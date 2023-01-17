@@ -199,9 +199,9 @@ deal:
   # 跨域配置
   cors:
     # 允许跨域的域名
-    allow-origins:
-      - http://localhost:1024
+    allowOrigins:
       - http://localhost:8080
+      - http://localhost:9999
   # JWT密钥  登录
   jwt:
     secret: E66559580A1ADF48CDD928516062F12E

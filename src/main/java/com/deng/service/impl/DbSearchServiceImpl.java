@@ -41,6 +41,7 @@ public class DbSearchServiceImpl implements SearchService {
         return RestResp.ok(
                 PageRespDTO.of(condition.getPageNum(), condition.getPageSize(), page.getTotal(),
                         // 得到list
+                        // goodsInfo -> goodsInfoRespDTO
                         goodsInfos.stream().map(goodsInfo -> GoodsInfoRespDTO.builder()
                                 .id(goodsInfo.getId())
                                 .goodsName(goodsInfo.getGoodsName())
