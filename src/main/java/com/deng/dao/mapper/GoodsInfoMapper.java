@@ -16,7 +16,7 @@ import java.util.List;
  */
 public interface GoodsInfoMapper extends BaseMapper<GoodsInfo> {
     /**
-     *
+     *商品查询
      * @param page 分页信息
      * @param condition 查询条件
      * @return 返回查询结果

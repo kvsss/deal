@@ -15,7 +15,8 @@ import org.springframework.stereotype.Service;
  * @version :1.0
  * @description : elasticsearch 搜索实现类
  * @since :1.8
- */@ConditionalOnProperty(prefix="spring.elasticsearch",name="enabled",havingValue="true")
+ */
+@ConditionalOnProperty(prefix="spring.elasticsearch",name="enabled",havingValue="true")
 @Service
 @RequiredArgsConstructor
 @Slf4j

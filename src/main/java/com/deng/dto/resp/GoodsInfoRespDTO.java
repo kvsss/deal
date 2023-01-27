@@ -9,12 +9,10 @@ import lombok.NoArgsConstructor;
 /**
  * @author :deng
  * @version :1.0
- * @description :
+ * @description :商品Dto
  * @since :1.8
  */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
 public class GoodsInfoRespDTO {
     /**

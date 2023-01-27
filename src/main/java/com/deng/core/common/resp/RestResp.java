@@ -4,6 +4,8 @@ import com.deng.core.common.constant.CodeEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 
+import java.util.Objects;
+
 /**
  * @author :deng
  * @version :1.0
@@ -59,18 +61,36 @@ public class RestResp<T> {
         return new RestResp<>(data);
     }
 
+    /*
+       public static RestResp<Void> fail(CodeEnum codeEnum) {
+            return new RestResp<>(codeEnum);
+        }
+    */
+
     /**
-     * 业务处理失败
+     * 业务失败处理
+     * 这里使用Object来处理通用返回
+     *
+     * @param codeEnum
+     * @return
      */
-    public static RestResp<Void> fail(CodeEnum codeEnum) {
+    public static <T> RestResp<T> fail(CodeEnum codeEnum) {
         return new RestResp<>(codeEnum);
     }
 
     /**
      * 系统错误
      */
-    public static RestResp<Void> error(CodeEnum codeEnum) {
-        return new RestResp<>(codeEnum);
+    public static RestResp<Void> error() {
+        return new RestResp<>(CodeEnum.SYSTEM_ERROR);
+    }
+
+    /**
+     * 判断是否成功
+     * 这个会在传输时，添加字段ok:true 或者 ok:false
+     */
+    public boolean isOk() {
+        return Objects.equals(this.code, CodeEnum.OK.getCode());
     }
 
 }

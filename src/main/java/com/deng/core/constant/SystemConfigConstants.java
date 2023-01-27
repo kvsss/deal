@@ -7,14 +7,16 @@ package com.deng.core.constant;
  * @since :1.8
  */
 
-
 /**
- * 系统配置相关常量
+ * @author :deng
+ * @version :1.0
+ * @description :系统常量
+ * @since :1.8
  */
-public class SystemConfigConstants {
+public final class SystemConfigConstants {
 
-    // 构造器是私有
-    private  SystemConfigConstants() {
+    private SystemConfigConstants() {
+        throw new IllegalStateException(SystemConfigConstants.CONST_INSTANCE_EXCEPTION_MSG);
     }
 
     /**
@@ -25,5 +27,10 @@ public class SystemConfigConstants {
     /**
      * 常量类实例化异常信息
      */
-    public static final String CONST_INSTANCE_EXCEPTION_MSG = "Constant class";
+    public static final String CONST_INSTANCE_EXCEPTION_MSG = "instantiate Constant class";
+
+    /**
+     * 前台门户标识
+     */
+    public static final String DEAL_FRONT_KEY = "front";
 }

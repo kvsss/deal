@@ -1,5 +1,6 @@
 package com.deng;
 
+import com.deng.core.constant.DateBaseConstants;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -8,12 +9,16 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @MapperScan("com.deng.dao.mapper") // 这里开启了扫描 MyBatis-plus需要
-
+/**
+ * @author :deng
+ * @version :1.0
+ * @description :主启动类
+ * @since :1.8
+ */
 public class DealApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(DealApplication.class, args);
-
     }
 
     @Bean

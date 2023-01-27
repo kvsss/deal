@@ -23,7 +23,7 @@ import java.util.stream.Stream;
  * @description : 数据库搜索实现类
  * @since :1.8
  */
-@ConditionalOnProperty(prefix = "spring.elasticsearch", name = "enabled", havingValue = "false")
+@ConditionalOnProperty(prefix = "spring.elasticsearch", name = "enabled", havingValue = "false",matchIfMissing = true)
 @Service
 @RequiredArgsConstructor
 @Slf4j

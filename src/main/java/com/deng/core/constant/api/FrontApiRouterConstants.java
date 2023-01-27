@@ -9,7 +9,7 @@ import org.apiguardian.api.API;
  * @description : 商品接口门面信息API
  * @since :1.8
  */
-public class FrontApiRouterConstants {
+public final class FrontApiRouterConstants {
     private FrontApiRouterConstants() {
         throw new IllegalStateException(SystemConfigConstants.CONST_INSTANCE_EXCEPTION_MSG);
     }
@@ -21,9 +21,31 @@ public class FrontApiRouterConstants {
      */
     public static final String SEARCH_URL_PREFIX = "/search";
 
+    /**
+     * 资源请求前缀
+     */
+    public static final String RESOURCE_URL_PREFIX = "/resource";
+
+    /**
+     * 登录请求前缀
+     */
+    public static final String USER_URL_PREFIX = "/user";
+
 
     /**
      * 前台门户搜索相关API请求路径前缀
      */
     public static final String FRONT_SEARCH_API_URL_PREFIX = FRONT_URL_PREFIX + SEARCH_URL_PREFIX;
+
+    /**
+     * 前台资源请求前缀
+     */
+    public static final String FRONT_RESOURCE_API_URL_PREFIX = FRONT_URL_PREFIX + RESOURCE_URL_PREFIX;
+
+
+    /**
+     * 用户请求前缀
+     */
+    public static final String FRONT_USER_API_URL_PREFIX = FRONT_URL_PREFIX + USER_URL_PREFIX;
+
 }

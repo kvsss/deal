@@ -152,7 +152,6 @@
             <version>${sentinel.version}</version>
         </dependency>
 
-
         <!-- ShardingSphere-JDBC -->
         <dependency>
             <groupId>org.apache.shardingsphere</groupId>
@@ -247,6 +246,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apiguardian</groupId>
+            <artifactId>apiguardian-api</artifactId>
+            <version>1.1.2</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
