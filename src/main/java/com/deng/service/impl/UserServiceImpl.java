@@ -8,8 +8,10 @@ import com.deng.core.constant.SystemConfigConstants;
 import com.deng.core.util.JwtUtils;
 import com.deng.dao.entity.UserInfo;
 import com.deng.dao.mapper.UserInfoMapper;
+import com.deng.dto.req.UserInfoUptReqDTO;
 import com.deng.dto.req.UserLoginReqDTO;
 import com.deng.dto.req.UserRegisterReqDTO;
+import com.deng.dto.resp.UserInfoRespDTO;
 import com.deng.dto.resp.UserLoginRespDTO;
 import com.deng.dto.resp.UserRegisterRespDTO;
 import com.deng.manage.redis.VerifyCodeManager;
@@ -109,5 +111,28 @@ public class UserServiceImpl implements UserService {
                         .token(JwtUtils.generateToken(userInfo.getId(), SystemConfigConstants.DEAL_FRONT_KEY))
                         .build()
         );
+    }
+
+    @Override
+    public RestResp<UserInfoRespDTO> getUserInfo(Long uid) {
+        UserInfo userInfo = userInfoMapper.selectById(uid);
+        return RestResp.ok(UserInfoRespDTO.builder()
+                .nickName(userInfo.getNickName())
+                .userSex(userInfo.getUserSex())
+                .userPhoto(userInfo.getUserPhoto())
+                .build()
+        );
+    }
+
+    @Override
+    public RestResp<Void> updateUserInfo(UserInfoUptReqDTO dto) {
+        // 扩展点:如果图片存在,考虑删除
+        UserInfo userInfo = new UserInfo();
+        userInfo.setId(dto.getUid());
+        userInfo.setNickName(dto.getNickName());
+        userInfo.setUserPhoto(dto.getUserPhoto());
+        userInfo.setUserSex(dto.getUserSex());
+        userInfoMapper.updateById(userInfo);
+        return RestResp.ok();
     }
 }

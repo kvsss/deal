@@ -2,6 +2,7 @@ package com.deng.dto.req;
 
 import com.deng.core.common.req.PageReqDTO;
 import io.swagger.v3.oas.annotations.Parameter;
+import lombok.Builder;
 import lombok.Data;
 
 /**

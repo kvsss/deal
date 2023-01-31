@@ -43,11 +43,12 @@ public class JwtUtils {
      * @return JWT
      */
     public String generateToken(Long uid, String systemKey) {
+        // 这里可以设置过期时间
         return Jwts.builder()
-            .setHeaderParam(HEADER_SYSTEM_KEY, systemKey)
-            .setSubject(uid.toString())
-            .signWith(Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8)))
-            .compact();
+                .setHeaderParam(HEADER_SYSTEM_KEY, systemKey)
+                .setSubject(uid.toString())
+                .signWith(Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8)))
+                .compact();
     }
 
     /**
@@ -61,9 +62,13 @@ public class JwtUtils {
         Jws<Claims> claimsJws;
         try {
             claimsJws = Jwts.parserBuilder()
-                .setSigningKey(Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8)))
-                .build()
-                .parseClaimsJws(token);
+                    .setSigningKey(Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8)))
+                    .build()
+                    .parseClaimsJws(token);
+
+            /*
+             *   claimsJws.getBody().getExpiration() 校验时间
+             */
             // OK, we can trust this JWT
             // 判断该 JWT 是否属于指定系统
             if (Objects.equals(claimsJws.getHeader().get(HEADER_SYSTEM_KEY), systemKey)) {

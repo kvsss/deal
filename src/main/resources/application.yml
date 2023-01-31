@@ -216,7 +216,7 @@ deal:
     # 文件上传配置
     upload:
       # 上传路径
-      path: D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\resource\img\1-deal-img
+      path: D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\resource\deal
 
 --- #------------------- dev 特定配置---------------------------
 spring:

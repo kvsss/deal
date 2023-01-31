@@ -33,4 +33,11 @@ public final class SystemConfigConstants {
      * 前台门户标识
      */
     public static final String DEAL_FRONT_KEY = "front";
+
+    /**
+     * 图片上传路径
+     */
+    public  static final String IMAGE_UPLOAD_DIRECTORY = "/image/";
+
+
 }

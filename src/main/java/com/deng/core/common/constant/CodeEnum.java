@@ -30,15 +30,31 @@ public enum CodeEnum {
     /**
      * 用户已存在
      */
-    USER_NOT_EXIST("A0003","用户不存在"),
+    USER_NOT_EXIST("A0003", "用户不存在"),
 
     /**
      * 用户密码错误
      */
-    USER_PASSWORD_ERROR("A0004","用户密码错误"),
+    USER_PASSWORD_ERROR("A0004", "用户密码错误"),
 
+    /**
+     * 请求限制
+     */
+    USER_REQUEST_LIMIT("A0005", "请求超出限制"),
+    /**
+     * 用户上传文件异常
+     */
+    USER_UPLOAD_FILE_ERROR("A0006", "用户上传文件异常"),
 
+    /**
+     * 文件类型不匹配
+     */
+    USER_UPLOAD_FILE_TYPE_NOT_MATCH("A0007", "上传文件类型不匹配"),
 
+    /**
+     * 验证码生成失败
+     */
+    IMG_VERIFY_CODE_FAIL("A0008", "验证码生成失败"),
 
     /**
      * 用户登录已过期

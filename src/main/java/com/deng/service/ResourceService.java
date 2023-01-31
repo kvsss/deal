@@ -18,8 +18,7 @@ public interface ResourceService {
      * @return Base64编码的图片
      * @throws IOException 验证码图片生成失效
      */
-    RestResp<ImgVerifyCodeRespDTO> getImgVerifyCode() throws IOException;
-
+    RestResp<ImgVerifyCodeRespDTO> getImgVerifyCode();
 
     /**
      * 上传图片
