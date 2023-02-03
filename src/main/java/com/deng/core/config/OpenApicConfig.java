@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Profile;
  */
 @Configuration
 @Profile("dev") // dev环境
-@OpenAPIDefinition(info = @Info(title = "novel 项目接口文档", version = "v3.2.0", license = @License(name = "Apache 2.0", url = "https://www.apache.org/licenses/LICENSE-2.0")))
+@OpenAPIDefinition(info = @Info(title = "deal 项目接口文档", version = "v3.2.0", license = @License(name = "Apache 2.0", url = "https://www.apache.org/licenses/LICENSE-2.0")))
 @SecurityScheme(type = SecuritySchemeType.APIKEY, in = SecuritySchemeIn.HEADER, name = SystemConfigConstants.HTTP_AUTH_HEADER_NAME, description = "登录 token")
 public class OpenApicConfig {
 }

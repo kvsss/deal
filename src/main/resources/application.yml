@@ -54,7 +54,7 @@ spring:
       ds_0:
         type: com.zaxxer.hikari.HikariDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
-        jdbcUrl: jdbc:mysql://localhost:3306/novel_test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+        jdbcUrl: jdbc:mysql://localhost:3306/deal?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
         username: root
         password: root
     # 规则配置
@@ -62,24 +62,24 @@ spring:
       # 数据分片
       sharding:
         tables:
-          # book_content 表
-          book_content:
+          # goods_content 表
+          goods_content:
             # 数据节点
-            actual-data-nodes: ds_$->{0}.book_content$->{0..9}
+            actual-data-nodes: ds_$->{0}.goods_content$->{0..9}
             # 分表策略
             table-strategy:
               standard:
                 # 分片列名称
                 sharding-column: chapter_id
                 # 分片算法名称
-                sharding-algorithm-name: bookContentSharding
+                sharding-algorithm-name: goodsContentSharding
         sharding-algorithms:
-          bookContentSharding:
+          goodsContentSharding:
             # 行表达式分片算法，使用 Groovy 的表达式，提供对 SQL 语句中的 = 和 IN 的分片操作支持
             type: INLINE
             props:
               # 分片算法的行表达式
-              algorithm-expression: book_content$->{chapter_id % 10}
+              algorithm-expression: goods_content$->{chapter_id % 10}
 
 --- # ------------------------中间件配置--------------------------------------
 spring:

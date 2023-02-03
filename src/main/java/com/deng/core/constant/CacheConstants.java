@@ -18,6 +18,15 @@ public final class CacheConstants {
     public static final String REDIS_CACHE_PREFIX = "Cache::Deal::";
 
 
+    public static final String CAFFEINE_CACHE_MANAGER = "caffeineCacheManager";
+
+    /**
+     *  商品分类列表缓存
+     */
+    public static final String GOODS_CATEGORY_LIST_CACHE_NAME = "goodsCategoryListCache";
+
+
+
     /**
      * redis存储验证码前缀
      */

@@ -2,12 +2,14 @@ package com.deng.controller.front;
 
 import com.deng.core.common.resp.RestResp;
 import com.deng.core.constant.api.FrontApiRouterConstants;
+import com.deng.dto.req.GoodsAddReqDTO;
 import com.deng.dto.req.UserInfoUptReqDTO;
 import com.deng.dto.req.UserLoginReqDTO;
 import com.deng.dto.req.UserRegisterReqDTO;
 import com.deng.dto.resp.UserInfoRespDTO;
 import com.deng.dto.resp.UserLoginRespDTO;
 import com.deng.dto.resp.UserRegisterRespDTO;
+import com.deng.service.GoodsService;
 import com.deng.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -29,6 +31,8 @@ import javax.validation.Valid;
 @RequiredArgsConstructor
 public class UserController {
     private final UserService userService;
+
+    private final GoodsService goodsService;
 
     /**
      * 用户注册接口
@@ -68,5 +72,12 @@ public class UserController {
         return userService.updateUserInfo(dto);
     }
 
-
+    /**
+     * 商品发布列表查询接口
+     */
+    @Operation(summary = "商品发布接口")
+    @PostMapping("goods")
+    public RestResp<Void> publishGoods(@Valid @RequestBody GoodsAddReqDTO dto) {
+        return goodsService.saveGoods(dto);
+    }
 }
