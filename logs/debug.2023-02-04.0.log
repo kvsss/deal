@@ -1,0 +1,962 @@
+2023-02-04 00:00:21,414 INFO (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-04 00:00:21,440 INFO (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2023-02-04 00:00:21,442 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.deng.dao.mapper]' package. Please check your configuration.
+2023-02-04 00:00:33,934 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-04 00:00:33,943 INFO (Undertow.java:259)- stopping server: Undertow - 2.2.22.Final
+2023-02-04 00:00:33,956 INFO (ServletContextImpl.java:388)- Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-04 00:00:33,978 INFO (SchedulerFactoryBean.java:847)- Shutting down Quartz Scheduler
+2023-02-04 00:00:33,978 INFO (QuartzScheduler.java:666)- Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-02-04 00:00:33,979 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-04 00:00:33,979 INFO (QuartzScheduler.java:740)- Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-02-04 00:00:34,125 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-02-04 00:00:34,140 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-02-04 00:00:44,550 INFO (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-02-04 00:00:44,636 INFO (StartupInfoLogger.java:55)- Starting DealApplication using Java 1.8.0_291 on DESKTOP-JTJ35B8 with PID 5540 (D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal\target\classes started by shinelon in D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal)
+2023-02-04 00:00:44,637 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-04 00:00:44,637 INFO (SpringApplication.java:637)- The following 1 profile is active: "dev"
+2023-02-04 00:00:44,942 INFO (DeferredLog.java:255)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-04 00:00:44,942 INFO (DeferredLog.java:255)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-04 00:00:46,647 INFO (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-04 00:00:46,650 INFO (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-04 00:00:46,685 INFO (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2023-02-04 00:00:47,846 WARN (Bootstrap.java:68)- UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-02-04 00:00:47,873 INFO (ServletContextImpl.java:388)- Initializing Spring embedded WebApplicationContext
+2023-02-04 00:00:47,874 INFO (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 2931 ms
+2023-02-04 00:00:51,262 INFO (DefaultSecurityFilterChain.java:55)- Will secure org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest$EndpointRequestMatcher@4f2a0909 with [org.springframework.security.web.session.DisableEncodeUrlFilter@34947355, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62ad5f35, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ac35b17, org.springframework.security.web.header.HeaderWriterFilter@64641998, org.springframework.security.web.authentication.logout.LogoutFilter@66ad7167, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@11d557a5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f8035d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a7b4ff5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e6ad84c, org.springframework.security.web.session.SessionManagementFilter@627ad446, org.springframework.security.web.access.ExceptionTranslationFilter@15e748b5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@16422f27]
+2023-02-04 00:00:52,465 INFO (StdSchedulerFactory.java:1220)- Using default implementation for ThreadExecutor
+2023-02-04 00:00:52,478 INFO (SchedulerSignalerImpl.java:61)- Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-04 00:00:52,479 INFO (QuartzScheduler.java:229)- Quartz Scheduler v.2.3.2 created.
+2023-02-04 00:00:52,480 INFO (RAMJobStore.java:155)- RAMJobStore initialized.
+2023-02-04 00:00:52,508 INFO (QuartzScheduler.java:294)- Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-04 00:00:52,508 INFO (StdSchedulerFactory.java:1374)- Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-02-04 00:00:52,509 INFO (StdSchedulerFactory.java:1378)- Quartz scheduler version: 2.3.2
+2023-02-04 00:00:52,509 INFO (QuartzScheduler.java:2293)- JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3c4940d2
+2023-02-04 00:00:53,453 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2023-02-04 00:00:53,459 INFO (EndpointLinksResolver.java:58)- Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-02-04 00:00:53,574 INFO (Undertow.java:120)- starting server: Undertow - 2.2.22.Final
+2023-02-04 00:00:53,582 INFO (Xnio.java:95)- XNIO version 3.8.7.Final
+2023-02-04 00:00:53,589 INFO (NioXnio.java:58)- XNIO NIO Implementation Version 3.8.7.Final
+2023-02-04 00:00:53,622 INFO (Version.java:52)- JBoss Threads version 3.1.0.Final
+2023-02-04 00:00:53,670 INFO (UndertowWebServer.java:119)- Undertow started on port(s) 9999 (http)
+2023-02-04 00:00:53,673 INFO (SchedulerFactoryBean.java:729)- Starting Quartz Scheduler now
+2023-02-04 00:00:53,673 INFO (QuartzScheduler.java:547)- Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-02-04 00:00:53,691 INFO (StartupInfoLogger.java:61)- Started DealApplication in 9.92 seconds (JVM running for 14.965)
+2023-02-04 00:00:54,493 INFO (ServletContextImpl.java:388)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-04 00:00:54,493 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-02-04 00:00:54,496 INFO (FrameworkServlet.java:547)- Completed initialization in 2 ms
+2023-02-04 00:00:54,497 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-02-04 00:00:54,748 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-02-04 00:03:08,397 ERROR (CommonExceptionHandler.java:38)- null
+java.lang.NullPointerException: null
+	at com.deng.service.impl.GoodsServiceImpl.listCategory(GoodsServiceImpl.java:39)
+	at com.deng.controller.front.GoodsController.listCategory(GoodsController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.jrHandle(ServletInitialHandler.java:40001)
+	at org.zeroturnaround.javarebel.integration.servlet.undertow.cbp.ServletInitialHandlerCBP.handleRequest(ServletInitialHandlerCBP.java:131)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.lang.Thread.run(Thread.java:748)
+2023-02-04 00:03:08,400 WARN (AbstractHandlerExceptionResolver.java:208)- Resolved [java.lang.NullPointerException]
+2023-02-04 00:03:24,863 ERROR (CommonExceptionHandler.java:38)- null
+java.lang.NullPointerException: null
+	at com.deng.service.impl.GoodsServiceImpl.listCategory(GoodsServiceImpl.java:39)
+	at com.deng.controller.front.GoodsController.listCategory(GoodsController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.jrHandle(ServletInitialHandler.java:40001)
+	at org.zeroturnaround.javarebel.integration.servlet.undertow.cbp.ServletInitialHandlerCBP.handleRequest(ServletInitialHandlerCBP.java:131)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.lang.Thread.run(Thread.java:748)
+2023-02-04 00:03:24,865 WARN (AbstractHandlerExceptionResolver.java:208)- Resolved [java.lang.NullPointerException]
+2023-02-04 00:04:04,682 ERROR (CommonExceptionHandler.java:38)- null
+java.lang.NullPointerException: null
+	at com.deng.service.impl.GoodsServiceImpl.listCategory(GoodsServiceImpl.java:39)
+	at com.deng.controller.front.GoodsController.listCategory(GoodsController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.jrHandle(ServletInitialHandler.java:40001)
+	at org.zeroturnaround.javarebel.integration.servlet.undertow.cbp.ServletInitialHandlerCBP.handleRequest(ServletInitialHandlerCBP.java:131)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.lang.Thread.run(Thread.java:748)
+2023-02-04 00:04:04,684 WARN (AbstractHandlerExceptionResolver.java:208)- Resolved [java.lang.NullPointerException]
+2023-02-04 00:04:06,468 ERROR (CommonExceptionHandler.java:38)- null
+java.lang.NullPointerException: null
+	at com.deng.service.impl.GoodsServiceImpl.listCategory(GoodsServiceImpl.java:39)
+	at com.deng.controller.front.GoodsController.listCategory(GoodsController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.jrHandle(ServletInitialHandler.java:40001)
+	at org.zeroturnaround.javarebel.integration.servlet.undertow.cbp.ServletInitialHandlerCBP.handleRequest(ServletInitialHandlerCBP.java:131)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.lang.Thread.run(Thread.java:748)
+2023-02-04 00:04:06,470 WARN (AbstractHandlerExceptionResolver.java:208)- Resolved [java.lang.NullPointerException]
+2023-02-04 00:05:48,415 INFO (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-04 00:05:48,465 INFO (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+2023-02-04 00:05:48,491 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.deng.dao.mapper]' package. Please check your configuration.
+2023-02-04 00:05:54,743 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 00:05:54,815 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 00:05:54,895 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 00:08:48,916 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 00:08:48,916 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 00:08:48,922 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 00:08:48,923 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 00:08:48,924 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 00:08:48,928 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 00:08:53,393 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 00:08:53,395 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 00:08:53,403 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 00:09:34,122 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 00:09:34,123 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 00:09:34,126 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 00:09:44,353 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 00:09:44,354 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 00:09:44,357 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 00:09:46,198 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 00:09:46,199 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 00:09:46,212 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 00:10:59,342 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 00:10:59,343 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 00:10:59,345 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 00:11:04,646 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 00:11:04,647 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 00:11:04,648 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 00:11:04,649 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 00:11:04,650 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 00:11:04,652 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:26:13,666 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-04 01:26:13,670 INFO (Undertow.java:259)- stopping server: Undertow - 2.2.22.Final
+2023-02-04 01:26:13,676 INFO (ServletContextImpl.java:388)- Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-04 01:26:13,730 INFO (SchedulerFactoryBean.java:847)- Shutting down Quartz Scheduler
+2023-02-04 01:26:13,730 INFO (QuartzScheduler.java:666)- Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-02-04 01:26:13,730 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-04 01:26:13,731 INFO (QuartzScheduler.java:740)- Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-02-04 01:26:13,977 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-02-04 01:26:13,980 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-02-04 01:29:40,091 INFO (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-02-04 01:29:40,097 INFO (StartupInfoLogger.java:55)- Starting DealApplication using Java 1.8.0_291 on DESKTOP-JTJ35B8 with PID 22300 (D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal\target\classes started by shinelon in D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal)
+2023-02-04 01:29:40,097 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-04 01:29:40,098 INFO (SpringApplication.java:637)- The following 1 profile is active: "dev"
+2023-02-04 01:29:40,371 INFO (DeferredLog.java:255)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-04 01:29:40,371 INFO (DeferredLog.java:255)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-04 01:29:41,782 INFO (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-04 01:29:41,785 INFO (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-04 01:29:41,811 INFO (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2023-02-04 01:29:42,785 WARN (Bootstrap.java:68)- UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-02-04 01:29:42,811 INFO (ServletContextImpl.java:388)- Initializing Spring embedded WebApplicationContext
+2023-02-04 01:29:42,812 INFO (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 2440 ms
+2023-02-04 01:29:45,709 INFO (DefaultSecurityFilterChain.java:55)- Will secure org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest$EndpointRequestMatcher@6c4b8ed7 with [org.springframework.security.web.session.DisableEncodeUrlFilter@3c540635, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10ca43cc, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e17d76, org.springframework.security.web.header.HeaderWriterFilter@6390f646, org.springframework.security.web.authentication.logout.LogoutFilter@b8ee3b7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@70062dd9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16e8c2b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@dff7088, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2da73fac, org.springframework.security.web.session.SessionManagementFilter@40a27bac, org.springframework.security.web.access.ExceptionTranslationFilter@1578f779, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17fc5cc3]
+2023-02-04 01:29:46,950 INFO (StdSchedulerFactory.java:1220)- Using default implementation for ThreadExecutor
+2023-02-04 01:29:46,962 INFO (SchedulerSignalerImpl.java:61)- Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-04 01:29:46,962 INFO (QuartzScheduler.java:229)- Quartz Scheduler v.2.3.2 created.
+2023-02-04 01:29:46,963 INFO (RAMJobStore.java:155)- RAMJobStore initialized.
+2023-02-04 01:29:46,964 INFO (QuartzScheduler.java:294)- Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-04 01:29:46,964 INFO (StdSchedulerFactory.java:1374)- Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-02-04 01:29:46,964 INFO (StdSchedulerFactory.java:1378)- Quartz scheduler version: 2.3.2
+2023-02-04 01:29:46,964 INFO (QuartzScheduler.java:2293)- JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@31c95427
+2023-02-04 01:29:48,243 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2023-02-04 01:29:48,248 INFO (EndpointLinksResolver.java:58)- Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-02-04 01:29:48,363 INFO (Undertow.java:120)- starting server: Undertow - 2.2.22.Final
+2023-02-04 01:29:48,370 INFO (Xnio.java:95)- XNIO version 3.8.7.Final
+2023-02-04 01:29:48,379 INFO (NioXnio.java:58)- XNIO NIO Implementation Version 3.8.7.Final
+2023-02-04 01:29:48,408 INFO (Version.java:52)- JBoss Threads version 3.1.0.Final
+2023-02-04 01:29:48,454 INFO (UndertowWebServer.java:119)- Undertow started on port(s) 9999 (http)
+2023-02-04 01:29:48,456 INFO (SchedulerFactoryBean.java:729)- Starting Quartz Scheduler now
+2023-02-04 01:29:48,457 INFO (QuartzScheduler.java:547)- Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-02-04 01:29:48,472 INFO (StartupInfoLogger.java:61)- Started DealApplication in 9.01 seconds (JVM running for 10.972)
+2023-02-04 01:29:49,242 INFO (ServletContextImpl.java:388)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-04 01:29:49,242 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-02-04 01:29:49,245 INFO (FrameworkServlet.java:547)- Completed initialization in 2 ms
+2023-02-04 01:29:49,246 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-02-04 01:29:49,462 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-02-04 01:30:09,479 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 01:30:09,498 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:30:09,512 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:30:09,512 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 01:30:09,560 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:30:09,560 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 01:30:14,112 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:30:14,123 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:30:14,125 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:30:33,645 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:30:33,645 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:30:33,648 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:32:10,180 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:32:10,181 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:32:10,183 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:34:30,041 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:34:30,042 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:34:30,043 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:34:46,166 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 01:34:46,166 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 01:34:46,168 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 01:37:13,860 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:37:13,861 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:37:13,862 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:38:28,148 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:38:28,149 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:38:28,150 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:38:58,706 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:38:58,707 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:38:58,708 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:39:48,723 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:39:48,723 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:39:48,725 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:39:50,732 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:39:50,733 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:39:50,734 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:39:50,741 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 01:39:50,742 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 01:39:50,743 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 01:40:32,086 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:40:32,087 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:40:32,088 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:41:14,894 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:41:14,895 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:41:14,896 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:43:56,482 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: UPDATE user_info SET user_photo=? WHERE id=?
+2023-02-04 01:43:56,485 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: /image/2023\02\04\4af23bd1535b5a745ae97cc361b7e8f1.jpg(String), 3(Long)
+2023-02-04 01:43:56,499 DEBUG (BaseJdbcLogger.java:137)- <==    Updates: 1
+2023-02-04 01:45:14,842 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:45:14,843 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:45:14,850 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:45:33,850 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:45:33,851 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:45:33,852 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:45:45,794 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:45:45,794 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:45:45,795 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:45:51,534 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:45:51,534 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:45:51,536 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:45:51,537 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 01:45:51,538 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 01:45:51,547 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 01:46:22,683 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:46:22,684 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:46:22,685 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:46:47,198 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:46:47,199 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:46:47,200 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:46:56,351 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:46:56,351 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:46:56,352 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:46:59,945 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:46:59,946 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:46:59,947 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:46:59,951 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 01:46:59,951 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 01:46:59,953 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 01:47:35,131 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:47:35,131 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:47:35,132 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:47:36,683 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:47:36,684 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:47:36,685 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:47:36,688 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 01:47:36,689 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 01:47:36,691 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 01:47:55,506 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:47:55,507 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:47:55,508 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 01:47:55,508 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:47:55,508 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 01:47:55,509 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 01:48:27,432 ERROR (CommonExceptionHandler.java:38)- HV000030: No validator could be found for constraint 'javax.validation.constraints.NotBlank' validating type 'java.math.BigDecimal'. Check configuration for 'price'
+javax.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'javax.validation.constraints.NotBlank' validating type 'java.math.BigDecimal'. Check configuration for 'price'
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116)
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:162)
+	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:54)
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75)
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130)
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172)
+	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:109)
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:66)
+	at org.springframework.validation.DataBinder.validate(DataBinder.java:933)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.validateIfApplicable(AbstractMessageConverterMethodArgumentResolver.java:250)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:139)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:517)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.lang.Thread.run(Thread.java:748)
+2023-02-04 01:48:27,434 WARN (AbstractHandlerExceptionResolver.java:208)- Resolved [javax.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'javax.validation.constraints.NotBlank' validating type 'java.math.BigDecimal'. Check configuration for 'price']
+2023-02-04 01:50:47,714 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-04 01:50:47,716 INFO (Undertow.java:259)- stopping server: Undertow - 2.2.22.Final
+2023-02-04 01:50:47,719 INFO (ServletContextImpl.java:388)- Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-04 01:50:47,729 INFO (SchedulerFactoryBean.java:847)- Shutting down Quartz Scheduler
+2023-02-04 01:50:47,729 INFO (QuartzScheduler.java:666)- Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-02-04 01:50:47,729 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-04 01:50:47,730 INFO (QuartzScheduler.java:740)- Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-02-04 01:50:47,954 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-02-04 01:50:47,963 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-02-04 01:50:56,163 INFO (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-02-04 01:50:56,166 INFO (StartupInfoLogger.java:55)- Starting DealApplication using Java 1.8.0_291 on DESKTOP-JTJ35B8 with PID 22644 (D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal\target\classes started by shinelon in D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal)
+2023-02-04 01:50:56,167 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-04 01:50:56,167 INFO (SpringApplication.java:637)- The following 1 profile is active: "dev"
+2023-02-04 01:50:56,437 INFO (DeferredLog.java:255)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-04 01:50:56,438 INFO (DeferredLog.java:255)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-04 01:50:57,863 INFO (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-04 01:50:57,865 INFO (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-04 01:50:57,893 INFO (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2023-02-04 01:50:58,848 WARN (Bootstrap.java:68)- UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-02-04 01:50:58,873 INFO (ServletContextImpl.java:388)- Initializing Spring embedded WebApplicationContext
+2023-02-04 01:50:58,873 INFO (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 2434 ms
+2023-02-04 01:51:01,751 INFO (DefaultSecurityFilterChain.java:55)- Will secure org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest$EndpointRequestMatcher@1f7a1a0d with [org.springframework.security.web.session.DisableEncodeUrlFilter@1a9c7725, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@413b415d, org.springframework.security.web.context.SecurityContextPersistenceFilter@45e2505, org.springframework.security.web.header.HeaderWriterFilter@2aad94de, org.springframework.security.web.authentication.logout.LogoutFilter@6d34244f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@34d8812d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c554754, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@742d6d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@772fd4e7, org.springframework.security.web.session.SessionManagementFilter@bb61f5d, org.springframework.security.web.access.ExceptionTranslationFilter@38190874, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79a1f332]
+2023-02-04 01:51:03,088 INFO (StdSchedulerFactory.java:1220)- Using default implementation for ThreadExecutor
+2023-02-04 01:51:03,101 INFO (SchedulerSignalerImpl.java:61)- Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-04 01:51:03,102 INFO (QuartzScheduler.java:229)- Quartz Scheduler v.2.3.2 created.
+2023-02-04 01:51:03,103 INFO (RAMJobStore.java:155)- RAMJobStore initialized.
+2023-02-04 01:51:03,103 INFO (QuartzScheduler.java:294)- Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-04 01:51:03,104 INFO (StdSchedulerFactory.java:1374)- Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-02-04 01:51:03,104 INFO (StdSchedulerFactory.java:1378)- Quartz scheduler version: 2.3.2
+2023-02-04 01:51:03,104 INFO (QuartzScheduler.java:2293)- JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4d9deacb
+2023-02-04 01:51:04,396 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2023-02-04 01:51:04,401 INFO (EndpointLinksResolver.java:58)- Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-02-04 01:51:04,503 INFO (Undertow.java:120)- starting server: Undertow - 2.2.22.Final
+2023-02-04 01:51:04,512 INFO (Xnio.java:95)- XNIO version 3.8.7.Final
+2023-02-04 01:51:04,519 INFO (NioXnio.java:58)- XNIO NIO Implementation Version 3.8.7.Final
+2023-02-04 01:51:04,545 INFO (Version.java:52)- JBoss Threads version 3.1.0.Final
+2023-02-04 01:51:04,586 INFO (UndertowWebServer.java:119)- Undertow started on port(s) 9999 (http)
+2023-02-04 01:51:04,588 INFO (SchedulerFactoryBean.java:729)- Starting Quartz Scheduler now
+2023-02-04 01:51:04,588 INFO (QuartzScheduler.java:547)- Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-02-04 01:51:04,606 INFO (StartupInfoLogger.java:61)- Started DealApplication in 9.107 seconds (JVM running for 10.703)
+2023-02-04 01:51:05,027 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-02-04 01:51:05,270 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-02-04 01:51:05,897 INFO (ServletContextImpl.java:388)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-04 01:51:05,897 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-02-04 01:51:05,899 INFO (FrameworkServlet.java:547)- Completed initialization in 2 ms
+2023-02-04 01:51:41,739 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: INSERT INTO goods_info ( category_id, category_name, pic_url, uid, user_name, goods_price, goods_title, goods_content, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-02-04 01:51:41,766 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 1(Long), 衣物(String), /image/2023\02\04\c04a1cf4b500e36714b14cb12803e4b6.jpg(String), 3(Long), 15707473510(String), 1(BigDecimal), 1(String), 1(String), 2023-02-04T01:51:41.699(LocalDateTime), 2023-02-04T01:51:41.700(LocalDateTime)
+2023-02-04 01:51:41,782 DEBUG (BaseJdbcLogger.java:137)- <==    Updates: 1
+2023-02-04 01:53:20,702 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:53:20,703 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:53:20,720 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:53:23,881 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:53:23,882 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:53:23,884 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:53:23,899 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 01:53:23,900 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 01:53:23,903 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 01:53:46,253 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: INSERT INTO goods_info ( category_id, category_name, pic_url, uid, user_name, goods_price, goods_title, goods_content, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-02-04 01:53:46,254 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 1(Long), 衣物(String), /image/2023\02\04\e37577f105f3661d5c58744e31710c1c.jpg(String), 3(Long), 15707473510(String), 12(BigDecimal), 1(String), 1(String), 2023-02-04T01:53:46.253(LocalDateTime), 2023-02-04T01:53:46.253(LocalDateTime)
+2023-02-04 01:53:46,416 ERROR (CommonExceptionHandler.java:38)- 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName'
+### The error may exist in com/deng/dao/mapper/GoodsInfoMapper.java (best guess)
+### The error may involve com.deng.dao.mapper.GoodsInfoMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO goods_info  ( category_id, category_name, pic_url, uid, user_name, goods_price, goods_title, goods_content,   create_time, update_time )  VALUES  ( ?, ?, ?, ?, ?, ?, ?, ?,   ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName'
+; Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName'
+org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName'
+### The error may exist in com/deng/dao/mapper/GoodsInfoMapper.java (best guess)
+### The error may involve com.deng.dao.mapper.GoodsInfoMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO goods_info  ( category_id, category_name, pic_url, uid, user_name, goods_price, goods_title, goods_content,   create_time, update_time )  VALUES  ( ?, ?, ?, ?, ?, ?, ?, ?,   ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName'
+; Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:247)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy122.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:59)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy124.insert(Unknown Source)
+	at com.deng.service.impl.GoodsServiceImpl.saveGoods(GoodsServiceImpl.java:54)
+	at com.deng.controller.front.UserController.publishGoods(UserController.java:81)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:517)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy168.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at com.sun.proxy.$Proxy167.update(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:106)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy166.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:194)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 87 common frames omitted
+2023-02-04 01:53:46,418 WARN (AbstractHandlerExceptionResolver.java:208)- Resolved [org.springframework.dao.DuplicateKeyException: <EOL><EOL>### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName'<EOL><EOL>### The error may exist in com/deng/dao/mapper/GoodsInfoMapper.java (best guess)<EOL><EOL>### The error may involve com.deng.dao.mapper.GoodsInfoMapper.insert-Inline<EOL><EOL>### The error occurred while setting parameters<EOL><EOL>### SQL: INSERT INTO goods_info  ( category_id, category_name, pic_url, uid, user_name, goods_price, goods_title, goods_content,   create_time, update_time )  VALUES  ( ?, ?, ?, ?, ?, ?, ?, ?,   ?, ? )<EOL><EOL>### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName'<EOL>; Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1-15707473510' for key 'goods_info.uk_goodsTitle_userName']
+2023-02-04 01:57:44,740 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 01:57:44,741 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 01:57:44,743 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 01:57:44,744 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:57:44,746 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:57:44,749 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:58:01,042 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: INSERT INTO goods_info ( category_id, category_name, pic_url, uid, user_name, goods_price, goods_title, goods_content, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-02-04 01:58:01,043 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 1(Long), 衣物(String), /image/2023\02\04\7313918badeddf99fd8a3d1a3e4fc86e.jpg(String), 3(Long), 15707473510(String), 1(BigDecimal), 1(String), 1(String), 2023-02-04T01:58:01.041(LocalDateTime), 2023-02-04T01:58:01.041(LocalDateTime)
+2023-02-04 01:58:01,048 DEBUG (BaseJdbcLogger.java:137)- <==    Updates: 1
+2023-02-04 01:58:45,076 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:58:45,077 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:58:45,080 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 01:59:04,763 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: INSERT INTO goods_info ( category_id, category_name, pic_url, uid, user_name, goods_price, goods_title, goods_content, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-02-04 01:59:04,764 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 1(Long), 衣物(String), /image/2023\02\04\b14f1aaf07c012315a2d617d8d7b79cc.jpg(String), 3(Long), 15707473510(String), 1(BigDecimal), 1(String), 1(String), 2023-02-04T01:59:04.762(LocalDateTime), 2023-02-04T01:59:04.762(LocalDateTime)
+2023-02-04 01:59:04,774 DEBUG (BaseJdbcLogger.java:137)- <==    Updates: 1
+2023-02-04 01:59:45,597 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 01:59:45,598 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 01:59:45,599 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 02:00:01,354 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 02:00:01,354 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 02:00:01,355 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 02:00:34,325 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 02:00:34,325 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 02:00:34,327 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 02:00:36,602 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 02:00:36,603 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 02:00:36,604 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 02:00:36,608 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 02:00:36,609 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 02:00:36,612 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 02:00:44,310 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 02:00:44,311 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 02:00:44,313 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 02:00:44,315 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 02:00:44,316 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 02:00:44,319 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 02:01:03,444 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: INSERT INTO goods_info ( category_id, category_name, pic_url, uid, user_name, goods_price, goods_title, goods_content, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-02-04 02:01:03,445 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 1(Long), 衣物(String), /image/2023\02\04\0690ba1a430388dad71cd4fe73d72f87.jpg(String), 3(Long), 15707473510(String), 2(BigDecimal), 2(String), 2(String), 2023-02-04T02:01:03.443(LocalDateTime), 2023-02-04T02:01:03.443(LocalDateTime)
+2023-02-04 02:01:03,453 DEBUG (BaseJdbcLogger.java:137)- <==    Updates: 1
+2023-02-04 02:03:32,149 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 02:03:32,150 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 02:03:32,152 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 02:03:33,258 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-04 02:03:33,259 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-04 02:03:33,260 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-04 02:03:50,633 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: INSERT INTO goods_info ( category_id, category_name, pic_url, uid, user_name, goods_price, goods_title, goods_content, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-02-04 02:03:50,634 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 4(Long), 家具(String), /image/2023\02\04\387eea6d727cd67b5bf655ed8e36efaa.jpg(String), 3(Long), 15707473510(String), 12(BigDecimal), 1(String), 2(String), 2023-02-04T02:03:50.630(LocalDateTime), 2023-02-04T02:03:50.630(LocalDateTime)
+2023-02-04 02:03:50,643 DEBUG (BaseJdbcLogger.java:137)- <==    Updates: 1
+2023-02-04 02:04:16,360 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE (username = ?) limit 1
+2023-02-04 02:04:16,361 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 15707473510(String)
+2023-02-04 02:04:16,364 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 02:04:17,511 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 02:04:17,511 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 02:04:17,513 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 02:04:19,108 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 02:04:19,109 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 02:04:19,110 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 02:04:21,002 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 02:04:21,002 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 02:04:21,003 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 02:04:23,026 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 02:04:23,026 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 02:04:23,027 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 02:04:24,629 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-04 02:04:24,630 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-04 02:04:24,631 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-04 02:04:31,314 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-04 02:04:31,317 INFO (Undertow.java:259)- stopping server: Undertow - 2.2.22.Final
+2023-02-04 02:04:31,321 INFO (ServletContextImpl.java:388)- Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-04 02:04:31,329 INFO (SchedulerFactoryBean.java:847)- Shutting down Quartz Scheduler
+2023-02-04 02:04:31,329 INFO (QuartzScheduler.java:666)- Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-02-04 02:04:31,329 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-04 02:04:31,330 INFO (QuartzScheduler.java:740)- Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-02-04 02:04:31,473 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-02-04 02:04:31,486 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.

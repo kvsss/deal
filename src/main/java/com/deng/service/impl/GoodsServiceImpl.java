@@ -43,7 +43,7 @@ public class GoodsServiceImpl implements GoodsService {
         goodsInfo.setCategoryName(dto.getCategoryName());
         goodsInfo.setPicUrl(dto.getPicUrl());
         goodsInfo.setUid(dto.getUid());
-        goodsInfo.setUserName(dto.getNickName());
+        goodsInfo.setNickName(dto.getNickName());
 
         goodsInfo.setGoodsPrice(dto.getPrice());
         goodsInfo.setGoodsTitle(dto.getGoodsTitle());

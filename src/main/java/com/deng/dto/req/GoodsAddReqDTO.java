@@ -45,7 +45,6 @@ public class GoodsAddReqDTO {
      * 价格
      */
     @Schema(description = "价格", required = true)
-    //@NotBlank
     private BigDecimal price;
 
     /**

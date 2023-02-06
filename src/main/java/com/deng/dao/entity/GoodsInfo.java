@@ -49,7 +49,7 @@ public class GoodsInfo implements Serializable {
     /**
      * 用户名
      */
-    private String userName;
+    private String nickName;
 
     /**
      * 商品价格
@@ -127,12 +127,12 @@ public class GoodsInfo implements Serializable {
         this.uid = uid;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public BigDecimal getGoodsPrice() {
@@ -199,7 +199,7 @@ public class GoodsInfo implements Serializable {
         ", categoryName=" + categoryName +
         ", picUrl=" + picUrl +
         ", uid=" + uid +
-        ", userName=" + userName +
+        ", nickName=" + nickName +
         ", goodsPrice=" + goodsPrice +
         ", goodsTitle=" + goodsTitle +
         ", goodsContent=" + goodsContent +

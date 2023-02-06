@@ -1,0 +1,1435 @@
+2023-02-06 11:32:08,456 INFO (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-02-06 11:32:08,720 INFO (StartupInfoLogger.java:55)- Starting DealApplication using Java 1.8.0_291 on DESKTOP-JTJ35B8 with PID 7568 (D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal\target\classes started by shinelon in D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal)
+2023-02-06 11:32:08,722 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-06 11:32:08,723 INFO (SpringApplication.java:637)- The following 1 profile is active: "dev"
+2023-02-06 11:32:09,252 INFO (DeferredLog.java:255)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-06 11:32:09,253 INFO (DeferredLog.java:255)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-06 11:32:11,523 INFO (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-06 11:32:11,526 INFO (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-06 11:32:11,570 INFO (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2023-02-06 11:32:12,929 WARN (Bootstrap.java:68)- UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-02-06 11:32:12,960 INFO (ServletContextImpl.java:388)- Initializing Spring embedded WebApplicationContext
+2023-02-06 11:32:12,960 INFO (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 3706 ms
+2023-02-06 11:32:16,214 INFO (DefaultSecurityFilterChain.java:55)- Will secure org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest$EndpointRequestMatcher@1978eab7 with [org.springframework.security.web.session.DisableEncodeUrlFilter@49dacc93, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@dd025d9, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b7d5eca, org.springframework.security.web.header.HeaderWriterFilter@1dcc0bb8, org.springframework.security.web.authentication.logout.LogoutFilter@40612056, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4a985388, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ed74d03, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ec729be, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3bea478e, org.springframework.security.web.session.SessionManagementFilter@6ddc817f, org.springframework.security.web.access.ExceptionTranslationFilter@536f389, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f51d1cc]
+2023-02-06 11:32:17,732 INFO (StdSchedulerFactory.java:1220)- Using default implementation for ThreadExecutor
+2023-02-06 11:32:17,748 INFO (SchedulerSignalerImpl.java:61)- Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-06 11:32:17,748 INFO (QuartzScheduler.java:229)- Quartz Scheduler v.2.3.2 created.
+2023-02-06 11:32:17,749 INFO (RAMJobStore.java:155)- RAMJobStore initialized.
+2023-02-06 11:32:17,750 INFO (QuartzScheduler.java:294)- Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-06 11:32:17,751 INFO (StdSchedulerFactory.java:1374)- Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-02-06 11:32:17,751 INFO (StdSchedulerFactory.java:1378)- Quartz scheduler version: 2.3.2
+2023-02-06 11:32:17,751 INFO (QuartzScheduler.java:2293)- JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@320ca97c
+2023-02-06 11:32:18,824 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2023-02-06 11:32:18,830 INFO (EndpointLinksResolver.java:58)- Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-02-06 11:32:18,952 INFO (Undertow.java:120)- starting server: Undertow - 2.2.22.Final
+2023-02-06 11:32:18,959 INFO (Xnio.java:95)- XNIO version 3.8.7.Final
+2023-02-06 11:32:18,968 INFO (NioXnio.java:58)- XNIO NIO Implementation Version 3.8.7.Final
+2023-02-06 11:32:19,002 INFO (Version.java:52)- JBoss Threads version 3.1.0.Final
+2023-02-06 11:32:19,055 INFO (UndertowWebServer.java:119)- Undertow started on port(s) 9999 (http)
+2023-02-06 11:32:19,058 INFO (SchedulerFactoryBean.java:729)- Starting Quartz Scheduler now
+2023-02-06 11:32:19,058 INFO (QuartzScheduler.java:547)- Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-02-06 11:32:19,077 INFO (StartupInfoLogger.java:61)- Started DealApplication in 13.642 seconds (JVM running for 22.652)
+2023-02-06 11:32:20,213 INFO (ServletContextImpl.java:388)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-06 11:32:20,214 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-02-06 11:32:20,217 INFO (FrameworkServlet.java:547)- Completed initialization in 3 ms
+2023-02-06 11:32:20,218 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-02-06 11:32:20,529 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-02-06 11:35:58,087 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE (username = ?) limit 1
+2023-02-06 11:35:58,132 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 15707473510(String)
+2023-02-06 11:35:58,205 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 11:36:01,229 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-06 11:36:01,229 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 11:36:01,245 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-06 11:36:05,909 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 11:36:05,911 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 11:36:05,913 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 11:36:07,316 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 11:36:07,317 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 11:36:07,319 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 11:36:07,939 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 11:36:07,939 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 11:36:07,941 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 11:36:09,226 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 11:36:09,226 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 11:36:09,228 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 14:56:23,515 WARN (HikariPool.java:788)- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h20m32s872ms229µs200ns).
+2023-02-06 14:56:23,623 ERROR (CommonExceptionHandler.java:38)- nested exception is org.apache.ibatis.builder.BuilderException: Error evaluating expression 'condition.workDirection != null'. Cause: org.apache.ibatis.ognl.NoSuchPropertyException: com.deng.dto.req.GoodsSearchReqDTO.workDirection
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.builder.BuilderException: Error evaluating expression 'condition.workDirection != null'. Cause: org.apache.ibatis.ognl.NoSuchPropertyException: com.deng.dto.req.GoodsSearchReqDTO.workDirection
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy128.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy130.searchGoods(Unknown Source)
+	at com.deng.service.impl.DbSearchServiceImpl.search(DbSearchServiceImpl.java:40)
+	at com.deng.controller.front.SearchController.searchGoods(SearchController.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.jrHandle(ServletInitialHandler.java:40001)
+	at org.zeroturnaround.javarebel.integration.servlet.undertow.cbp.ServletInitialHandlerCBP.handleRequest(ServletInitialHandlerCBP.java:131)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.builder.BuilderException: Error evaluating expression 'condition.workDirection != null'. Cause: org.apache.ibatis.ognl.NoSuchPropertyException: com.deng.dto.req.GoodsSearchReqDTO.workDirection
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:48)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:34)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:39)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:305)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:69)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy169.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 90 common frames omitted
+Caused by: org.apache.ibatis.ognl.NoSuchPropertyException: com.deng.dto.req.GoodsSearchReqDTO.workDirection
+	at org.apache.ibatis.ognl.ObjectPropertyAccessor.getProperty(ObjectPropertyAccessor.java:164)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:3356)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:121)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
+	at org.apache.ibatis.ognl.ASTChain.getValueBody(ASTChain.java:141)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:50)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:586)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:550)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:46)
+	... 108 common frames omitted
+2023-02-06 14:56:23,629 WARN (AbstractHandlerExceptionResolver.java:208)- Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.builder.BuilderException: Error evaluating expression 'condition.workDirection != null'. Cause: org.apache.ibatis.ognl.NoSuchPropertyException: com.deng.dto.req.GoodsSearchReqDTO.workDirection]
+2023-02-06 14:56:46,987 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 14:56:46,988 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 14:56:46,993 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 15:02:45,167 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 15:02:45,167 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 15:02:45,168 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 15:14:07,340 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 15:14:07,341 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 15:14:07,345 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 15:14:24,372 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 15:14:24,372 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 15:14:24,373 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 15:14:44,949 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 15:14:44,950 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 15:14:44,953 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 15:14:56,178 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 15:14:56,179 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 15:14:56,184 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 15:17:06,352 INFO (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-06 15:17:06,369 INFO (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2023-02-06 15:17:06,373 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.deng.dao.mapper]' package. Please check your configuration.
+2023-02-06 16:36:54,441 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-06 16:36:54,446 INFO (Undertow.java:259)- stopping server: Undertow - 2.2.22.Final
+2023-02-06 16:36:54,454 INFO (ServletContextImpl.java:388)- Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-06 16:36:54,497 INFO (SchedulerFactoryBean.java:847)- Shutting down Quartz Scheduler
+2023-02-06 16:36:54,497 INFO (QuartzScheduler.java:666)- Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-02-06 16:36:54,498 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-06 16:36:54,498 INFO (QuartzScheduler.java:740)- Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-02-06 16:36:54,696 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-02-06 16:36:54,705 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-02-06 17:15:30,336 INFO (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-02-06 17:15:30,338 INFO (StartupInfoLogger.java:55)- Starting DealApplication using Java 1.8.0_291 on DESKTOP-JTJ35B8 with PID 11788 (D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal\target\classes started by shinelon in D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal)
+2023-02-06 17:15:30,339 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-06 17:15:30,339 INFO (SpringApplication.java:637)- The following 1 profile is active: "dev"
+2023-02-06 17:15:30,574 INFO (DeferredLog.java:255)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-06 17:15:30,574 INFO (DeferredLog.java:255)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-06 17:15:31,865 INFO (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-06 17:15:31,867 INFO (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-06 17:15:31,895 INFO (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2023-02-06 17:15:32,853 WARN (Bootstrap.java:68)- UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-02-06 17:15:32,906 INFO (ServletContextImpl.java:388)- Initializing Spring embedded WebApplicationContext
+2023-02-06 17:15:32,907 INFO (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 2332 ms
+2023-02-06 17:15:35,645 INFO (DefaultSecurityFilterChain.java:55)- Will secure org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest$EndpointRequestMatcher@5d458264 with [org.springframework.security.web.session.DisableEncodeUrlFilter@534b74e1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56fe54ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@47a88707, org.springframework.security.web.header.HeaderWriterFilter@22a6ec13, org.springframework.security.web.authentication.logout.LogoutFilter@7b1d57cc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1a5d3f51, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44bb5af7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1db8ce48, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55ba66, org.springframework.security.web.session.SessionManagementFilter@3d6a3b77, org.springframework.security.web.access.ExceptionTranslationFilter@60bcb581, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@716cd449]
+2023-02-06 17:15:36,705 INFO (StdSchedulerFactory.java:1220)- Using default implementation for ThreadExecutor
+2023-02-06 17:15:36,716 INFO (SchedulerSignalerImpl.java:61)- Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-06 17:15:36,717 INFO (QuartzScheduler.java:229)- Quartz Scheduler v.2.3.2 created.
+2023-02-06 17:15:36,717 INFO (RAMJobStore.java:155)- RAMJobStore initialized.
+2023-02-06 17:15:36,718 INFO (QuartzScheduler.java:294)- Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-06 17:15:36,718 INFO (StdSchedulerFactory.java:1374)- Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-02-06 17:15:36,718 INFO (StdSchedulerFactory.java:1378)- Quartz scheduler version: 2.3.2
+2023-02-06 17:15:36,719 INFO (QuartzScheduler.java:2293)- JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@316e10a2
+2023-02-06 17:15:37,884 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2023-02-06 17:15:37,889 INFO (EndpointLinksResolver.java:58)- Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-02-06 17:15:37,986 INFO (Undertow.java:120)- starting server: Undertow - 2.2.22.Final
+2023-02-06 17:15:37,993 INFO (Xnio.java:95)- XNIO version 3.8.7.Final
+2023-02-06 17:15:37,999 INFO (NioXnio.java:58)- XNIO NIO Implementation Version 3.8.7.Final
+2023-02-06 17:15:38,021 INFO (Version.java:52)- JBoss Threads version 3.1.0.Final
+2023-02-06 17:15:38,060 INFO (UndertowWebServer.java:119)- Undertow started on port(s) 9999 (http)
+2023-02-06 17:15:38,062 INFO (SchedulerFactoryBean.java:729)- Starting Quartz Scheduler now
+2023-02-06 17:15:38,063 INFO (QuartzScheduler.java:547)- Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-02-06 17:15:38,077 INFO (StartupInfoLogger.java:61)- Started DealApplication in 8.279 seconds (JVM running for 9.557)
+2023-02-06 17:15:38,681 INFO (ServletContextImpl.java:388)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-06 17:15:38,681 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-02-06 17:15:38,684 INFO (FrameworkServlet.java:547)- Completed initialization in 3 ms
+2023-02-06 17:15:38,689 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-02-06 17:15:39,023 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-02-06 17:20:46,490 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-06 17:20:46,514 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:20:46,541 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-06 17:21:19,352 INFO (LocalDevToolsAutoConfiguration.java:213)- Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-02-06 17:21:19,358 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-06 17:21:19,360 INFO (Undertow.java:259)- stopping server: Undertow - 2.2.22.Final
+2023-02-06 17:21:19,363 INFO (ServletContextImpl.java:388)- Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-06 17:21:19,371 INFO (SchedulerFactoryBean.java:847)- Shutting down Quartz Scheduler
+2023-02-06 17:21:19,372 INFO (QuartzScheduler.java:666)- Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-02-06 17:21:19,372 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-06 17:21:19,372 INFO (QuartzScheduler.java:740)- Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-02-06 17:21:19,493 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-02-06 17:21:19,501 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-02-06 17:21:19,769 INFO (StartupInfoLogger.java:55)- Starting DealApplication using Java 1.8.0_291 on DESKTOP-JTJ35B8 with PID 11788 (D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal\target\classes started by shinelon in D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal)
+2023-02-06 17:21:19,770 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-06 17:21:19,770 INFO (SpringApplication.java:637)- The following 1 profile is active: "dev"
+2023-02-06 17:21:20,196 INFO (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-06 17:21:20,196 INFO (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-06 17:21:20,203 INFO (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2023-02-06 17:21:20,419 WARN (Bootstrap.java:68)- UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-02-06 17:21:20,420 INFO (ServletContextImpl.java:388)- Initializing Spring embedded WebApplicationContext
+2023-02-06 17:21:20,420 INFO (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 648 ms
+2023-02-06 17:21:20,982 WARN (AbstractApplicationContext.java:591)- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeController' defined in file [D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal\target\classes\com\deng\controller\front\HomeController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeServiceImpl' defined in file [D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal\target\classes\com\deng\service\impl\HomeServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.deng.manage.cache.HomeGoodsCacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-02-06 17:21:20,992 INFO (ConditionEvaluationReportLoggingListener.java:136)- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-06 17:21:21,022 ERROR (LoggingFailureAnalysisReporter.java:40)- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.deng.service.impl.HomeServiceImpl required a bean of type 'com.deng.manage.cache.HomeGoodsCacheManager' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.deng.manage.cache.HomeGoodsCacheManager' in your configuration.
+
+2023-02-06 17:21:22,478 INFO (StartupInfoLogger.java:55)- Starting DealApplication using Java 1.8.0_291 on DESKTOP-JTJ35B8 with PID 11788 (D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal\target\classes started by shinelon in D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal)
+2023-02-06 17:21:22,478 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-06 17:21:22,478 INFO (SpringApplication.java:637)- The following 1 profile is active: "dev"
+2023-02-06 17:21:22,818 INFO (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-06 17:21:22,818 INFO (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-06 17:21:22,825 INFO (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2023-02-06 17:21:23,024 WARN (Bootstrap.java:68)- UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-02-06 17:21:23,026 INFO (ServletContextImpl.java:388)- Initializing Spring embedded WebApplicationContext
+2023-02-06 17:21:23,026 INFO (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 546 ms
+2023-02-06 17:21:23,614 INFO (DefaultSecurityFilterChain.java:55)- Will secure org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest$EndpointRequestMatcher@464757a with [org.springframework.security.web.session.DisableEncodeUrlFilter@60abf9b8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39d401bf, org.springframework.security.web.context.SecurityContextPersistenceFilter@59c31235, org.springframework.security.web.header.HeaderWriterFilter@248236f4, org.springframework.security.web.authentication.logout.LogoutFilter@1195a92a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4fdeded0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53196877, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6619c176, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c5700b, org.springframework.security.web.session.SessionManagementFilter@141447bf, org.springframework.security.web.access.ExceptionTranslationFilter@791e79db, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7fb4c250]
+2023-02-06 17:21:24,071 INFO (StdSchedulerFactory.java:1220)- Using default implementation for ThreadExecutor
+2023-02-06 17:21:24,072 INFO (SchedulerSignalerImpl.java:61)- Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-06 17:21:24,072 INFO (QuartzScheduler.java:229)- Quartz Scheduler v.2.3.2 created.
+2023-02-06 17:21:24,072 INFO (RAMJobStore.java:155)- RAMJobStore initialized.
+2023-02-06 17:21:24,072 INFO (QuartzScheduler.java:294)- Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-06 17:21:24,072 INFO (StdSchedulerFactory.java:1374)- Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-02-06 17:21:24,072 INFO (StdSchedulerFactory.java:1378)- Quartz scheduler version: 2.3.2
+2023-02-06 17:21:24,073 INFO (QuartzScheduler.java:2293)- JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4dd18334
+2023-02-06 17:21:24,190 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2023-02-06 17:21:24,193 INFO (EndpointLinksResolver.java:58)- Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-02-06 17:21:24,219 INFO (Undertow.java:120)- starting server: Undertow - 2.2.22.Final
+2023-02-06 17:21:24,225 INFO (UndertowWebServer.java:119)- Undertow started on port(s) 9999 (http)
+2023-02-06 17:21:24,225 INFO (SchedulerFactoryBean.java:729)- Starting Quartz Scheduler now
+2023-02-06 17:21:24,225 INFO (QuartzScheduler.java:547)- Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-02-06 17:21:24,233 INFO (StartupInfoLogger.java:61)- Started DealApplication in 1.79 seconds (JVM running for 355.714)
+2023-02-06 17:21:24,235 INFO (ConditionEvaluationDeltaLoggingListener.java:63)- Condition evaluation unchanged
+2023-02-06 17:22:55,550 INFO (ServletContextImpl.java:388)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-06 17:22:55,551 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-02-06 17:22:55,553 INFO (FrameworkServlet.java:547)- Completed initialization in 1 ms
+2023-02-06 17:22:55,568 INFO (HikariDataSource.java:110)- HikariPool-2 - Starting...
+2023-02-06 17:22:55,578 INFO (HikariDataSource.java:123)- HikariPool-2 - Start completed.
+2023-02-06 17:22:55,578 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-06 17:22:55,579 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:22:55,580 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-06 17:23:06,493 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: INSERT INTO goods_info ( category_id, category_name, pic_url, uid, nick_name, goods_price, goods_title, goods_content, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-02-06 17:23:06,494 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 1(Long), 衣物(String), /image/2023\02\06\b99f68fa5f224f75f4fc8ba2e4445324.jfif(String), 3(Long), 15707473510(String), 10(BigDecimal), 袜子(String), 臭袜子一双，速买！(String), 2023-02-06T17:23:06.488(LocalDateTime), 2023-02-06T17:23:06.488(LocalDateTime)
+2023-02-06 17:23:06,521 DEBUG (BaseJdbcLogger.java:137)- <==    Updates: 1
+2023-02-06 17:31:20,818 INFO (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-02-06 17:31:20,821 INFO (StartupInfoLogger.java:55)- Starting DealApplication using Java 1.8.0_291 on DESKTOP-JTJ35B8 with PID 12756 (D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal\target\classes started by shinelon in D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal)
+2023-02-06 17:31:20,822 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-06 17:31:20,822 INFO (SpringApplication.java:637)- The following 1 profile is active: "dev"
+2023-02-06 17:31:21,071 INFO (DeferredLog.java:255)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-06 17:31:21,071 INFO (DeferredLog.java:255)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-06 17:31:22,296 INFO (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-06 17:31:22,298 INFO (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-06 17:31:22,323 INFO (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2023-02-06 17:31:23,198 WARN (Bootstrap.java:68)- UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-02-06 17:31:23,222 INFO (ServletContextImpl.java:388)- Initializing Spring embedded WebApplicationContext
+2023-02-06 17:31:23,222 INFO (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 2150 ms
+2023-02-06 17:31:25,924 INFO (DefaultSecurityFilterChain.java:55)- Will secure org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest$EndpointRequestMatcher@4de291b7 with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d004cac, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@fcc2c20, org.springframework.security.web.context.SecurityContextPersistenceFilter@3f30dd8a, org.springframework.security.web.header.HeaderWriterFilter@2a08a932, org.springframework.security.web.authentication.logout.LogoutFilter@1c885775, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@28f79943, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5885c0e1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32cfc2e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f3592d3, org.springframework.security.web.session.SessionManagementFilter@1490cda7, org.springframework.security.web.access.ExceptionTranslationFilter@4de3dab0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@63f854b0]
+2023-02-06 17:31:27,000 INFO (StdSchedulerFactory.java:1220)- Using default implementation for ThreadExecutor
+2023-02-06 17:31:27,010 INFO (SchedulerSignalerImpl.java:61)- Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-06 17:31:27,011 INFO (QuartzScheduler.java:229)- Quartz Scheduler v.2.3.2 created.
+2023-02-06 17:31:27,012 INFO (RAMJobStore.java:155)- RAMJobStore initialized.
+2023-02-06 17:31:27,012 INFO (QuartzScheduler.java:294)- Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-06 17:31:27,012 INFO (StdSchedulerFactory.java:1374)- Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-02-06 17:31:27,013 INFO (StdSchedulerFactory.java:1378)- Quartz scheduler version: 2.3.2
+2023-02-06 17:31:27,013 INFO (QuartzScheduler.java:2293)- JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5f08b23f
+2023-02-06 17:31:28,096 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2023-02-06 17:31:28,101 INFO (EndpointLinksResolver.java:58)- Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-02-06 17:31:28,200 INFO (Undertow.java:120)- starting server: Undertow - 2.2.22.Final
+2023-02-06 17:31:28,207 INFO (Xnio.java:95)- XNIO version 3.8.7.Final
+2023-02-06 17:31:28,213 INFO (NioXnio.java:58)- XNIO NIO Implementation Version 3.8.7.Final
+2023-02-06 17:31:28,238 INFO (Version.java:52)- JBoss Threads version 3.1.0.Final
+2023-02-06 17:31:28,279 INFO (UndertowWebServer.java:119)- Undertow started on port(s) 9999 (http)
+2023-02-06 17:31:28,280 INFO (SchedulerFactoryBean.java:729)- Starting Quartz Scheduler now
+2023-02-06 17:31:28,281 INFO (QuartzScheduler.java:547)- Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-02-06 17:31:28,296 INFO (StartupInfoLogger.java:61)- Started DealApplication in 8.099 seconds (JVM running for 9.462)
+2023-02-06 17:31:28,802 INFO (ServletContextImpl.java:388)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-06 17:31:28,802 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-02-06 17:31:28,804 INFO (FrameworkServlet.java:547)- Completed initialization in 2 ms
+2023-02-06 17:31:28,805 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-02-06 17:31:28,979 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-02-06 17:31:50,743 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:31:50,771 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:31:50,793 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 0
+2023-02-06 17:33:22,635 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:33:22,636 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:33:22,642 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:33:22,650 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:33:22,674 ERROR (CommonExceptionHandler.java:38)- nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='ew.paramNameValuePairs.MPGENVAL1', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='ew.paramNameValuePairs.MPGENVAL1', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy122.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy124.selectList(Unknown Source)
+	at com.deng.manage.cache.HomeGoodsCacheManager.listHomeGoods(HomeGoodsCacheManager.java:55)
+	at com.deng.service.impl.HomeServiceImpl.listHomeGoods(HomeServiceImpl.java:28)
+	at com.deng.controller.front.HomeController.listHomeBooks(HomeController.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='ew.paramNameValuePairs.MPGENVAL1', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.setParameters(MybatisParameterHandler.java:234)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at com.sun.proxy.$Proxy162.parameterize(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy161.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 89 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:75)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.setParameters(MybatisParameterHandler.java:232)
+	... 113 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:75)
+	at org.apache.ibatis.type.UnknownTypeHandler.setNonNullParameter(UnknownTypeHandler.java:67)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	... 114 common frames omitted
+Caused by: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setObject(ClientPreparedStatement.java:1634)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setObject(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:67)
+	at com.sun.proxy.$Proxy163.setObject(Unknown Source)
+	at org.apache.ibatis.type.ObjectTypeHandler.setNonNullParameter(ObjectTypeHandler.java:31)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	... 116 common frames omitted
+Caused by: com.mysql.cj.exceptions.WrongArgumentException: Invalid argument value: java.io.NotSerializableException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeQueryBindings.setSerializableObject(NativeQueryBindings.java:552)
+	at com.mysql.cj.NativeQueryBindings.setObject(NativeQueryBindings.java:509)
+	at com.mysql.cj.NativeQueryBindings.setObject(NativeQueryBindings.java:480)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setObject(ClientPreparedStatement.java:1632)
+	... 125 common frames omitted
+Caused by: java.io.NotSerializableException: java.util.stream.ReferencePipeline$3
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at com.mysql.cj.NativeQueryBindings.setSerializableObject(NativeQueryBindings.java:541)
+	... 128 common frames omitted
+2023-02-06 17:33:22,676 WARN (AbstractHandlerExceptionResolver.java:208)- Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='ew.paramNameValuePairs.MPGENVAL1', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException]
+2023-02-06 17:34:05,682 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:34:05,685 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:34:05,690 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:36:00,454 WARN (HikariPool.java:788)- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m1s367ms172µs600ns).
+2023-02-06 17:36:00,458 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:36:00,461 ERROR (CommonExceptionHandler.java:38)- nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='ew.paramNameValuePairs.MPGENVAL1', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='ew.paramNameValuePairs.MPGENVAL1', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy122.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy124.selectList(Unknown Source)
+	at com.deng.manage.cache.HomeGoodsCacheManager.listHomeGoods(HomeGoodsCacheManager.java:55)
+	at com.deng.service.impl.HomeServiceImpl.listHomeGoods(HomeServiceImpl.java:28)
+	at com.deng.controller.front.HomeController.listHomeBooks(HomeController.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:497)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
+	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='ew.paramNameValuePairs.MPGENVAL1', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.setParameters(MybatisParameterHandler.java:234)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at com.sun.proxy.$Proxy162.parameterize(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy161.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 89 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:75)
+	at com.baomidou.mybatisplus.core.MybatisParameterHandler.setParameters(MybatisParameterHandler.java:232)
+	... 113 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:75)
+	at org.apache.ibatis.type.UnknownTypeHandler.setNonNullParameter(UnknownTypeHandler.java:67)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	... 114 common frames omitted
+Caused by: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setObject(ClientPreparedStatement.java:1634)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.setObject(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:67)
+	at com.sun.proxy.$Proxy163.setObject(Unknown Source)
+	at org.apache.ibatis.type.ObjectTypeHandler.setNonNullParameter(ObjectTypeHandler.java:31)
+	at org.apache.ibatis.type.BaseTypeHandler.setParameter(BaseTypeHandler.java:73)
+	... 116 common frames omitted
+Caused by: com.mysql.cj.exceptions.WrongArgumentException: Invalid argument value: java.io.NotSerializableException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeQueryBindings.setSerializableObject(NativeQueryBindings.java:552)
+	at com.mysql.cj.NativeQueryBindings.setObject(NativeQueryBindings.java:509)
+	at com.mysql.cj.NativeQueryBindings.setObject(NativeQueryBindings.java:480)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setObject(ClientPreparedStatement.java:1632)
+	... 125 common frames omitted
+Caused by: java.io.NotSerializableException: java.util.stream.ReferencePipeline$3
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at com.mysql.cj.NativeQueryBindings.setSerializableObject(NativeQueryBindings.java:541)
+	... 128 common frames omitted
+2023-02-06 17:36:00,470 WARN (AbstractHandlerExceptionResolver.java:208)- Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='ew.paramNameValuePairs.MPGENVAL1', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Cannot convert class java.util.stream.ReferencePipeline$3 to SQL type requested due to com.mysql.cj.exceptions.WrongArgumentException - Invalid argument value: java.io.NotSerializableException]
+2023-02-06 17:36:00,507 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-06 17:36:00,508 INFO (Undertow.java:259)- stopping server: Undertow - 2.2.22.Final
+2023-02-06 17:36:00,511 INFO (ServletContextImpl.java:388)- Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-06 17:36:00,520 INFO (SchedulerFactoryBean.java:847)- Shutting down Quartz Scheduler
+2023-02-06 17:36:00,521 INFO (QuartzScheduler.java:666)- Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2023-02-06 17:36:00,521 INFO (QuartzScheduler.java:585)- Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2023-02-06 17:36:00,521 INFO (QuartzScheduler.java:740)- Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2023-02-06 17:36:00,744 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2023-02-06 17:36:00,753 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2023-02-06 17:36:21,287 INFO (Version.java:21)- HV000001: Hibernate Validator 6.2.5.Final
+2023-02-06 17:36:21,359 INFO (StartupInfoLogger.java:55)- Starting DealApplication using Java 1.8.0_291 on DESKTOP-JTJ35B8 with PID 6632 (D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal\target\classes started by shinelon in D:\idea\IntelliJ IDEA 2021.1.3\code\98-project\my-project\deal)
+2023-02-06 17:36:21,360 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-06 17:36:21,361 INFO (SpringApplication.java:637)- The following 1 profile is active: "dev"
+2023-02-06 17:36:21,679 INFO (DeferredLog.java:255)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-06 17:36:21,680 INFO (DeferredLog.java:255)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-06 17:36:23,459 INFO (RepositoryConfigurationDelegate.java:262)- Multiple Spring Data modules found, entering strict repository configuration mode
+2023-02-06 17:36:23,462 INFO (RepositoryConfigurationDelegate.java:132)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-02-06 17:36:23,496 INFO (RepositoryConfigurationDelegate.java:201)- Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2023-02-06 17:36:24,652 WARN (Bootstrap.java:68)- UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-02-06 17:36:24,680 INFO (ServletContextImpl.java:388)- Initializing Spring embedded WebApplicationContext
+2023-02-06 17:36:24,681 INFO (ServletWebServerApplicationContext.java:292)- Root WebApplicationContext: initialization completed in 3000 ms
+2023-02-06 17:36:27,891 INFO (DefaultSecurityFilterChain.java:55)- Will secure org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest$EndpointRequestMatcher@735dc133 with [org.springframework.security.web.session.DisableEncodeUrlFilter@57330423, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2257590f, org.springframework.security.web.context.SecurityContextPersistenceFilter@21d561c9, org.springframework.security.web.header.HeaderWriterFilter@3bbb3c84, org.springframework.security.web.authentication.logout.LogoutFilter@516370c1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3f9ee527, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bef33e7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5bd191c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c3e5e3c, org.springframework.security.web.session.SessionManagementFilter@273e622f, org.springframework.security.web.access.ExceptionTranslationFilter@5a8149f6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@154cbb46]
+2023-02-06 17:36:29,123 INFO (StdSchedulerFactory.java:1220)- Using default implementation for ThreadExecutor
+2023-02-06 17:36:29,138 INFO (SchedulerSignalerImpl.java:61)- Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-06 17:36:29,138 INFO (QuartzScheduler.java:229)- Quartz Scheduler v.2.3.2 created.
+2023-02-06 17:36:29,138 INFO (RAMJobStore.java:155)- RAMJobStore initialized.
+2023-02-06 17:36:29,140 INFO (QuartzScheduler.java:294)- Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-06 17:36:29,141 INFO (StdSchedulerFactory.java:1374)- Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-02-06 17:36:29,141 INFO (StdSchedulerFactory.java:1378)- Quartz scheduler version: 2.3.2
+2023-02-06 17:36:29,141 INFO (QuartzScheduler.java:2293)- JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@73983f07
+2023-02-06 17:36:30,147 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2023-02-06 17:36:30,153 INFO (EndpointLinksResolver.java:58)- Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-02-06 17:36:30,268 INFO (Undertow.java:120)- starting server: Undertow - 2.2.22.Final
+2023-02-06 17:36:30,281 INFO (Xnio.java:95)- XNIO version 3.8.7.Final
+2023-02-06 17:36:30,289 INFO (NioXnio.java:58)- XNIO NIO Implementation Version 3.8.7.Final
+2023-02-06 17:36:30,323 INFO (Version.java:52)- JBoss Threads version 3.1.0.Final
+2023-02-06 17:36:30,369 INFO (UndertowWebServer.java:119)- Undertow started on port(s) 9999 (http)
+2023-02-06 17:36:30,371 INFO (SchedulerFactoryBean.java:729)- Starting Quartz Scheduler now
+2023-02-06 17:36:30,371 INFO (QuartzScheduler.java:547)- Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-02-06 17:36:30,389 INFO (StartupInfoLogger.java:61)- Started DealApplication in 9.915 seconds (JVM running for 14.879)
+2023-02-06 17:36:30,806 INFO (ServletContextImpl.java:388)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-06 17:36:30,806 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2023-02-06 17:36:30,809 INFO (FrameworkServlet.java:547)- Completed initialization in 3 ms
+2023-02-06 17:36:31,525 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2023-02-06 17:36:31,741 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2023-02-06 17:36:54,091 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:36:54,141 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:36:54,192 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:36:54,201 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:36:54,202 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:36:54,208 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:43:39,275 WARN (HikariPool.java:788)- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s419ms233µs600ns).
+2023-02-06 17:43:39,279 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:43:39,280 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:43:39,287 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:43:39,287 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:43:39,288 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:43:39,289 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:43:39,290 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:43:39,291 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:43:39,300 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:43:39,302 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:43:39,303 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:43:39,305 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:43:39,311 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:43:39,313 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:43:39,315 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:43:39,317 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:43:39,318 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:43:39,321 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:43:43,810 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:43:43,811 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:43:43,813 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:43:43,815 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:43:43,816 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:43:43,818 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:47:27,629 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:47:27,630 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:47:27,633 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:47:27,634 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:47:27,634 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:47:27,636 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:47:42,990 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:47:42,992 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:47:42,993 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:47:42,994 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:47:42,994 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:47:42,995 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:47:48,719 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:47:48,719 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:47:48,720 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:47:48,723 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:47:48,725 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:47:48,727 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:48:14,898 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:48:14,899 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:48:14,900 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:48:14,902 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:48:14,902 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:48:14,905 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:48:19,978 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:48:19,978 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:48:19,980 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:48:19,982 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:48:19,983 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:48:19,985 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:48:28,875 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:48:28,876 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:48:28,877 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:48:28,879 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:48:28,879 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:48:28,881 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:48:31,021 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:48:31,022 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:48:31,023 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:48:31,024 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:48:31,025 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:48:31,026 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:48:35,469 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 17:48:35,470 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:48:35,471 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:48:35,473 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 17:48:35,474 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 17:48:35,475 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 17:55:18,772 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-06 17:55:18,773 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 17:55:18,775 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-06 18:00:06,134 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-06 18:00:06,136 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 18:00:06,139 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-06 18:00:26,976 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: INSERT INTO goods_info ( category_id, category_name, pic_url, uid, nick_name, goods_price, goods_title, goods_content, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-02-06 18:00:26,977 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 1(Long), 衣物(String), /image/2023\02\06\380436778a51b17fc0321ad7f5787cfb.jfif(String), 3(Long), 15707473510(String), 2(BigDecimal), 帽子(String), 帽子(String), 2023-02-06T18:00:26.972(LocalDateTime), 2023-02-06T18:00:26.972(LocalDateTime)
+2023-02-06 18:00:27,038 DEBUG (BaseJdbcLogger.java:137)- <==    Updates: 1
+2023-02-06 18:00:29,392 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 18:00:29,392 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 18:00:29,394 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 18:00:29,396 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?))
+2023-02-06 18:00:29,397 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long)
+2023-02-06 18:00:29,399 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 18:01:14,599 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 18:01:14,599 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 18:01:14,604 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 2
+2023-02-06 18:01:14,606 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?))
+2023-02-06 18:01:14,607 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long)
+2023-02-06 18:01:14,616 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 2
+2023-02-06 18:02:27,225 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 18:02:27,225 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 18:02:27,226 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 2
+2023-02-06 18:02:27,229 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?))
+2023-02-06 18:02:27,229 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long)
+2023-02-06 18:02:27,230 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 2
+2023-02-06 18:03:29,184 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-06 18:03:29,189 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 18:03:29,198 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-06 18:03:36,273 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-06 18:03:36,274 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 18:03:36,292 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-06 18:03:58,124 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: INSERT INTO goods_info ( category_id, category_name, pic_url, uid, nick_name, goods_price, goods_title, goods_content, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-02-06 18:03:58,125 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 1(Long), 衣物(String), /image/2023\02\06\4d6b0767f89e4d85eb851b35d2ede70a.jfif(String), 3(Long), 15707473510(String), 3(BigDecimal), 鞋子(String), 鞋子(String), 2023-02-06T18:03:58.123(LocalDateTime), 2023-02-06T18:03:58.123(LocalDateTime)
+2023-02-06 18:03:58,141 DEBUG (BaseJdbcLogger.java:137)- <==    Updates: 1
+2023-02-06 18:04:24,793 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 18:04:24,793 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 18:04:24,795 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 3
+2023-02-06 18:04:24,797 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?))
+2023-02-06 18:04:24,798 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long)
+2023-02-06 18:04:24,800 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 3
+2023-02-06 18:04:33,141 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,name,sort,create_time,update_time FROM goods_category
+2023-02-06 18:04:33,142 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 18:04:33,144 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 5
+2023-02-06 18:04:45,681 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: INSERT INTO goods_info ( category_id, category_name, pic_url, uid, nick_name, goods_price, goods_title, goods_content, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-02-06 18:04:45,682 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 1(Long), 衣物(String), /image/2023\02\06\aeb467ba4e67fcfaaa65335b39ae63d6.jpg(String), 3(Long), 15707473510(String), 100(BigDecimal), 衣服(String), 衣服(String), 2023-02-06T18:04:45.680(LocalDateTime), 2023-02-06T18:04:45.680(LocalDateTime)
+2023-02-06 18:04:45,701 DEBUG (BaseJdbcLogger.java:137)- <==    Updates: 1
+2023-02-06 18:05:05,478 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 18:05:05,479 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 18:05:05,481 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 18:05:05,482 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 18:05:05,483 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 18:05:05,485 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 18:05:17,030 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 18:05:17,030 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 18:05:17,039 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 18:05:17,040 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 18:05:17,040 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 18:05:17,042 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 18:34:34,227 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 18:34:34,228 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 18:34:34,234 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 18:34:34,237 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 18:34:34,237 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 18:34:34,239 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 18:34:49,022 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 18:34:49,023 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 18:34:49,024 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 18:34:49,026 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 18:34:49,027 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 18:34:49,028 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:34:47,874 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:34:47,875 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:34:47,878 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:34:47,879 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:34:47,880 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:34:47,881 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:40:58,682 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:40:58,683 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:40:58,684 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:40:58,687 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:40:58,688 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:40:58,690 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:41:42,278 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:41:42,279 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:41:42,280 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:41:42,282 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:41:42,283 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:41:42,284 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:43:45,796 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:43:45,796 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:43:45,797 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:43:45,798 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:43:45,799 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:43:45,801 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:44:03,022 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:44:03,022 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:44:03,024 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:44:03,025 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:44:03,026 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:44:03,027 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:45:39,864 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:45:39,865 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:45:39,866 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:45:39,868 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:45:39,869 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:45:39,870 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:46:52,207 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:46:52,208 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:46:52,209 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:46:52,211 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:46:52,212 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:46:52,213 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:47:10,238 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:47:10,239 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:47:10,241 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:47:10,247 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:47:10,247 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:47:10,249 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:47:13,594 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:47:13,595 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:47:13,596 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:47:13,597 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:47:13,598 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:47:13,600 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:48:42,383 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:48:42,384 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:48:42,385 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:48:42,386 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:48:42,386 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:48:42,388 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:49:18,644 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:49:18,644 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:49:18,645 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:49:18,647 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:49:18,647 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:49:18,649 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:49:40,328 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:49:40,329 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:49:40,330 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:49:40,332 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:49:40,333 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:49:40,334 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:50:24,439 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:50:24,440 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:50:24,441 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:50:24,443 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:50:24,443 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:50:24,445 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:50:40,560 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:50:40,560 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:50:40,561 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:50:40,563 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:50:40,564 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:50:40,565 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:50:47,474 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:50:47,475 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:50:47,476 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:50:47,477 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:50:47,478 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:50:47,479 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:50:50,433 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:50:50,434 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:50:50,435 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:50:50,466 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:50:50,467 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:50:50,469 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:51:57,389 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:51:57,389 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:51:57,391 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:51:57,393 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:51:57,394 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:51:57,395 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:52:11,082 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:52:11,083 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:52:11,083 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:52:11,085 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:52:11,085 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:52:11,086 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:53:28,954 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:53:28,955 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:53:28,956 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:53:28,958 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:53:28,959 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:53:28,961 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:53:31,491 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:53:31,492 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:53:31,493 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:53:31,495 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:53:31,496 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:53:31,497 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:53:52,536 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:53:52,537 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:53:52,538 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:53:52,539 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:53:52,540 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:53:52,541 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:55:36,956 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:55:36,957 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:55:36,957 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:55:36,959 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:55:36,960 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:55:36,961 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:56:31,154 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:56:31,154 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:56:31,155 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:56:31,156 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:56:31,157 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:56:31,160 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:58:14,693 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:58:14,693 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:58:14,695 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:58:14,695 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:58:14,696 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:58:14,697 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:58:16,617 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:58:16,618 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:58:16,619 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:58:16,620 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:58:16,621 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:58:16,622 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:58:57,454 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 22:58:57,455 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 22:58:57,456 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 22:58:57,458 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 22:58:57,458 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 22:58:57,459 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:02:51,077 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:02:51,078 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:02:51,081 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:02:51,083 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:02:51,083 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:02:51,085 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:03:20,847 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:03:20,848 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:03:20,850 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:03:20,853 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:03:20,854 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:03:20,857 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:03:56,869 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:03:56,869 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:03:56,870 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:03:56,871 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:03:56,872 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:03:56,873 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:04:46,229 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:04:46,230 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:04:46,231 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:04:46,232 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:04:46,232 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:04:46,233 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:06:56,362 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:06:56,363 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:06:56,364 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:06:56,366 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:06:56,366 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:06:56,368 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:07:57,718 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:07:57,719 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:07:57,720 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:07:57,722 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:07:57,722 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:07:57,723 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:08:07,322 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:08:07,326 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:08:07,327 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:08:07,329 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:08:07,330 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:08:07,332 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:08:12,345 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:08:12,346 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:08:12,347 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:08:12,348 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:08:12,349 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:08:12,350 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:09:33,700 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:09:33,700 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:09:33,700 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:09:33,702 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:09:33,703 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:09:33,704 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:09:48,776 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:09:48,777 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:09:48,778 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:09:48,779 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:09:48,779 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:09:48,781 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:10:09,817 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:10:09,818 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:10:09,819 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:10:09,820 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:10:09,821 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:10:09,822 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:11:52,342 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:11:52,343 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:11:52,344 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:11:52,345 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:11:52,345 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:11:52,346 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:12:19,167 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:12:19,168 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:12:19,170 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:12:19,172 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:12:19,173 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:12:19,174 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:12:39,204 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:12:39,205 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:12:39,205 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:12:39,206 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:12:39,207 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:12:39,208 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:14:08,806 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:14:08,806 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:14:08,808 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:14:08,808 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:14:08,809 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:14:08,810 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:16:24,555 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:16:24,556 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:16:24,557 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:16:24,558 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:16:24,559 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:16:24,559 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:17:38,763 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:17:38,763 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:17:38,764 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:17:38,766 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:17:38,766 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:17:38,768 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:18:47,627 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:18:47,628 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:18:47,629 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:18:47,631 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:18:47,631 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:18:47,632 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:19:13,836 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:19:13,837 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:19:13,838 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:19:13,839 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:19:13,839 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:19:13,841 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:20:31,078 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:20:31,079 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:20:31,080 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:20:31,081 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:20:31,081 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:20:31,081 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:24:25,428 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:24:25,428 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:24:25,429 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:24:25,430 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:24:25,431 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:24:25,433 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:24:36,210 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:24:36,210 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:24:36,211 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:24:36,212 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:24:36,213 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:24:36,213 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:29,332 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:26:29,333 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:26:29,333 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:29,335 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:26:29,335 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:26:29,337 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:30,807 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:26:30,808 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:26:30,809 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:30,810 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:26:30,810 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:26:30,811 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:32,371 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:26:32,372 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:26:32,372 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:32,373 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:26:32,374 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:26:32,385 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:35,683 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 23:26:35,684 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 23:26:35,688 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 23:26:37,439 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:26:37,440 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:26:37,441 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:37,442 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:26:37,442 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:26:37,443 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:37,961 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 23:26:37,961 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 23:26:37,963 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 23:26:39,911 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:26:39,911 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:26:39,912 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:39,913 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:26:39,913 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:26:39,914 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:41,232 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,username,password,salt,nick_name,user_photo,user_sex,account_balance,status,create_time,update_time FROM user_info WHERE id=?
+2023-02-06 23:26:41,233 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 3(Long)
+2023-02-06 23:26:41,234 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 1
+2023-02-06 23:26:47,586 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:26:47,586 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:26:47,587 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:47,588 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:26:47,588 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:26:47,589 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:51,226 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:26:51,227 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:26:51,228 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:26:51,229 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:26:51,230 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:26:51,231 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:27:25,778 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:27:25,778 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:27:25,779 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:27:25,780 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:27:25,780 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:27:25,781 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:27:59,497 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:27:59,498 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:27:59,499 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:27:59,500 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:27:59,501 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:27:59,503 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:28:04,714 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:28:04,714 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:28:04,714 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:28:04,715 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:28:04,716 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:28:04,716 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:28:40,314 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:28:40,315 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:28:40,316 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:28:40,318 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:28:40,319 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:28:40,321 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:29:32,030 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:29:32,031 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:29:32,032 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:29:32,033 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:29:32,034 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:29:32,036 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:30:44,178 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:30:44,179 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:30:44,180 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:30:44,181 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:30:44,182 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:30:44,184 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:32:24,211 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:32:24,212 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:32:24,219 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:32:24,221 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:32:24,222 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:32:24,224 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:33:43,429 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:33:43,430 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:33:43,431 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:33:43,433 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:33:43,435 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:33:43,437 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:36:32,499 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:36:32,500 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:36:32,502 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:36:32,503 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:36:32,503 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:36:32,504 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:37:33,797 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:37:33,798 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:37:33,799 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:37:33,800 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:37:33,801 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:37:33,802 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:37:57,759 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:37:57,760 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:37:57,760 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:37:57,762 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:37:57,762 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:37:57,763 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:38:03,998 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:38:03,998 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:38:03,999 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:38:04,000 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:38:04,001 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:38:04,002 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:38:05,979 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:38:05,980 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:38:05,980 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:38:05,982 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:38:05,982 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:38:05,983 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:39:10,122 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:39:10,123 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:39:10,124 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:39:10,126 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:39:10,126 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:39:10,127 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:39:12,566 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:39:12,567 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:39:12,567 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:39:12,568 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:39:12,569 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:39:12,570 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:39:46,933 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:39:46,933 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:39:46,934 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:39:46,935 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:39:46,935 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:39:46,936 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:41:21,080 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:41:21,081 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:41:21,081 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:41:21,083 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:41:21,083 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:41:21,084 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:42:10,235 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:42:10,237 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:42:10,237 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:42:10,239 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:42:10,239 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:42:10,241 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:42:48,542 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:42:48,543 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:42:48,544 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:42:48,545 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:42:48,546 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:42:48,549 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:43:24,578 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:43:24,579 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:43:24,579 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:43:24,580 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:43:24,582 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:43:24,583 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:44:49,994 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:44:49,994 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:44:49,995 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:44:49,995 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:44:49,996 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:44:49,997 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:52:26,967 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:52:26,968 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:52:26,969 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:52:26,970 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:52:26,971 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:52:26,972 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:54:53,853 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:54:53,854 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:54:53,855 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:54:53,856 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:54:53,857 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:54:53,858 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:57:53,891 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:57:53,891 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:57:53,892 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:57:53,893 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:57:53,894 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:57:53,896 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:58:08,286 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:58:08,286 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:58:08,287 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:58:08,289 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:58:08,289 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:58:08,291 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:59:05,840 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:59:05,841 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:59:05,842 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:59:05,843 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:59:05,844 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:59:05,845 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:59:25,705 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,type,sort,goods_id,create_time,update_time FROM home_goods ORDER BY sort ASC
+2023-02-06 23:59:25,706 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 
+2023-02-06 23:59:25,707 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4
+2023-02-06 23:59:25,708 DEBUG (BaseJdbcLogger.java:137)- ==>  Preparing: SELECT id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,comment_count,create_time,update_time FROM goods_info WHERE (id IN (?,?,?,?))
+2023-02-06 23:59:25,708 DEBUG (BaseJdbcLogger.java:137)- ==> Parameters: 14316305963553(Long), 14316305963554(Long), 14316305963555(Long), 14316305963556(Long)
+2023-02-06 23:59:25,709 DEBUG (BaseJdbcLogger.java:137)- <==      Total: 4

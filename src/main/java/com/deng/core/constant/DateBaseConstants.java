@@ -1,5 +1,7 @@
 package com.deng.core.constant;
 
+import lombok.Getter;
+
 /**
  * @author :deng
  * @version :1.0
@@ -13,6 +15,25 @@ public final class DateBaseConstants {
         }
 
         public static final String COLUMN_USERNAME = "username";
+    }
+
+
+    @Getter
+    public enum CommonColumnEnum {
+        // id
+        ID("id"),
+        // sort
+        SORT("sort"),
+        // 创建时间
+        CREATE_TIME("create_time"),
+        // 修改时间
+        UPDATE_TIME("update_time");
+
+        private final String name;
+
+        CommonColumnEnum(String name) {
+            this.name = name;
+        }
     }
 
 
@@ -32,14 +53,13 @@ public final class DateBaseConstants {
         // 数量限制为500
         LIMIT_500("limit 500");
 
-
         private final String limitSql;
 
         LimitSQLtEnum(String limitSql) {
             this.limitSql = limitSql;
         }
 
-        public  String getLimitSql(){
+        public String getLimitSql() {
             return limitSql;
         }
     }
