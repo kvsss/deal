@@ -17,6 +17,14 @@ public final class DateBaseConstants {
         public static final String COLUMN_USERNAME = "username";
     }
 
+    public static final class GoodsInfoTable {
+        private GoodsInfoTable() {
+            throw new IllegalStateException(this.getClass().getName() + ":" + SystemConfigConstants.CONST_INSTANCE_EXCEPTION_MSG);
+        }
+
+        public static final String COLUMN_VISIT_COUNT = "visit_count";
+    }
+
 
     @Getter
     public enum CommonColumnEnum {
@@ -46,6 +54,8 @@ public final class DateBaseConstants {
         LIMIT_5("limit 5"),
         // 数量限制为10
         LIMIT_10("limit 10"),
+        // 数量限制为30
+        LIMIT_30("limit 30"),
         // 数量限制为50
         LIMIT_50("limit 50"),
         // 数量限制为100

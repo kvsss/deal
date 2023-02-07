@@ -39,5 +39,4 @@ public final class SystemConfigConstants {
      */
     public  static final String IMAGE_UPLOAD_DIRECTORY = "/image/";
 
-
 }

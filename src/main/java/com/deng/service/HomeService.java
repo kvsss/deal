@@ -18,4 +18,20 @@ public interface HomeService {
      * @return 返回视屏推荐信息
      */
     RestResp<List<HomeGoodsRespDTO>> listHomeGoods();
+
+
+    /**
+     * 商品点击榜查询
+     *
+     * @return 商品点击排行列表
+     */
+    RestResp<List<HomeGoodsRespDTO>> listVisitRankGoods();
+
+
+    /**
+     * 商品点击榜查询
+     *
+     * @return 商品点击排行列表
+     */
+    RestResp<List<HomeGoodsRespDTO>> listNewestRankGoods();
 }

@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 /**
  * @author :deng
  * @version :1.0
@@ -15,28 +17,40 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class GoodsInfoRespDTO {
+
     /**
-     * ID
+     * 商品ID
      */
     @Schema(description = "商品ID")
-    private Long id;
+    private Long goodsId;
 
-/*    *//**
-     * 类别ID
-     *//*
-    @Schema(description = "类别ID")
-    private Long categoryId;*/
-
-/*    *//**
-     * 类别名
-     *//*
-    @Schema(description = "类别名")
-    private String categoryName;*/
+    /**
+     * 商品封面地址
+     */
+    @Schema(description = "商品封面地址")
+    private String picUrl;
 
     /**
      * 商品名
      */
-    @Schema(description = "类别名")
-    private String goodsName;
+    @Schema(description = "商品名")
+    private String goodsTitle;
 
+    /**
+     * 商品描述
+     */
+    @Schema(description = "商品描述")
+    private String goodsContent;
+
+    /**
+     * 商品价格
+     */
+    @Schema(description = "商品价格")
+    private BigDecimal price;
+
+    /**
+     * 用户名
+     */
+    @Schema(description = "用户名")
+    private String nickName;
 }

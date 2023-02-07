@@ -23,7 +23,7 @@ import java.util.stream.Stream;
  * @description : 数据库搜索实现类
  * @since :1.8
  */
-@ConditionalOnProperty(prefix = "spring.elasticsearch", name = "enabled", havingValue = "false",matchIfMissing = true)
+@ConditionalOnProperty(prefix = "spring.elasticsearch", name = "enabled", havingValue = "false", matchIfMissing = true)
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -38,8 +38,16 @@ public class DbSearchServiceImpl implements SearchService {
         page.setSize(condition.getPageSize());
 
         List<GoodsInfo> goodsInfos = goodsInfoMapper.searchGoods(page, condition);
-        return  null;
+        return RestResp.ok(PageRespDTO.of(condition.getPageNum(), condition.getPageSize(), page.getTotal(),
+                goodsInfos.stream().map(goodsInfo -> GoodsInfoRespDTO.builder()
+                        .goodsId(goodsInfo.getId())
+                        .goodsContent(goodsInfo.getGoodsContent())
+                        .goodsTitle(goodsInfo.getGoodsTitle())
+                        .nickName(goodsInfo.getNickName())
+                        .picUrl(goodsInfo.getPicUrl())
+                        .price(goodsInfo.getGoodsPrice())
+                        .build()
+                ).collect(Collectors.toList())
+        ));
     }
-
-
 }

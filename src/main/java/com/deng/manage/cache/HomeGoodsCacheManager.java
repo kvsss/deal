@@ -41,14 +41,13 @@ public class HomeGoodsCacheManager {
     @Cacheable(cacheManager = CacheConstants.CAFFEINE_CACHE_MANAGER,
             value = CacheConstants.HOME_GOODS_CACHE_NAME)
     public List<HomeGoodsRespDTO> listHomeGoods() {
-
         QueryWrapper<HomeGoods> queryWrapper = new QueryWrapper<>();
         // 优先级排序
         queryWrapper.orderByAsc(DateBaseConstants.CommonColumnEnum.SORT.getName());
         List<HomeGoods> result = homeGoodsMapper.selectList(queryWrapper);
 
         if (!CollectionUtils.isEmpty(result)) {
-            List <Long> goodsIds = result.stream().map(HomeGoods::getGoodsId).collect((Collectors.toList()));
+            List<Long> goodsIds = result.stream().map(HomeGoods::getGoodsId).collect((Collectors.toList()));
             QueryWrapper<GoodsInfo> goodsInfoQueryWrapper = new QueryWrapper<>();
             goodsInfoQueryWrapper.in(DateBaseConstants.CommonColumnEnum.ID.getName(), goodsIds);
             // 查询具体的商品信息
@@ -60,7 +59,6 @@ public class HomeGoodsCacheManager {
 
             if (!CollectionUtils.isEmpty(goodsInfos)) {
                 // HomeGoods + GoodsInfo 转换为HomeGoodsRespDTO
-
                 return result.stream().map(homeGoods -> {
                     HomeGoodsRespDTO homeGoodsRespDTO = new HomeGoodsRespDTO();
                     GoodsInfo goodsInfo = goodsInfoMap.get(homeGoods.getGoodsId());
@@ -77,5 +75,49 @@ public class HomeGoodsCacheManager {
         }
         // 否者返回空的集合
         return Collections.emptyList();
+    }
+
+
+    /**
+     * 查询商品点击榜列表，并放入缓存中
+     */
+    @Cacheable(cacheManager = CacheConstants.REDIS_CACHE_MANAGER,
+            value = CacheConstants.GOODS_VISIT_RANK_CACHE_NAME)
+    public List<HomeGoodsRespDTO> listVisitRankGoods() {
+        QueryWrapper<GoodsInfo> goodsInfoQueryWrapper = new QueryWrapper<>();
+        // 访问量排序
+        goodsInfoQueryWrapper.orderByDesc(DateBaseConstants.GoodsInfoTable.COLUMN_VISIT_COUNT);
+        return listRankGoods(goodsInfoQueryWrapper);
+    }
+
+
+    /**
+     * 查询商品新书榜列表，并放入缓存中
+     */
+    @Cacheable(cacheManager = CacheConstants.CAFFEINE_CACHE_MANAGER,
+            value = CacheConstants.GOODS_NEWEST_RANK_CACHE_NAME)
+    public List<HomeGoodsRespDTO> listNewestRankGoods() {
+        QueryWrapper<GoodsInfo> goodsInfoQueryWrapper = new QueryWrapper<>();
+        // 创建时间排序
+        goodsInfoQueryWrapper
+                .orderByDesc(DateBaseConstants.CommonColumnEnum.CREATE_TIME.getName());
+        return listRankGoods(goodsInfoQueryWrapper);
+    }
+
+    private List<HomeGoodsRespDTO> listRankGoods(QueryWrapper<GoodsInfo> goodsInfoQueryWrapper) {
+        goodsInfoQueryWrapper
+                .last(DateBaseConstants.LimitSQLtEnum.LIMIT_30.getLimitSql());
+        return goodsInfoMapper.selectList(goodsInfoQueryWrapper).stream().map(goodsInfo -> {
+            HomeGoodsRespDTO homeGoodsRespDTO = new HomeGoodsRespDTO();
+            // type 不起作用
+            homeGoodsRespDTO.setType(-1);
+            homeGoodsRespDTO.setGoodsId(goodsInfo.getId());
+            homeGoodsRespDTO.setPicUrl(goodsInfo.getPicUrl());
+            homeGoodsRespDTO.setGoodsTitle(goodsInfo.getGoodsTitle());
+            homeGoodsRespDTO.setGoodsContent(goodsInfo.getGoodsContent());
+            homeGoodsRespDTO.setPrice(goodsInfo.getGoodsPrice());
+            homeGoodsRespDTO.setNickName(goodsInfo.getNickName());
+            return homeGoodsRespDTO;
+        }).collect(Collectors.toList());
     }
 }

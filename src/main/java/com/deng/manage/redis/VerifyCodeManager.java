@@ -2,6 +2,7 @@ package com.deng.manage.redis;
 
 import com.deng.core.common.util.ImgVerifyCodeUtils;
 import com.deng.core.constant.CacheConstants;
+import com.deng.core.time.TimeEnum;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -32,7 +33,7 @@ public class VerifyCodeManager {
 
         // 1min过期
         stringRedisTemplate.opsForValue().set(CacheConstants.IMG_VERIFY_CODE_CACHE_KEY + sessionId,
-                verifyCode, Duration.ofMinutes(1));
+                verifyCode, Duration.ofMinutes(TimeEnum.MINUTE_1.getTime()));
         return img;
     }
 

@@ -20,8 +20,8 @@ public class PageReqDTO {
     /**
      * 每页的大小
      */
-    @Parameter(description = "每页大小，默认每页 10 条")
-    private int pageSize = 10;
+    @Parameter(description = "每页大小，默认每页 12 条")
+    private int pageSize = 12;
 
     /**
      * 是否查询所有,默认不查询所有 为true时,pageNum 和 pageSize 无效

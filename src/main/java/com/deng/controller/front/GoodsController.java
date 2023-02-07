@@ -10,6 +10,7 @@ package com.deng.controller.front;
 import com.deng.core.common.resp.RestResp;
 import com.deng.core.constant.api.FrontApiRouterConstants;
 import com.deng.dto.resp.GoodsCategoryRespDTO;
+import com.deng.dto.resp.HomeGoodsRespDTO;
 import com.deng.service.GoodsService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -42,4 +43,7 @@ public class GoodsController {
     public RestResp<List<GoodsCategoryRespDTO>> listCategory() {
         return goodsService.listCategory();
     }
+
+
+
 }

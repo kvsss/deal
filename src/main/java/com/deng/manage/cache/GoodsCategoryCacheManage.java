@@ -37,4 +37,7 @@ public class GoodsCategoryCacheManage {
                         .build()).collect(Collectors.toList());
     }
 
+
+
+
 }

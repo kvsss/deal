@@ -21,10 +21,20 @@ import java.util.List;
 @Slf4j
 public class HomeServiceImpl implements HomeService {
 
-    private final HomeGoodsCacheManager HomeGoodsCacheManager;
+    private final HomeGoodsCacheManager homeGoodsCacheManager;
 
     @Override
     public RestResp<List<HomeGoodsRespDTO>> listHomeGoods() {
-        return RestResp.ok(HomeGoodsCacheManager.listHomeGoods());
+        return RestResp.ok(homeGoodsCacheManager.listHomeGoods());
+    }
+
+    @Override
+    public RestResp<List<HomeGoodsRespDTO>> listVisitRankGoods() {
+        return RestResp.ok(homeGoodsCacheManager.listVisitRankGoods());
+    }
+
+    @Override
+    public RestResp<List<HomeGoodsRespDTO>> listNewestRankGoods() {
+        return RestResp.ok(homeGoodsCacheManager.listNewestRankGoods());
     }
 }

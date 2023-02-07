@@ -5,10 +5,13 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @MapperScan("com.deng.dao.mapper") // 这里开启了扫描 MyBatis-plus需要
+@EnableCaching  // 开启缓存
+
 /**
  * @author :deng
  * @version :1.0

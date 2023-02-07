@@ -6,6 +6,7 @@ import com.deng.dao.entity.GoodsInfo;
 import com.deng.dao.mapper.GoodsInfoMapper;
 import com.deng.dto.req.GoodsAddReqDTO;
 import com.deng.dto.resp.GoodsCategoryRespDTO;
+import com.deng.dto.resp.HomeGoodsRespDTO;
 import com.deng.manage.cache.GoodsCategoryCacheManage;
 import com.deng.service.GoodsService;
 import lombok.RequiredArgsConstructor;
@@ -35,8 +36,6 @@ public class GoodsServiceImpl implements GoodsService {
     @Override
     public RestResp<Void> saveGoods(GoodsAddReqDTO dto) {
         // 校验商品名是否已存在
-
-
         GoodsInfo goodsInfo = new GoodsInfo();
         // 填充数据
         goodsInfo.setCategoryId(dto.getCategoryId());
@@ -60,4 +59,5 @@ public class GoodsServiceImpl implements GoodsService {
     public RestResp<List<GoodsCategoryRespDTO>> listCategory() {
         return RestResp.ok(goodsCategoryCacheManage.listCategory());
     }
+
 }

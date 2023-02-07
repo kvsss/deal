@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -13,13 +14,14 @@ import java.math.BigDecimal;
  * @since :1.8
  */
 @Data
-public class HomeGoodsRespDTO {
-
+public class HomeGoodsRespDTO implements Serializable {
+    // 交给redis的类需要序列化
+    private static final long serialVersionUID = 1L;
 
     /**
      * 类型;0-轮播图 1-顶部栏 2-本周强推 3-热门推荐 4-精品推荐
      */
-    @Schema(description = "类型;0-轮播图 1-顶部栏 2-本周强推 3-热门推荐 4-精品推荐")
+    @Schema(description = "类型;-1-不起作用 0-轮播图 1-顶部栏 2-本周强推 3-热门推荐 4-精品推荐")
     private Integer type;
 
     /**

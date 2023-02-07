@@ -27,11 +27,30 @@ public class HomeController {
     private final HomeService homeService;
 
     /**
-     * 首页小说推荐查询接口
+     * 首页商品推荐查询接口
      */
     @Operation(summary = "首页商品推荐查询接口")
     @GetMapping("goods")
     public RestResp<List<HomeGoodsRespDTO>> listHomeBooks() {
         return homeService.listHomeGoods();
+    }
+
+    /**
+     * 商品点击榜查询接口
+     */
+    @Operation(summary = "商品点击榜查询接口")
+    @GetMapping("visit_rank")
+    public RestResp<List<HomeGoodsRespDTO>> listVisitRankGoods() {
+        return homeService.listVisitRankGoods();
+    }
+
+
+    /**
+     * 商品新书榜查询接口
+     */
+    @Operation(summary = "商品新发布查询接口")
+    @GetMapping("newest_rank")
+    public RestResp<List<HomeGoodsRespDTO>> listNewestRankGoods() {
+        return homeService.listNewestRankGoods();
     }
 }

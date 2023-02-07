@@ -3,6 +3,7 @@ package com.deng.service;
 import com.deng.core.common.resp.RestResp;
 import com.deng.dto.req.GoodsAddReqDTO;
 import com.deng.dto.resp.GoodsCategoryRespDTO;
+import com.deng.dto.resp.HomeGoodsRespDTO;
 
 import java.util.List;
 
@@ -28,4 +29,5 @@ public interface GoodsService {
      * @return 商品分类列表
      */
     RestResp<List<GoodsCategoryRespDTO>> listCategory();
+
 }
