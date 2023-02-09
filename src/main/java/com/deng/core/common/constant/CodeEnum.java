@@ -41,6 +41,7 @@ public enum CodeEnum {
      * 请求限制
      */
     USER_REQUEST_LIMIT("A0005", "请求超出限制"),
+
     /**
      * 用户上传文件异常
      */
@@ -55,6 +56,8 @@ public enum CodeEnum {
      * 验证码生成失败
      */
     IMG_VERIFY_CODE_FAIL("A0008", "验证码生成失败"),
+
+    USER_COMMENTED("A0009", "用户已评论"),
 
     /**
      * 用户登录已过期

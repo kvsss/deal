@@ -1,11 +1,9 @@
 package com.deng.controller.front;
 
+import com.deng.core.auth.UserHolder;
 import com.deng.core.common.resp.RestResp;
 import com.deng.core.constant.api.FrontApiRouterConstants;
-import com.deng.dto.req.GoodsAddReqDTO;
-import com.deng.dto.req.UserInfoUptReqDTO;
-import com.deng.dto.req.UserLoginReqDTO;
-import com.deng.dto.req.UserRegisterReqDTO;
+import com.deng.dto.req.*;
 import com.deng.dto.resp.UserInfoRespDTO;
 import com.deng.dto.resp.UserLoginRespDTO;
 import com.deng.dto.resp.UserRegisterRespDTO;
@@ -79,5 +77,37 @@ public class UserController {
     @PostMapping("goods")
     public RestResp<Void> publishGoods(@Valid @RequestBody GoodsAddReqDTO dto) {
         return goodsService.saveGoods(dto);
+    }
+
+
+    /**
+     * 发表评论接口
+     */
+    @Operation(summary = "发表评论接口")
+    @PostMapping("comment")
+    public RestResp<Void> comment(@Valid @RequestBody UserCommentReqDTO dto) {
+        return goodsService.saveComment(dto);
+    }
+
+
+    /**
+     * 修改评论接口
+     */
+    @Operation(summary = "修改评论接口")
+    @PutMapping("comment/{id}/{uid}")
+    public RestResp<Void> updateComment(@Parameter(description = "评论ID") @PathVariable Long id,
+                                        @Parameter(description = "用户ID") @PathVariable Long uid,
+                                        String content) {
+        return goodsService.updateComment(uid, id, content);
+    }
+
+    /**
+     * 删除评论接口
+     */
+    @Operation(summary = "删除评论接口")
+    @DeleteMapping("comment/{id}/{uid}")
+    public RestResp<Void> deleteComment(@Parameter(description = "评论ID") @PathVariable Long id,
+                                        @Parameter(description = "用户ID") @PathVariable Long uid) {
+        return goodsService.deleteComment(uid, id);
     }
 }

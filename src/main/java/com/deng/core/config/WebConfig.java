@@ -40,6 +40,12 @@ public class WebConfig implements WebMvcConfigurer {
                 .addPathPatterns(SystemConfigConstants.IMAGE_UPLOAD_DIRECTORY + "**")
                 .order(1);
 
+        // token拦截器
 
+        // Token 解析拦截器
+        registry.addInterceptor(tokenParseInterceptor)
+                // 拦截小说内容查询接口，需要解析 token 以判断该用户是否有权阅读该章节（付费章节是否已购买）
+                .addPathPatterns("/**")
+                .order(3);
     }
 }

@@ -10,15 +10,15 @@ package com.deng.controller.front;
 import com.deng.core.common.resp.RestResp;
 import com.deng.core.constant.api.FrontApiRouterConstants;
 import com.deng.dto.resp.GoodsCategoryRespDTO;
+import com.deng.dto.resp.GoodsCommentRespDTO;
+import com.deng.dto.resp.GoodsInfoRespDTO;
 import com.deng.dto.resp.HomeGoodsRespDTO;
 import com.deng.service.GoodsService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -46,4 +46,35 @@ public class GoodsController {
 
 
 
+    /**
+     * 商品信息查询接口
+     */
+    @Operation(summary = "商品信息查询接口")
+    @GetMapping("{id}")
+    public RestResp<GoodsInfoRespDTO> getGoodsById(
+            @Parameter(description = "商品 ID") @PathVariable("id") Long goodsId) {
+        return goodsService.getGoodsById(goodsId);
+    }
+    
+    
+
+    /**
+     * 增加商品点击量接口
+     */
+    @Operation(summary = "增加商品点击量接口")
+    @PostMapping("visit")
+    public RestResp<Void> addVisitCount(@Parameter(description = "商品ID") Long goodsId) {
+        return goodsService.addVisitCount(goodsId);
+    }
+
+
+    /**
+     * 商品最新评论查询接口
+     */
+    @Operation(summary = "小说最新评论查询接口")
+    @GetMapping("comment/newest_list")
+    public RestResp<GoodsCommentRespDTO> listNewestComments(
+            @Parameter(description = "小说ID") Long goodsId) {
+        return goodsService.listNewestComments(goodsId);
+    }
 }

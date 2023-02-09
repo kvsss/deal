@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @Component
 @RequiredArgsConstructor
 public class GoodsCategoryCacheManage {
-    private  final GoodsCategoryMapper goodsCategoryMapper;
+    private final GoodsCategoryMapper goodsCategoryMapper;
 
     /**
      * 将分类放入缓存
@@ -36,8 +36,6 @@ public class GoodsCategoryCacheManage {
                         .name(v.getName())
                         .build()).collect(Collectors.toList());
     }
-
-
 
 
 }

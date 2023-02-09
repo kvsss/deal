@@ -26,6 +26,16 @@ public final class DateBaseConstants {
     }
 
 
+    public static final class GoodsCommentTable {
+        private GoodsCommentTable() {
+            throw new IllegalStateException(this.getClass().getName() + ":" + SystemConfigConstants.CONST_INSTANCE_EXCEPTION_MSG);
+        }
+
+        public static final String COLUMN_GOODS_ID = "goods_id";
+        public static final String COLUMN_USER_ID = "user_id";
+    }
+
+
     @Getter
     public enum CommonColumnEnum {
         // id

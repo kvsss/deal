@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -16,7 +17,9 @@ import java.math.BigDecimal;
  */
 @Data
 @Builder
-public class GoodsInfoRespDTO {
+public class GoodsInfoRespDTO implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     /**
      * 商品ID

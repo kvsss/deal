@@ -5,6 +5,7 @@ import com.deng.dao.entity.GoodsInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.deng.dto.req.GoodsSearchReqDTO;
 import com.deng.dto.resp.GoodsInfoRespDTO;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -25,4 +26,11 @@ public interface GoodsInfoMapper extends BaseMapper<GoodsInfo> {
      * @return 返回结果
      * */
     List<GoodsInfo> searchGoods(IPage<GoodsInfoRespDTO> page, GoodsSearchReqDTO condition);
+
+
+    /**
+     * 添加商品访问量
+     * @param goodsId
+     */
+    void addVisitCount(@Param("goodsId")Long goodsId);
 }

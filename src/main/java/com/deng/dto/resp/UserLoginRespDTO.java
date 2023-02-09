@@ -4,6 +4,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author :deng
  * @version :1.0
@@ -12,7 +14,9 @@ import lombok.Data;
  */
 @Data
 @Builder
-public class UserLoginRespDTO {
+public class UserLoginRespDTO implements Serializable {
+    private static final long serialVersionUID = 1L;
+
 
     @Schema(description = "用户id")
     private Long uid;

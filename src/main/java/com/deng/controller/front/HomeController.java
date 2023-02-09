@@ -31,7 +31,7 @@ public class HomeController {
      */
     @Operation(summary = "首页商品推荐查询接口")
     @GetMapping("goods")
-    public RestResp<List<HomeGoodsRespDTO>> listHomeBooks() {
+    public RestResp<List<HomeGoodsRespDTO>> listHomeGoodss() {
         return homeService.listHomeGoods();
     }
 

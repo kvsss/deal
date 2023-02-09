@@ -8,6 +8,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  * @author :deng
  * @version :1.0
@@ -16,7 +18,9 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @Builder
-public class UserRegisterRespDTO {
+public class UserRegisterRespDTO implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @Schema(description = "用户ID")
     private Long uid;
 

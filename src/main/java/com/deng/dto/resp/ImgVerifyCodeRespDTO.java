@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  * @author :deng
  * @version :1.0
@@ -14,7 +16,8 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @Builder
-public class ImgVerifyCodeRespDTO {
+public class ImgVerifyCodeRespDTO implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     /**
      * 当前会话ID，用于标识改图形验证码属于哪个会话

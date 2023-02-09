@@ -4,6 +4,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author :deng
  * @version :1.0
@@ -12,7 +14,9 @@ import lombok.Data;
  */
 @Data
 @Builder
-public class UserInfoRespDTO {
+public class UserInfoRespDTO implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @Schema(description = "昵称")
     private String nickName;
 

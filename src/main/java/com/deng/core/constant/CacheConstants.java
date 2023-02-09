@@ -51,6 +51,12 @@ public final class CacheConstants {
      */
     public static final String HOME_GOODS_CACHE_NAME = "homeGoodsCache";
 
+
+    /**
+     * 书籍信息查询
+     */
+    public static final String GOODS_INFO_CACHE_NAME = "goodsInfoCache";
+
     /**
      * redis存储验证码前缀
      */
@@ -77,7 +83,11 @@ public final class CacheConstants {
         /**
          * 商品新出缓存配置
          */
-        GOODS_NEWEST_RANK_CACHE(0, GOODS_NEWEST_RANK_CACHE_NAME, TimeEnum.MINUTE_1.getTime() * 30, 1);
+        GOODS_NEWEST_RANK_CACHE(0, GOODS_NEWEST_RANK_CACHE_NAME, TimeEnum.MINUTE_1.getTime() * 30, 1),
+        /**
+         * 商品信息缓存配置
+         */
+        GOODS_INFO_CACHE(0, GOODS_INFO_CACHE_NAME, TimeEnum.HOUR_1.getTime() * 12, 500);
 
 
         /**
