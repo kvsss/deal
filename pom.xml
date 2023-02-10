@@ -18,7 +18,7 @@
         <java.version>1.8</java.version>
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
         <jjwt.version>0.11.5</jjwt.version>
-        <elasticsearch.version>8.2.0</elasticsearch.version>
+        <!--<elasticsearch.version>8.2.0</elasticsearch.version>-->
         <xxl-job.version>2.3.1</xxl-job.version>
         <sentinel.version>1.8.4</sentinel.version>
         <shardingsphere-jdbc.version>5.1.1</shardingsphere-jdbc.version>
@@ -116,16 +116,35 @@
         </dependency>
 
         <!-- elasticsearch 相关 -->
+        <!--<dependency>-->
+        <!--    <groupId>co.elastic.clients</groupId>-->
+        <!--    <artifactId>elasticsearch-java</artifactId>-->
+        <!--    <version>${elasticsearch.version}</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>jakarta.json</groupId>
+            <artifactId>jakarta.json-api</artifactId>
+            <version>2.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+
         <dependency>
             <groupId>co.elastic.clients</groupId>
             <artifactId>elasticsearch-java</artifactId>
-            <version>${elasticsearch.version}</version>
+            <version>8.6.1</version>
         </dependency>
+
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
         </dependency>
 
+        <!--<dependency>-->
+        <!--    <groupId>org.springframework.boot</groupId>-->
+        <!--    <artifactId>spring-boot-starter-data-elasticsearch</artifactId>-->
+        <!--</dependency>-->
         <!-- MQ 相关 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -190,11 +209,11 @@
 
         <!-- OpenAPI 3 -->
         <!-- 需要jdk17的环境  暂时下先用下面这个代替-->
-<!--            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-                <version>${springdoc-openapi.version}</version>
-            </dependency>-->
+        <!--            <dependency>
+                        <groupId>org.springdoc</groupId>
+                        <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                        <version>${springdoc-openapi.version}</version>
+                    </dependency>-->
 
         <dependency>
             <groupId>org.springdoc</groupId>
@@ -209,11 +228,11 @@
                     <version>1.2.32</version>
                 </dependency>-->
 
-<!--        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>${springdoc-openapi.version}</version>
-        </dependency>-->
+        <!--        <dependency>
+                    <groupId>org.springdoc</groupId>
+                    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                    <version>${springdoc-openapi.version}</version>
+                </dependency>-->
 
 
         <dependency>

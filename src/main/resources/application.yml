@@ -91,10 +91,9 @@ spring:
   elasticsearch:
     # 是否开启 Elasticsearch 搜索引擎功能：true-开启 false-不开启
     enabled: false
-    uris:
-      - https://my-deployment-ce7ca3.es.us-central1.gcp.cloud.es.io:9243
-    username: elastic
-    password: qTjgYVKSuExX6tWAsDuvuvwl
+    uris: 127.0.0.1:9200
+#    username: elastic
+#    password: qTjgYVKSuExX6tWAsDuvuvwl
 
   # Spring AMQP 配置  高级消息队列
   amqp:

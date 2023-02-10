@@ -2,6 +2,8 @@ package com.deng.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.AbstractWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.deng.core.annotation.Key;
+import com.deng.core.annotation.Lock;
 import com.deng.core.common.constant.CodeEnum;
 import com.deng.core.common.resp.RestResp;
 import com.deng.core.constant.DateBaseConstants;
@@ -131,9 +133,15 @@ public class GoodsServiceImpl implements GoodsService {
         return RestResp.ok(goodsCommentRespDTO);
     }
 
-
+    /**
+     * 这里实现加锁
+     * @param dto
+     * @return
+     */
+    @Lock(prefix = "userComment")
     @Override
-    public RestResp<Void> saveComment(UserCommentReqDTO dto) {
+    public RestResp<Void> saveComment(
+            @Key(expr = "#{userId + '::' + goodsId}") UserCommentReqDTO dto) {
         // 校验用户是否已发表评论
         QueryWrapper<GoodsComment> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq(DateBaseConstants.GoodsCommentTable.COLUMN_USER_ID, dto.getUserId())

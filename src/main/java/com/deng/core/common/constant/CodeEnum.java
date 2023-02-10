@@ -64,7 +64,6 @@ public enum CodeEnum {
      */
     USER_LOGIN_EXPIRED("A0230", "用户登录已过期"),
 
-
     /**
      * 系统异常
      */

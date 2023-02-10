@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ServiceException extends RuntimeException {
     private final CodeEnum codeEnum;
 
-    ServiceException(CodeEnum codeEnum) {
+    public ServiceException(CodeEnum codeEnum) {
         super(codeEnum.getMessage(), null, false, false);
         this.codeEnum = codeEnum;
     }
