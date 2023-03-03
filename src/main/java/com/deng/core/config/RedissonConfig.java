@@ -15,6 +15,8 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class RedissonConfig {
+
+    // 使用Redisson实现分布式锁
     @Bean
     @SneakyThrows
     public RedissonClient redissonClient() {

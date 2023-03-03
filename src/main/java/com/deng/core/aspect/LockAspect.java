@@ -32,7 +32,6 @@ import java.util.concurrent.TimeUnit;
 @Component
 @RequiredArgsConstructor
 public class LockAspect {
-
     private final RedissonClient redissonClient;
 
     private static final String KEY_PREFIX = "Lock";

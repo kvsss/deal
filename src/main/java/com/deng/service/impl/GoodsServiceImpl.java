@@ -146,6 +146,8 @@ public class GoodsServiceImpl implements GoodsService {
         QueryWrapper<GoodsComment> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq(DateBaseConstants.GoodsCommentTable.COLUMN_USER_ID, dto.getUserId())
                 .eq(DateBaseConstants.GoodsCommentTable.COLUMN_GOODS_ID, dto.getGoodsId());
+
+        // 这里需要判断加锁
         if (goodsCommentMapper.selectCount(queryWrapper) > 0) {
             // 用户已发表评论
             return RestResp.fail(CodeEnum.USER_COMMENTED);

@@ -44,6 +44,7 @@ public class HomeGoodsCacheManager {
         QueryWrapper<HomeGoods> queryWrapper = new QueryWrapper<>();
         // 优先级排序
         queryWrapper.orderByAsc(DateBaseConstants.CommonColumnEnum.SORT.getName());
+        queryWrapper.last(DateBaseConstants.LimitSQLtEnum.LIMIT_30.getLimitSql());
         List<HomeGoods> result = homeGoodsMapper.selectList(queryWrapper);
 
         if (!CollectionUtils.isEmpty(result)) {
