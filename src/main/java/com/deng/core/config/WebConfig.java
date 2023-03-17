@@ -1,6 +1,7 @@
 package com.deng.core.config;
 
 import com.deng.core.constant.SystemConfigConstants;
+import com.deng.core.constant.api.FrontApiRouterConstants;
 import com.deng.core.interceptor.AuthInterceptor;
 import com.deng.core.interceptor.FileInterceptor;
 import com.deng.core.interceptor.FlowLimitInterceptor;
@@ -45,7 +46,9 @@ public class WebConfig implements WebMvcConfigurer {
         // Token 解析拦截器
         registry.addInterceptor(tokenParseInterceptor)
                 // 拦截小说内容查询接口，需要解析 token 以判断该用户是否有权阅读该章节（付费章节是否已购买）
+                // login 页面不用拦截
                 .addPathPatterns("/**")
+                .excludePathPatterns(FrontApiRouterConstants.FRONT_USER_API_URL_PREFIX + "/login")
                 .order(3);
     }
 }

@@ -17,7 +17,7 @@ public class UsernameSerializer extends JsonSerializer<String> {
     @Override
     public void serialize(String s, JsonGenerator jsonGenerator,
                           SerializerProvider serializerProvider) throws IOException {
-        // 使用** 替换
+        // 使用** 替换 用户名，用户名替换
         jsonGenerator.writeString(s.substring(0, 4) + "****" + s.substring(8));
     }
 
