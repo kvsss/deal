@@ -46,6 +46,10 @@ public class DbSearchServiceImpl implements SearchService {
                         .nickName(goodsInfo.getNickName())
                         .picUrl(goodsInfo.getPicUrl())
                         .price(goodsInfo.getGoodsPrice())
+                        .buyTime(goodsInfo.getBuyTime())
+                        .oldDegree(goodsInfo.getOldDegree())
+                        .goodsStatus(goodsInfo.getGoodsStatus())
+                        .uid(goodsInfo.getUid())
                         .build()
                 ).collect(Collectors.toList())
         ));

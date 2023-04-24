@@ -42,7 +42,7 @@ public final class CacheConstants {
     public static final String GOODS_VISIT_RANK_CACHE_NAME = "goodsVisitRankCache";
 
     /**
-     * 商品新书榜缓存
+     * 商品榜缓存
      */
     public static final String GOODS_NEWEST_RANK_CACHE_NAME = "goodsNewestRankCache";
 
@@ -53,7 +53,7 @@ public final class CacheConstants {
 
 
     /**
-     * 书籍信息查询
+     * 商品信息查询
      */
     public static final String GOODS_INFO_CACHE_NAME = "goodsInfoCache";
 

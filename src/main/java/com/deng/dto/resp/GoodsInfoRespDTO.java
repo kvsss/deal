@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * @author :deng
@@ -34,6 +35,12 @@ public class GoodsInfoRespDTO implements Serializable {
     private String picUrl;
 
     /**
+     * 用户ID
+     */
+    @Schema(description = "用户ID")
+    private Long uid;
+
+    /**
      * 商品名
      */
     @Schema(description = "商品名")
@@ -56,4 +63,22 @@ public class GoodsInfoRespDTO implements Serializable {
      */
     @Schema(description = "用户名")
     private String nickName;
+
+    /**
+     * 购买时间
+     */
+    @Schema(description = "购买时间")
+    private LocalDateTime buyTime;
+
+    /**
+     * 新旧程度(1-10成新)
+     */
+    @Schema(description = "新旧程度(1-10成新)")
+    private Integer oldDegree;
+
+    /**
+     * 商品状态(0:未售出,1:已售出,2:已下架)
+     */
+    @Schema(description = "商品状态(0:未售出,1:已售出,2:已下架)")
+    private Integer goodsStatus;
 }

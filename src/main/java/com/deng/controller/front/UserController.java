@@ -7,6 +7,7 @@ import com.deng.dto.req.*;
 import com.deng.dto.resp.UserInfoRespDTO;
 import com.deng.dto.resp.UserLoginRespDTO;
 import com.deng.dto.resp.UserRegisterRespDTO;
+import com.deng.service.GoodsOrderService;
 import com.deng.service.GoodsService;
 import com.deng.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -31,6 +32,8 @@ public class UserController {
     private final UserService userService;
 
     private final GoodsService goodsService;
+
+    private final GoodsOrderService goodsOrderService;
 
     /**
      * 用户注册接口
@@ -109,5 +112,14 @@ public class UserController {
     public RestResp<Void> deleteComment(@Parameter(description = "评论ID") @PathVariable Long id,
                                         @Parameter(description = "用户ID") @PathVariable Long uid) {
         return goodsService.deleteComment(uid, id);
+    }
+
+    /**
+     * 用户购买商品接口
+     */
+    @Operation(summary = "用户购买商品接口")
+    @PostMapping("goodsOrder")
+    public RestResp<Void> buyGoods(@Valid @RequestBody GoodsOrderAddReqDTO dto) {
+        return goodsOrderService.buyGoods(dto);
     }
 }

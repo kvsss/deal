@@ -71,10 +71,10 @@ public class GoodsController {
     /**
      * 商品最新评论查询接口
      */
-    @Operation(summary = "小说最新评论查询接口")
+    @Operation(summary = "商品最新评论查询接口")
     @GetMapping("comment/newest_list")
     public RestResp<GoodsCommentRespDTO> listNewestComments(
-            @Parameter(description = "小说ID") Long goodsId) {
+            @Parameter(description = "商品ID") Long goodsId) {
         return goodsService.listNewestComments(goodsId);
     }
 }

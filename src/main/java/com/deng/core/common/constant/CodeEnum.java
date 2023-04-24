@@ -59,6 +59,8 @@ public enum CodeEnum {
 
     USER_COMMENTED("A0009", "用户已评论"),
 
+    USER_ORDER_FAIL("A00010", "没有抢到"),
+
     /**
      * 用户登录已过期
      */

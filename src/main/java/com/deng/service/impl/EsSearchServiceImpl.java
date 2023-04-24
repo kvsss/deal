@@ -98,6 +98,7 @@ public class EsSearchServiceImpl implements SearchService {
                     .nickName(goods.getNickName())
                     .picUrl(goods.getPicUrl())
                     .price(goods.getGoodsPrice())
+                    .uid(goods.getUid())
                     .build());
         }
         assert total != null;
@@ -112,7 +113,7 @@ public class EsSearchServiceImpl implements SearchService {
     private void buildSearchCondition(GoodsSearchReqDTO condition,
                                       SearchRequest.Builder searchBuilder) {
         BoolQuery boolQuery = BoolQuery.of(b -> {
-            // 只查有字数的小说
+            // 只查有商品
 /*            b.must(RangeQuery.of(m -> m
                     .field(EsConstants.GoodsIndex.FIELD_WORD_COUNT)
                     .gt(JsonData.of(0))

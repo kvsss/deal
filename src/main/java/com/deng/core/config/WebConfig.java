@@ -37,18 +37,18 @@ public class WebConfig implements WebMvcConfigurer {
                 .order(0);
 
         // 文件访问拦截
+        // 文件上传不会通过后续的的token拦截器
         registry.addInterceptor(fileInterceptor)
                 .addPathPatterns(SystemConfigConstants.IMAGE_UPLOAD_DIRECTORY + "**")
                 .order(1);
 
-        // token拦截器
-
         // Token 解析拦截器
         registry.addInterceptor(tokenParseInterceptor)
-                // 拦截小说内容查询接口，需要解析 token 以判断该用户是否有权阅读该章节（付费章节是否已购买）
-                // login 页面不用拦截
+                // 拦截商品内容查询接口，需要解析 token 以判断该用户是否有权阅读该章节（付费章节是否已购买）
+                // login, register页面不用拦截
                 .addPathPatterns("/**")
-                .excludePathPatterns(FrontApiRouterConstants.FRONT_USER_API_URL_PREFIX + "/login")
+                .excludePathPatterns(FrontApiRouterConstants.FRONT_USER_API_URL_PREFIX + "/login",
+                        FrontApiRouterConstants.FRONT_USER_API_URL_PREFIX + "/register")
                 .order(3);
     }
 }

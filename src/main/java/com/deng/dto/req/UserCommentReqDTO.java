@@ -17,8 +17,8 @@ import javax.validation.constraints.NotNull;
 public class UserCommentReqDTO {
     private Long userId;
 
-    @Schema(description = "小说ID", required = true)
-    @NotNull(message = "小说ID不能为空！")
+    @Schema(description = "商品ID", required = true)
+    @NotNull(message = "商品ID不能为空！")
     private Long goodsId;
 
     @Schema(description = "评论内容", required = true)

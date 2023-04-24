@@ -35,7 +35,7 @@ public class TokenParseInterceptor implements HandlerInterceptor {
         // 资源get请求不用进过token解析
         // 开启token解析
         if (Objects.equals(request.getMethod(), GET)) {
-            //return true;
+            return true;
         }
         // 使用jwt来防止csrf攻击
 
@@ -48,6 +48,8 @@ public class TokenParseInterceptor implements HandlerInterceptor {
             if (uid != null) {
                 UserHolder.setUserId(uid);
                 return true;
+            } else {
+                log.error(request.getRequestURI());
             }
         }
         // 拦截

@@ -11,8 +11,9 @@
     <select id="searchGoods" resultType="com.deng.dao.entity.GoodsInfo">
         select
         id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,
-        comment_count,create_time,update_time
-        from goods_info where true
+        comment_count,create_time,update_time,goods_status,buy_time,old_degree
+        from goods_info where
+        goods_status = 0                   <!-- 0表示商品正常状态 -->
         <if test="condition.keyword != null and condition.keyword != ''">
             and (goods_title like concat('%',#{condition.keyword},'%') or goods_content like
             concat('%',#{condition.keyword},'%'))
@@ -27,7 +28,7 @@
         </if>
 
         <if test="condition.sort != null and condition.sort != ''">
-            order by ${condition.sort}
+            order by ${condition.sort}  DESC
         </if>
     </select>
 

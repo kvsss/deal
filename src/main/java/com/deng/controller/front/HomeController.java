@@ -27,11 +27,11 @@ public class HomeController {
     private final HomeService homeService;
 
     /**
-     * 首页商品推荐查询接口
+     * 首页商品推荐查询接口，这里默认查询了热门推荐和精品推荐
      */
     @Operation(summary = "首页商品推荐查询接口")
     @GetMapping("goods")
-    public RestResp<List<HomeGoodsRespDTO>> listHomeGoodss() {
+    public RestResp<List<HomeGoodsRespDTO>> listHomeGoods() {
         return homeService.listHomeGoods();
     }
 
@@ -46,7 +46,7 @@ public class HomeController {
 
 
     /**
-     * 商品新书榜查询接口
+     * 商品榜查询接口
      */
     @Operation(summary = "商品新发布查询接口")
     @GetMapping("newest_rank")

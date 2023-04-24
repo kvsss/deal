@@ -58,6 +58,9 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Override
     public RestResp<Void> saveGoods(GoodsAddReqDTO dto) {
+        // 修改时间戳,去掉时分秒
+        dto.setBuyTime(dto.getBuyTime().toLocalDate().atStartOfDay());
+
         // 校验商品名是否已存在
         GoodsInfo goodsInfo = new GoodsInfo();
         // 填充数据
@@ -71,6 +74,8 @@ public class GoodsServiceImpl implements GoodsService {
         goodsInfo.setGoodsContent(dto.getGoodsContent());
         goodsInfo.setCreateTime(LocalDateTime.now());
         goodsInfo.setUpdateTime(LocalDateTime.now());
+        goodsInfo.setBuyTime(dto.getBuyTime());
+        goodsInfo.setOldDegree(dto.getOldDegree());
         goodsInfoMapper.insert(goodsInfo);
         return RestResp.ok();
     }
@@ -135,6 +140,7 @@ public class GoodsServiceImpl implements GoodsService {
 
     /**
      * 这里实现加锁
+     *
      * @param dto
      * @return
      */
@@ -152,6 +158,12 @@ public class GoodsServiceImpl implements GoodsService {
             // 用户已发表评论
             return RestResp.fail(CodeEnum.USER_COMMENTED);
         }
+
+        // 评论数量加1
+        GoodsInfo goodsInfo = goodsInfoMapper.selectById(dto.getGoodsId());
+        goodsInfo.setCommentCount(goodsInfo.getCommentCount() + 1);
+        goodsInfoMapper.updateById(goodsInfo);
+
         // 数据封装
         GoodsComment goodsComment = new GoodsComment();
         goodsComment.setGoodsId(dto.getGoodsId());

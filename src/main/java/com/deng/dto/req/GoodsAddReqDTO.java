@@ -6,6 +6,7 @@ import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * @author :deng
@@ -67,4 +68,16 @@ public class GoodsAddReqDTO {
     @Schema(description = "商品详细", required = true)
     @NotBlank
     private String goodsContent;
+
+    /**
+     * 购买时间
+     */
+    @Schema(description = "购买时间")
+    private LocalDateTime buyTime;
+
+    /**
+     * 新旧程度(1-10成新)
+     */
+    @Schema(description = "新旧程度(1-10成新)")
+    private Integer oldDegree;
 }

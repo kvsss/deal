@@ -70,6 +70,9 @@ public class HomeGoodsCacheManager {
                     homeGoodsRespDTO.setGoodsContent(goodsInfo.getGoodsContent());
                     homeGoodsRespDTO.setPrice(goodsInfo.getGoodsPrice());
                     homeGoodsRespDTO.setNickName(goodsInfo.getNickName());
+                    homeGoodsRespDTO.setGoodsStatus(goodsInfo.getGoodsStatus());
+                    homeGoodsRespDTO.setOldDegree(goodsInfo.getOldDegree());
+                    homeGoodsRespDTO.setBuyTime(goodsInfo.getBuyTime());
                     return homeGoodsRespDTO;
                 }).collect(Collectors.toList());
             }
@@ -93,7 +96,7 @@ public class HomeGoodsCacheManager {
 
 
     /**
-     * 查询商品新书榜列表，并放入缓存中
+     * 查询商品榜列表，并放入缓存中
      */
     @Cacheable(cacheManager = CacheConstants.CAFFEINE_CACHE_MANAGER,
             value = CacheConstants.GOODS_NEWEST_RANK_CACHE_NAME)
@@ -118,6 +121,9 @@ public class HomeGoodsCacheManager {
             homeGoodsRespDTO.setGoodsContent(goodsInfo.getGoodsContent());
             homeGoodsRespDTO.setPrice(goodsInfo.getGoodsPrice());
             homeGoodsRespDTO.setNickName(goodsInfo.getNickName());
+            homeGoodsRespDTO.setGoodsStatus(goodsInfo.getGoodsStatus());
+            homeGoodsRespDTO.setOldDegree(goodsInfo.getOldDegree());
+            homeGoodsRespDTO.setBuyTime(goodsInfo.getBuyTime());
             return homeGoodsRespDTO;
         }).collect(Collectors.toList());
     }

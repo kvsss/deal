@@ -33,6 +33,8 @@ public class FileInterceptor implements HandlerInterceptor {
         // 图片返回,并没有借助controller层去处理
         // 而是根据url 带image的(这其实是图片的名称)
         // 逻辑：  前端上传图片  后端成功后(保存图片)  返回文件名  前端再得到成功信息后,更新用户头像 ->后端
+        // 这里是将图片(用户请求)返回给前端 /image/ 的请求
+        // 所有图片都存储在这样的路径下
 
         // 获取请求的 URI
         String requestUri = request.getRequestURI();

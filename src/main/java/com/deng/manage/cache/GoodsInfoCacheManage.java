@@ -21,8 +21,10 @@ public class GoodsInfoCacheManage {
     private final GoodsInfoMapper goodsInfoMapper;
 
 
-    /** 商品信息查询
-     * @param goodsId
+    /**
+     * 商品信息查询
+     *
+     * @param id
      * @return
      */
     @Cacheable(cacheManager = CacheConstants.CAFFEINE_CACHE_MANAGER,
@@ -47,6 +49,10 @@ public class GoodsInfoCacheManage {
                 .picUrl(goodsInfo.getPicUrl())
                 .goodsContent(goodsInfo.getGoodsContent())
                 .nickName(goodsInfo.getNickName())
+                .goodsStatus(goodsInfo.getGoodsStatus())
+                .buyTime(goodsInfo.getBuyTime())
+                .oldDegree(goodsInfo.getOldDegree())
+                .uid(goodsInfo.getUid())
                 .build();
     }
 }
