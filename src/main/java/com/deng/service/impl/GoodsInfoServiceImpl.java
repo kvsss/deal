@@ -1,10 +1,11 @@
 package com.deng.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.AbstractWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.deng.core.annotation.Key;
 import com.deng.core.annotation.Lock;
 import com.deng.core.common.constant.CodeEnum;
+import com.deng.core.common.resp.PageRespDTO;
 import com.deng.core.common.resp.RestResp;
 import com.deng.core.constant.DateBaseConstants;
 import com.deng.dao.entity.GoodsComment;
@@ -13,18 +14,19 @@ import com.deng.dao.entity.UserInfo;
 import com.deng.dao.mapper.GoodsCommentMapper;
 import com.deng.dao.mapper.GoodsInfoMapper;
 import com.deng.dto.req.GoodsAddReqDTO;
+import com.deng.dto.req.GoodsPublicReqDTO;
 import com.deng.dto.req.UserCommentReqDTO;
 import com.deng.dto.resp.GoodsCategoryRespDTO;
 import com.deng.dto.resp.GoodsCommentRespDTO;
 import com.deng.dto.resp.GoodsInfoRespDTO;
-import com.deng.dto.resp.HomeGoodsRespDTO;
+import com.deng.dto.resp.GoodsPublicRespDTO;
 import com.deng.manage.cache.GoodsCategoryCacheManage;
 import com.deng.manage.cache.GoodsInfoCacheManage;
 import com.deng.manage.dao.UserDaoManager;
-import com.deng.service.GoodsService;
+import com.deng.service.GoodsCategoryService;
+import com.deng.service.GoodsInfoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -43,7 +45,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class GoodsServiceImpl implements GoodsService {
+public class GoodsInfoServiceImpl implements GoodsInfoService {
 
     private final GoodsCategoryCacheManage goodsCategoryCacheManage;
 
@@ -54,6 +56,8 @@ public class GoodsServiceImpl implements GoodsService {
     private final GoodsCommentMapper goodsCommentMapper;
 
     private final UserDaoManager userDaoManager;
+
+    private final GoodsCategoryService goodsCategoryService;
 
 
     @Override
@@ -82,12 +86,26 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Override
     public RestResp<List<GoodsCategoryRespDTO>> listCategory() {
-        return RestResp.ok(goodsCategoryCacheManage.listCategory());
+        return RestResp.ok(goodsCategoryService.listCategory());
     }
 
     @Override
     public RestResp<GoodsInfoRespDTO> getGoodsById(Long goodsId) {
-        return RestResp.ok(goodsInfoCacheManage.getGoodsById(goodsId));
+        // 查询基础信息
+        GoodsInfo goodsInfo = goodsInfoMapper.selectById(goodsId);
+        GoodsInfoRespDTO result = GoodsInfoRespDTO.builder().
+                goodsId(goodsInfo.getId())
+                .price(goodsInfo.getGoodsPrice())
+                .goodsTitle(goodsInfo.getGoodsTitle())
+                .picUrl(goodsInfo.getPicUrl())
+                .goodsContent(goodsInfo.getGoodsContent())
+                .nickName(goodsInfo.getNickName())
+                .goodsStatus(goodsInfo.getGoodsStatus())
+                .buyTime(goodsInfo.getBuyTime())
+                .oldDegree(goodsInfo.getOldDegree())
+                .uid(goodsInfo.getUid())
+                .build();
+        return RestResp.ok(result);
     }
 
     @Override
@@ -194,5 +212,29 @@ public class GoodsServiceImpl implements GoodsService {
                 .eq(DateBaseConstants.CommonColumnEnum.ID.getName(), id);
         goodsCommentMapper.delete(queryWrapper);
         return RestResp.ok();
+    }
+
+    @Override
+    public RestResp<PageRespDTO<GoodsPublicRespDTO>> getPublicGoods(GoodsPublicReqDTO condition) {
+        Page<GoodsPublicRespDTO> page = new Page<>();
+        page.setCurrent(condition.getPageNum());
+        page.setSize(condition.getPageSize());
+
+        List<GoodsInfo> goodsInfos = goodsInfoMapper.getPublicGoods(page, condition);
+        return RestResp.ok(PageRespDTO.of(condition.getPageNum(), condition.getPageSize(), page.getTotal(),
+                goodsInfos.stream().map(goodsInfo -> GoodsPublicRespDTO.builder()
+                        .goodsId(goodsInfo.getId())
+                        .goodsContent(goodsInfo.getGoodsContent())
+                        .goodsTitle(goodsInfo.getGoodsTitle())
+                        .nickName(goodsInfo.getNickName())
+                        .picUrl(goodsInfo.getPicUrl())
+                        .price(goodsInfo.getGoodsPrice())
+                        .buyTime(goodsInfo.getBuyTime())
+                        .oldDegree(goodsInfo.getOldDegree())
+                        .goodsStatus(goodsInfo.getGoodsStatus())
+                        .uid(goodsInfo.getUid())
+                        .build()
+                ).collect(Collectors.toList())
+        ));
     }
 }

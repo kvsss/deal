@@ -1,19 +1,18 @@
 package com.deng.controller.front;
 
-import com.deng.core.auth.UserHolder;
+import com.deng.core.common.resp.PageRespDTO;
 import com.deng.core.common.resp.RestResp;
 import com.deng.core.constant.api.FrontApiRouterConstants;
 import com.deng.dto.req.*;
-import com.deng.dto.resp.UserInfoRespDTO;
-import com.deng.dto.resp.UserLoginRespDTO;
-import com.deng.dto.resp.UserRegisterRespDTO;
+import com.deng.dto.resp.*;
 import com.deng.service.GoodsOrderService;
-import com.deng.service.GoodsService;
+import com.deng.service.GoodsInfoService;
 import com.deng.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import org.springdoc.api.annotations.ParameterObject;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -31,7 +30,7 @@ import javax.validation.Valid;
 public class UserController {
     private final UserService userService;
 
-    private final GoodsService goodsService;
+    private final GoodsInfoService goodsInfoService;
 
     private final GoodsOrderService goodsOrderService;
 
@@ -52,6 +51,16 @@ public class UserController {
     public RestResp<UserLoginRespDTO> login(@Valid @RequestBody UserLoginReqDTO dto) {
         return userService.login(dto);
     }
+
+    /**
+     * 用户删除接口
+     */
+    @Operation(summary = "用户删除接口")
+    @DeleteMapping("deleteUser/{uid}")
+    public RestResp<Void> deleteUser(@Parameter(description = "用户ID") @PathVariable Long uid) {
+        return userService.deleteUser(uid);
+    }
+
 
 
     /**
@@ -79,7 +88,7 @@ public class UserController {
     @Operation(summary = "商品发布接口")
     @PostMapping("goods")
     public RestResp<Void> publishGoods(@Valid @RequestBody GoodsAddReqDTO dto) {
-        return goodsService.saveGoods(dto);
+        return goodsInfoService.saveGoods(dto);
     }
 
 
@@ -89,7 +98,7 @@ public class UserController {
     @Operation(summary = "发表评论接口")
     @PostMapping("comment")
     public RestResp<Void> comment(@Valid @RequestBody UserCommentReqDTO dto) {
-        return goodsService.saveComment(dto);
+        return goodsInfoService.saveComment(dto);
     }
 
 
@@ -101,7 +110,7 @@ public class UserController {
     public RestResp<Void> updateComment(@Parameter(description = "评论ID") @PathVariable Long id,
                                         @Parameter(description = "用户ID") @PathVariable Long uid,
                                         String content) {
-        return goodsService.updateComment(uid, id, content);
+        return goodsInfoService.updateComment(uid, id, content);
     }
 
     /**
@@ -111,7 +120,7 @@ public class UserController {
     @DeleteMapping("comment/{id}/{uid}")
     public RestResp<Void> deleteComment(@Parameter(description = "评论ID") @PathVariable Long id,
                                         @Parameter(description = "用户ID") @PathVariable Long uid) {
-        return goodsService.deleteComment(uid, id);
+        return goodsInfoService.deleteComment(uid, id);
     }
 
     /**
@@ -122,4 +131,32 @@ public class UserController {
     public RestResp<Void> buyGoods(@Valid @RequestBody GoodsOrderAddReqDTO dto) {
         return goodsOrderService.buyGoods(dto);
     }
+
+    /**
+     * 获取用户发布商品接口
+     */
+    @Operation(summary = "用户发布商品接口")
+    @GetMapping("publicInfo")
+    public RestResp<PageRespDTO<GoodsPublicRespDTO>> getPublicGoods(@ParameterObject GoodsPublicReqDTO condition) {
+        return goodsInfoService.getPublicGoods(condition);
+    }
+/*
+    *//**
+     * 获取用户购买商品接口
+     *//*
+    @Operation(summary = "用户购买商品接口")
+    @GetMapping("buyInfo")
+    public RestResp<Void> getBuyGoods( @ParameterObject GoodsBuyReqDTO dto) {
+        return goodsOrderService.buyGoods(dto);
+    }
+
+    *//**
+     * 获取用户卖出商品接口
+     *//*
+    @Operation(summary = "用户卖出商品接口")
+    @GetMapping("sellInfo")
+    public RestResp<Void> getSellGoods( @ParameterObject GoodsSellReqDTO dto) {
+        return goodsOrderService.buyGoods(dto);
+    }*/
+
 }

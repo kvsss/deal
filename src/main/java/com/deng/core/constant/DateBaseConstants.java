@@ -64,6 +64,8 @@ public final class DateBaseConstants {
         LIMIT_5("limit 5"),
         // 数量限制为10
         LIMIT_10("limit 10"),
+        // 数量限制为12
+        LIMIT_12("limit 12"),
         // 数量限制为30
         LIMIT_30("limit 30"),
         // 数量限制为50

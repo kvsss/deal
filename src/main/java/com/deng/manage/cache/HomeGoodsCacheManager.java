@@ -110,7 +110,7 @@ public class HomeGoodsCacheManager {
 
     private List<HomeGoodsRespDTO> listRankGoods(QueryWrapper<GoodsInfo> goodsInfoQueryWrapper) {
         goodsInfoQueryWrapper
-                .last(DateBaseConstants.LimitSQLtEnum.LIMIT_30.getLimitSql());
+                .last(DateBaseConstants.LimitSQLtEnum.LIMIT_12.getLimitSql());
         return goodsInfoMapper.selectList(goodsInfoQueryWrapper).stream().map(goodsInfo -> {
             HomeGoodsRespDTO homeGoodsRespDTO = new HomeGoodsRespDTO();
             // type 不起作用

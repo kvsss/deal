@@ -29,7 +29,6 @@ public class PageRespDTO<T> {
      * 总记录数
      */
     @Schema(description = "总记录数")
-
     private final long total;
 
     /**

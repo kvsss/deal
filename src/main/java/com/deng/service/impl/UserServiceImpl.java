@@ -129,10 +129,26 @@ public class UserServiceImpl implements UserService {
         // 扩展点:如果图片存在,考虑删除
         UserInfo userInfo = new UserInfo();
         userInfo.setId(dto.getUid());
-        userInfo.setNickName(dto.getNickName());
-        userInfo.setUserPhoto(dto.getUserPhoto());
-        userInfo.setUserSex(dto.getUserSex());
+        // nickName不能为null
+        if (dto.getNickName() != null && !dto.getNickName().isEmpty()) {
+            userInfo.setNickName(dto.getNickName());
+        }
+        // userPhoto不能为null
+        if (dto.getUserPhoto() != null && !dto.getUserPhoto().isEmpty()) {
+            userInfo.setUserPhoto(dto.getUserPhoto());
+        }
+        // userSex不能为null
+        if (dto.getUserSex() != null &&
+                (dto.getUserSex() == 0 || dto.getUserSex() == 1)) {
+            userInfo.setUserSex(dto.getUserSex());
+        }
         userInfoMapper.updateById(userInfo);
+        return RestResp.ok();
+    }
+
+    @Override
+    public RestResp<Void> deleteUser(Long uid) {
+        userInfoMapper.deleteById(uid);
         return RestResp.ok();
     }
 }

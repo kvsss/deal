@@ -43,4 +43,10 @@ public interface UserService {
      */
     RestResp<Void> updateUserInfo(UserInfoUptReqDTO dto);
 
+    /**
+     * 删除用户
+     * @param uid
+     * @return
+     */
+    RestResp<Void> deleteUser(Long uid);
 }

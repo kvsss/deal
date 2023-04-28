@@ -33,21 +33,12 @@ public class GoodsOrderServiceImpl implements GoodsOrderService {
 
     @Override
     public RestResp<Void> buyGoods(GoodsOrderAddReqDTO dto) {
-        GoodsInfo goodsInfo = goodsInfoMapper.selectById(dto.getGoodsId());
-
-        // 校验商品可购买
-        if(goodsInfo.getGoodsStatus() != 0){
+        // 行级索防止超卖
+        if (goodsInfoMapper.updateGoodsStatus(dto.getGoodsId()) == 0) {
             return RestResp.fail(CodeEnum.USER_ORDER_FAIL);
         }
 
-        // 修改商品的标记位为3:正在支付
-        goodsInfo.setGoodsStatus(3);
-        goodsInfoMapper.updateById(goodsInfo);
-
-        // 修改缓存
-        goodsInfoCacheManage.cachePutGoodsInfo(goodsInfo.getId());
-
-        // 添加订单
+        // 添加商品订单信息
         GoodsOrder goodsOrder = new GoodsOrder();
         goodsOrder.setGoodsId(dto.getGoodsId());
         goodsOrder.setSellerId(dto.getSellerId());
@@ -61,5 +52,20 @@ public class GoodsOrderServiceImpl implements GoodsOrderService {
         goodsOrder.setStatus(0);
         goodsOrderMapper.insert(goodsOrder);
         return RestResp.ok();
+    }
+
+/*    @Override
+    public RestResp<List<GoodsOrderRespDTO>> listOrder() {
+        return null;
+    }*/
+
+    @Override
+    public RestResp<Void> deleteOrder() {
+        return null;
+    }
+
+    @Override
+    public RestResp<Void> updateOrder() {
+        return null;
     }
 }

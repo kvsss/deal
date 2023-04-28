@@ -41,6 +41,15 @@ public final class FrontApiRouterConstants {
      */
     public static final String HOME_URL_PREFIX = "/home";
 
+    /**
+     * 订单请求前缀
+     */
+    public static final String ORDER_URL_PREFIX = "/order";
+
+    /**
+     * 商品类别请求前缀
+     */
+    public static final String CATEGORY_URL_PREFIX = "/category";
 
     /**
      * 前台门户搜索相关API请求路径前缀
@@ -66,6 +75,16 @@ public final class FrontApiRouterConstants {
      *   前台门户请求前缀
      */
     public static final String FRONT_HOME_API_URL_PREFIX = FRONT_URL_PREFIX + HOME_URL_PREFIX;
+
+    /**
+     * 前台订单请求前缀
+     */
+    public static final String FRONT_ORDER_API_URL_PREFIX = FRONT_URL_PREFIX + ORDER_URL_PREFIX;
+
+    /**
+     * 前台商品类别请求前缀
+     */
+    public static final String FRONT_CATEGORY_API_URL_PREFIX = FRONT_URL_PREFIX + CATEGORY_URL_PREFIX;
 
 
 

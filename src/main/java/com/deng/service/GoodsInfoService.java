@@ -1,12 +1,14 @@
 package com.deng.service;
 
+import com.deng.core.common.resp.PageRespDTO;
 import com.deng.core.common.resp.RestResp;
 import com.deng.dto.req.GoodsAddReqDTO;
+import com.deng.dto.req.GoodsPublicReqDTO;
 import com.deng.dto.req.UserCommentReqDTO;
 import com.deng.dto.resp.GoodsCategoryRespDTO;
 import com.deng.dto.resp.GoodsCommentRespDTO;
 import com.deng.dto.resp.GoodsInfoRespDTO;
-import com.deng.dto.resp.HomeGoodsRespDTO;
+import com.deng.dto.resp.GoodsPublicRespDTO;
 
 import java.util.List;
 
@@ -16,7 +18,7 @@ import java.util.List;
  * @description :商品服务类
  * @since :1.8
  */
-public interface GoodsService {
+public interface GoodsInfoService {
 
     /**
      * 商品信息保存
@@ -87,4 +89,11 @@ public interface GoodsService {
      * @return
      */
     RestResp<Void> deleteComment(Long uid, Long id);
+
+    /**
+     * 获取用户发布商品接口
+     * @param dto
+     * @return
+     */
+    RestResp<PageRespDTO<GoodsPublicRespDTO>> getPublicGoods(GoodsPublicReqDTO condition);
 }

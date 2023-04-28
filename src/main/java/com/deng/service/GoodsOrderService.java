@@ -16,4 +16,21 @@ public interface GoodsOrderService {
      * @return
      */
     RestResp<Void> buyGoods(GoodsOrderAddReqDTO dto);
+/*
+    *//**
+     * 订单列表查询接口
+     * @return
+     *//*
+    RestResp<List<GoodsOrderRespDTO>> listOrder();*/
+
+    /**
+     * 订单删除接口
+     */
+    RestResp<Void> deleteOrder();
+
+    /**
+     * 订单修改接口
+     */
+    RestResp<Void> updateOrder();
+
 }
