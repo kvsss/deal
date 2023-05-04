@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
  * </p>
  *
  * @author ${author}
- * @since 2023/04/24
+ * @since 2023/04/29
  */
 @TableName("goods_order")
 public class GoodsOrder implements Serializable {
@@ -50,6 +50,11 @@ public class GoodsOrder implements Serializable {
      * 买家地址
      */
     private String buyerAddress;
+
+    /**
+     * 买家电话
+     */
+    private String sellerPhone;
 
     /**
      * 买家电话
@@ -130,6 +135,14 @@ public class GoodsOrder implements Serializable {
         this.buyerAddress = buyerAddress;
     }
 
+    public String getSellerPhone() {
+        return sellerPhone;
+    }
+
+    public void setSellerPhone(String sellerPhone) {
+        this.sellerPhone = sellerPhone;
+    }
+
     public String getBuyerPhone() {
         return buyerPhone;
     }
@@ -187,6 +200,7 @@ public class GoodsOrder implements Serializable {
         ", buyerId=" + buyerId +
         ", buyerName=" + buyerName +
         ", buyerAddress=" + buyerAddress +
+        ", sellerPhone=" + sellerPhone +
         ", buyerPhone=" + buyerPhone +
         ", price=" + price +
         ", status=" + status +

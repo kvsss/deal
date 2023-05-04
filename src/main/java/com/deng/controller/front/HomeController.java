@@ -53,4 +53,13 @@ public class HomeController {
     public RestResp<List<HomeGoodsRespDTO>> listNewestRankGoods() {
         return homeService.listNewestRankGoods();
     }
+
+    /**
+     * 列出平台发布商品
+     */
+    @Operation(summary = "平台发布商品查询接口")
+    @GetMapping("platform_goods")
+    public RestResp<List<HomeGoodsRespDTO>> listPlatformGoods() {
+        return homeService.listPlatformGoods();
+    }
 }

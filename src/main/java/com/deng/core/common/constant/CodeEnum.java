@@ -66,10 +66,21 @@ public enum CodeEnum {
      */
     USER_LOGIN_EXPIRED("A0230", "用户登录已过期"),
 
+    USER_REFRESH("A0240", "操作失败，请刷新页面重试"),
+
+
+    PARAM_ERROR("B0001", "参数错误"),
+
     /**
      * 系统异常
      */
-    SYSTEM_ERROR("Z0001", "系统错误");
+    SYSTEM_ERROR("Z0001", "系统错误"),
+
+    /**
+     * 功能未实现
+     */
+    SYSTEM_WARN("Z0002", "系统功能未实现");
+
 
     /**
      * 错误码

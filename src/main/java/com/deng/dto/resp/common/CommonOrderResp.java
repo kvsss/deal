@@ -1,26 +1,21 @@
-package com.deng.dto.resp;
+package com.deng.dto.resp.common;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
  * @author :deng
  * @version :1.0
- * @description :商品Dto
+ * @description :
  * @since :1.8
  */
 @Data
-@Builder
-public class GoodsInfoRespDTO implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+@SuperBuilder
+public class CommonOrderResp {
 
     /**
      * 商品ID
@@ -82,10 +77,44 @@ public class GoodsInfoRespDTO implements Serializable {
     @Schema(description = "商品状态(0:未售出,1:已售出,2:已下架)")
     private Integer goodsStatus;
 
+    ////////////////////////////////////////////////////////////////
+
+    @Schema(description = "订单主键")
+    private Long orderId;
+
+    @Schema(description = "卖家id")
+    private Long sellerId;
+
+    @Schema(description = "买家id")
+    private Long buyerId;
+
+    @Schema(description = "买家名称")
+    private String buyerName;
+
+    @Schema(description = "买家地址")
+    private String buyerAddress;
+
+    @Schema(description = "买家电话")
+    private String buyerPhone;
+
+    @Schema(description = "卖家电话")
+    private String sellerPhone;
+
+    @Schema(description = "订单状态:0未完成 1已完成 2已取消")
+    private Integer status;
+
+    @Schema(description = "下单时间")
+    private LocalDateTime createTime;
+
+    @Schema(description = "最后更新时间")
+    private LocalDateTime updateTime;
+
+    @Schema(description = "完成时间,在已完成时设置")
+    private LocalDateTime completeTime;
+
     /**
      * 0:自己发布,1:平台发布
      */
     @Schema(description = "0:自己发布,1:平台发布")
     private String extra;
-
 }

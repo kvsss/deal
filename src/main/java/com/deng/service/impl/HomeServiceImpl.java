@@ -40,7 +40,11 @@ public class HomeServiceImpl implements HomeService {
     public RestResp<List<HomeGoodsRespDTO>> listVisitRankGoods() {
         QueryWrapper<GoodsInfo> goodsInfoQueryWrapper = new QueryWrapper<>();
         // 访问量排序
-        goodsInfoQueryWrapper.orderByDesc(DateBaseConstants.GoodsInfoTable.COLUMN_VISIT_COUNT);
+        goodsInfoQueryWrapper
+                .eq(DateBaseConstants.GoodsInfoTable.COLUMN_GOODS_STATUS, 0)
+                .orderByDesc(DateBaseConstants.GoodsInfoTable.COLUMN_VISIT_COUNT)
+                .last(DateBaseConstants.LimitSQLtEnum.LIMIT_12.getLimitSql());
+
         return RestResp.ok(listRankGoods(goodsInfoQueryWrapper));
     }
 
@@ -49,18 +53,33 @@ public class HomeServiceImpl implements HomeService {
         QueryWrapper<GoodsInfo> goodsInfoQueryWrapper = new QueryWrapper<>();
         // 创建时间排序
         goodsInfoQueryWrapper
-                .orderByDesc(DateBaseConstants.CommonColumnEnum.CREATE_TIME.getName());
+                .eq(DateBaseConstants.GoodsInfoTable.COLUMN_GOODS_STATUS, 0)
+                .orderByDesc(DateBaseConstants.CommonColumnEnum.CREATE_TIME.getName())
+                .last(DateBaseConstants.LimitSQLtEnum.LIMIT_12.getLimitSql());
+
+        return RestResp.ok(listRankGoods(goodsInfoQueryWrapper));
+    }
+
+    @Override
+    public RestResp<List<HomeGoodsRespDTO>> listPlatformGoods() {
+        QueryWrapper<GoodsInfo> goodsInfoQueryWrapper = new QueryWrapper<>();
+        // 创建时间排序
+        goodsInfoQueryWrapper
+                .eq(DateBaseConstants.GoodsInfoTable.COLUMN_GOODS_STATUS, 0)
+                .eq(DateBaseConstants.GoodsInfoTable.COLUMN_EXTRA, "1")
+                .orderByDesc(DateBaseConstants.CommonColumnEnum.CREATE_TIME.getName())
+                .last(DateBaseConstants.LimitSQLtEnum.LIMIT_18.getLimitSql());
+
         return RestResp.ok(listRankGoods(goodsInfoQueryWrapper));
     }
 
     /**
-     *  查询排行榜商品
+     * 查询排行榜商品
+     *
      * @param goodsInfoQueryWrapper
      * @return
      */
     private List<HomeGoodsRespDTO> listRankGoods(QueryWrapper<GoodsInfo> goodsInfoQueryWrapper) {
-        goodsInfoQueryWrapper
-                .last(DateBaseConstants.LimitSQLtEnum.LIMIT_12.getLimitSql());
         return goodsInfoMapper.selectList(goodsInfoQueryWrapper).stream().map(goodsInfo -> {
             HomeGoodsRespDTO homeGoodsRespDTO = new HomeGoodsRespDTO();
             // type 不起作用
@@ -74,6 +93,7 @@ public class HomeServiceImpl implements HomeService {
             homeGoodsRespDTO.setGoodsStatus(goodsInfo.getGoodsStatus());
             homeGoodsRespDTO.setOldDegree(goodsInfo.getOldDegree());
             homeGoodsRespDTO.setBuyTime(goodsInfo.getBuyTime());
+            homeGoodsRespDTO.setExtra(goodsInfo.getExtra());
             return homeGoodsRespDTO;
         }).collect(Collectors.toList());
     }

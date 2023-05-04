@@ -10,16 +10,12 @@ import com.deng.core.common.resp.RestResp;
 import com.deng.core.constant.DateBaseConstants;
 import com.deng.dao.entity.GoodsComment;
 import com.deng.dao.entity.GoodsInfo;
+import com.deng.dao.entity.GoodsOrder;
 import com.deng.dao.entity.UserInfo;
 import com.deng.dao.mapper.GoodsCommentMapper;
 import com.deng.dao.mapper.GoodsInfoMapper;
-import com.deng.dto.req.GoodsAddReqDTO;
-import com.deng.dto.req.GoodsPublicReqDTO;
-import com.deng.dto.req.UserCommentReqDTO;
-import com.deng.dto.resp.GoodsCategoryRespDTO;
-import com.deng.dto.resp.GoodsCommentRespDTO;
-import com.deng.dto.resp.GoodsInfoRespDTO;
-import com.deng.dto.resp.GoodsPublicRespDTO;
+import com.deng.dto.req.*;
+import com.deng.dto.resp.*;
 import com.deng.manage.cache.GoodsCategoryCacheManage;
 import com.deng.manage.cache.GoodsInfoCacheManage;
 import com.deng.manage.dao.UserDaoManager;
@@ -80,6 +76,18 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
         goodsInfo.setUpdateTime(LocalDateTime.now());
         goodsInfo.setBuyTime(dto.getBuyTime());
         goodsInfo.setOldDegree(dto.getOldDegree());
+
+        if (dto.getExtra() == null || "0".equals(dto.getExtra())) {
+            goodsInfo.setGoodsStatus(0);
+            dto.setExtra(dto.getExtra());
+        } else if ("1".equals(dto.getExtra())) {
+            // 11:表示需要平台审核
+            goodsInfo.setGoodsStatus(11);
+            dto.setExtra(dto.getExtra());
+        } else {
+            return RestResp.fail(CodeEnum.PARAM_ERROR);
+        }
+        goodsInfo.setExtra(dto.getExtra());
         goodsInfoMapper.insert(goodsInfo);
         return RestResp.ok();
     }
@@ -104,6 +112,7 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
                 .buyTime(goodsInfo.getBuyTime())
                 .oldDegree(goodsInfo.getOldDegree())
                 .uid(goodsInfo.getUid())
+                .extra(goodsInfo.getExtra())
                 .build();
         return RestResp.ok(result);
     }
@@ -214,13 +223,33 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
         return RestResp.ok();
     }
 
+
     @Override
     public RestResp<PageRespDTO<GoodsPublicRespDTO>> getPublicGoods(GoodsPublicReqDTO condition) {
-        Page<GoodsPublicRespDTO> page = new Page<>();
+        Page<GoodsInfo> page = new Page<>();
         page.setCurrent(condition.getPageNum());
         page.setSize(condition.getPageSize());
+        Page<GoodsInfo> goodsInfoPage;
+        // 发布的
+        if (condition.getExtra() == null || "1".equals(condition.getExtra())
+                || "".equals(condition.getExtra())) {
+            goodsInfoPage = goodsInfoMapper.selectPage(page,
+                    getQueryWrapperForStatusAndKeyword(condition.getUid(), 0, condition.getKeyword()));
+        }
+        // 平台待审核中
+        else if ("2".equals(condition.getExtra())) {
+            goodsInfoPage = goodsInfoMapper.selectPage(page,
+                    getQueryWrapperForStatusAndKeyword(condition.getUid(), 11, condition.getKeyword()));
+        }
+        // 平台审核不通过
+        else if ("3".equals(condition.getExtra())) {
+            goodsInfoPage = goodsInfoMapper.selectPage(page,
+                    getQueryWrapperForStatusAndKeyword(condition.getUid(), 20, condition.getKeyword()));
+        } else {
+            return RestResp.fail(CodeEnum.SYSTEM_ERROR);
+        }
 
-        List<GoodsInfo> goodsInfos = goodsInfoMapper.getPublicGoods(page, condition);
+        List<GoodsInfo> goodsInfos = goodsInfoPage.getRecords();
         return RestResp.ok(PageRespDTO.of(condition.getPageNum(), condition.getPageSize(), page.getTotal(),
                 goodsInfos.stream().map(goodsInfo -> GoodsPublicRespDTO.builder()
                         .goodsId(goodsInfo.getId())
@@ -232,9 +261,305 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
                         .buyTime(goodsInfo.getBuyTime())
                         .oldDegree(goodsInfo.getOldDegree())
                         .goodsStatus(goodsInfo.getGoodsStatus())
+                        .categoryId(goodsInfo.getCategoryId())
+                        .categoryName(goodsInfo.getCategoryName())
+                        .createTime(goodsInfo.getCreateTime())
+                        .updateTime(goodsInfo.getUpdateTime())
                         .uid(goodsInfo.getUid())
+                        .extra(goodsInfo.getExtra())
                         .build()
                 ).collect(Collectors.toList())
         ));
     }
+
+
+    @Override
+    public RestResp<PageRespDTO<GoodsOffRespDTO>> getOffGoods(GoodsOffReqDTO condition) {
+        Page<GoodsInfo> page = new Page<>();
+        page.setCurrent(condition.getPageNum());
+        page.setSize(condition.getPageSize());
+        Page<GoodsInfo> goodsInfoPage;
+
+        QueryWrapper<GoodsInfo> queryWrapper = getQueryWrapperForStatusAndKeyword(condition.getUid(), 2, condition.getKeyword());
+        // 个人下架的
+        if (condition.getExtra() == null || "1".equals(condition.getExtra())
+                || "".equals(condition.getExtra())) {
+            queryWrapper.eq(DateBaseConstants.GoodsInfoTable.COLUMN_EXTRA, 0);
+        }
+        // 平台下架的
+        else if ("2".equals(condition.getExtra())) {
+            queryWrapper.eq(DateBaseConstants.GoodsInfoTable.COLUMN_EXTRA, 1);
+        } else {
+            return RestResp.fail(CodeEnum.SYSTEM_ERROR);
+        }
+
+        goodsInfoPage = goodsInfoMapper.selectPage(page, queryWrapper);
+        List<GoodsInfo> goodsInfos = goodsInfoPage.getRecords();
+
+        return RestResp.ok(PageRespDTO.of(condition.getPageNum(), condition.getPageSize(), page.getTotal(),
+                goodsInfos.stream().map(goodsInfo -> GoodsOffRespDTO.builder()
+                        .goodsId(goodsInfo.getId())
+                        .goodsContent(goodsInfo.getGoodsContent())
+                        .goodsTitle(goodsInfo.getGoodsTitle())
+                        .nickName(goodsInfo.getNickName())
+                        .picUrl(goodsInfo.getPicUrl())
+                        .price(goodsInfo.getGoodsPrice())
+                        .buyTime(goodsInfo.getBuyTime())
+                        .oldDegree(goodsInfo.getOldDegree())
+                        .goodsStatus(goodsInfo.getGoodsStatus())
+                        .categoryId(goodsInfo.getCategoryId())
+                        .categoryName(goodsInfo.getCategoryName())
+                        .createTime(goodsInfo.getCreateTime())
+                        .updateTime(goodsInfo.getUpdateTime())
+                        .uid(goodsInfo.getUid())
+                        .extra(goodsInfo.getExtra())
+                        .build()
+                ).collect(Collectors.toList())
+        ));
+    }
+
+
+    @Override
+    public RestResp<PageRespDTO<GoodsApplyRespDTO>> getApplyGoods(GoodsApplyReqDTO condition) {
+        Page<GoodsInfo> page = new Page<>();
+        page.setCurrent(condition.getPageNum());
+        page.setSize(condition.getPageSize());
+
+        Page<GoodsInfo> goodsInfoPage;
+        // 申请页面
+        if (condition.getExtra() == null || "1".equals(condition.getExtra())
+                || "".equals(condition.getExtra())) {
+            goodsInfoPage = goodsInfoMapper.selectPage(page,
+                    getQueryWrapperForStatusAndKeyword(null, 11, condition.getKeyword()));
+        }
+        // 申请不通过的页面
+        else if ("2".equals(condition.getExtra())) {
+            goodsInfoPage = goodsInfoMapper.selectPage(page,
+                    getQueryWrapperForStatusAndKeyword(null, 20, condition.getKeyword()));
+        } else {
+            return RestResp.fail(CodeEnum.SYSTEM_ERROR);
+        }
+
+        List<GoodsInfo> goodsInfos = goodsInfoPage.getRecords();
+        return RestResp.ok(PageRespDTO.of(condition.getPageNum(), condition.getPageSize(), page.getTotal(),
+                goodsInfos.stream().map(goodsInfo -> GoodsApplyRespDTO.builder()
+                        .goodsId(goodsInfo.getId())
+                        .goodsContent(goodsInfo.getGoodsContent())
+                        .goodsTitle(goodsInfo.getGoodsTitle())
+                        .nickName(goodsInfo.getNickName())
+                        .picUrl(goodsInfo.getPicUrl())
+                        .price(goodsInfo.getGoodsPrice())
+                        .buyTime(goodsInfo.getBuyTime())
+                        .oldDegree(goodsInfo.getOldDegree())
+                        .goodsStatus(goodsInfo.getGoodsStatus())
+                        .categoryId(goodsInfo.getCategoryId())
+                        .categoryName(goodsInfo.getCategoryName())
+                        .createTime(goodsInfo.getCreateTime())
+                        .updateTime(goodsInfo.getUpdateTime())
+                        .uid(goodsInfo.getUid())
+                        .extra(goodsInfo.getExtra())
+                        .build()
+                ).collect(Collectors.toList())
+        ));
+    }
+
+
+    @Override
+    public RestResp<PageRespDTO<GoodsPlatformRespDTO>> getPlatformGoods(GoodsPlatformReqDTO condition) {
+        Page<GoodsInfo> page = new Page<>();
+        page.setCurrent(condition.getPageNum());
+        page.setSize(condition.getPageSize());
+
+        Page<GoodsInfo> goodsInfoPage = null;
+        QueryWrapper<GoodsInfo> queryWrapper = null;
+        // 发布页面
+        // 上架中
+        if (condition.getExtra() == null || "1".equals(condition.getExtra())
+                || "".equals(condition.getExtra())) {
+            queryWrapper = getQueryWrapperForStatusAndKeyword(null, 0, condition.getKeyword());
+        } // 已成交
+        else if ("2".equals(condition.getExtra())) {
+            queryWrapper = getQueryWrapperForStatusAndKeyword(null, 1, condition.getKeyword());
+        } // 成交中
+        else if ("3".equals(condition.getExtra())) {
+            queryWrapper = getQueryWrapperForStatusAndKeyword(null, 3, condition.getKeyword());
+        }//  已取消
+        else if ("4".equals(condition.getExtra())) {
+            queryWrapper = getQueryWrapperForStatusAndKeyword(null, 4, condition.getKeyword());
+        } else {
+            return RestResp.fail(CodeEnum.SYSTEM_ERROR);
+        }
+
+        queryWrapper.eq(DateBaseConstants.GoodsInfoTable.COLUMN_EXTRA, 1);
+        goodsInfoPage = goodsInfoMapper.selectPage(page, queryWrapper);
+        List<GoodsInfo> goodsInfos = goodsInfoPage.getRecords();
+        return RestResp.ok(PageRespDTO.of(condition.getPageNum(), condition.getPageSize(), page.getTotal(),
+                goodsInfos.stream().map(goodsInfo -> GoodsPlatformRespDTO.builder()
+                        .goodsId(goodsInfo.getId())
+                        .goodsContent(goodsInfo.getGoodsContent())
+                        .goodsTitle(goodsInfo.getGoodsTitle())
+                        .nickName(goodsInfo.getNickName())
+                        .picUrl(goodsInfo.getPicUrl())
+                        .price(goodsInfo.getGoodsPrice())
+                        .buyTime(goodsInfo.getBuyTime())
+                        .oldDegree(goodsInfo.getOldDegree())
+                        .goodsStatus(goodsInfo.getGoodsStatus())
+                        .categoryId(goodsInfo.getCategoryId())
+                        .categoryName(goodsInfo.getCategoryName())
+                        .createTime(goodsInfo.getCreateTime())
+                        .updateTime(goodsInfo.getUpdateTime())
+                        .uid(goodsInfo.getUid())
+                        .extra(goodsInfo.getExtra())
+                        .build()
+                ).collect(Collectors.toList())
+        ));
+    }
+
+
+    // 根据status
+    @Override
+    public QueryWrapper<GoodsInfo> getQueryWrapperForStatus(Long goodsId, Integer status) {
+        QueryWrapper<GoodsInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq(DateBaseConstants.GoodsInfoTable.COLUMN_GOODS_STATUS, status)
+                .eq(DateBaseConstants.CommonColumnEnum.ID.getName(), goodsId);
+        return queryWrapper;
+    }
+
+    // 根据keyWord
+    @Override
+    public QueryWrapper<GoodsInfo> getQueryWrapperForKeyword(Long goodsId, String keyword) {
+        QueryWrapper<GoodsInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq(DateBaseConstants.CommonColumnEnum.ID.getName(), goodsId);
+        // 模糊匹配
+        if (keyword != null && !"".equals(keyword)) {
+            queryWrapper.like(DateBaseConstants.GoodsInfoTable.COLUMN_GOODS_TITLE, keyword);
+        }
+        return queryWrapper;
+    }
+
+    // 根据status和keyword
+    @Override
+    public QueryWrapper<GoodsInfo> getQueryWrapperForStatusAndKeyword(Long uid, Integer status, String keyword) {
+        QueryWrapper<GoodsInfo> queryWrapper = new QueryWrapper<>();
+
+        // 当uid无效时，不加入uid的条件
+        if (uid != null && uid != -1) {
+            queryWrapper.eq(DateBaseConstants.GoodsInfoTable.COLUMN_UID, uid);
+        }
+
+        queryWrapper.eq(DateBaseConstants.GoodsInfoTable.COLUMN_GOODS_STATUS, status);
+
+        // 模糊匹配
+        if (keyword != null && !"".equals(keyword)) {
+            queryWrapper.like(DateBaseConstants.GoodsInfoTable.COLUMN_GOODS_TITLE, keyword);
+        }
+        return queryWrapper;
+    }
+
+
+    @Override
+    public RestResp<Void> deleteGoods(Long goodsId) {
+        QueryWrapper<GoodsInfo> queryWrapperForStatus = getQueryWrapperForStatus(goodsId, 0);
+
+        // 更新失败
+        if (goodsInfoMapper.delete(queryWrapperForStatus) == 0) {
+            return RestResp.fail(CodeEnum.USER_REFRESH);
+        }
+        return RestResp.ok();
+    }
+
+    @Override
+    public RestResp<Void> offShelfGoods(Long goodsId) {
+        QueryWrapper<GoodsInfo> queryWrapperForStatus = getQueryWrapperForStatus(goodsId, 0);
+        GoodsInfo goodsInfo = goodsInfoMapper.selectById(goodsId);
+        // 下架标记
+        goodsInfo.setGoodsStatus(2);
+        goodsInfo.setUpdateTime(LocalDateTime.now());
+
+        // 更新失败
+        if (goodsInfoMapper.update(goodsInfo, queryWrapperForStatus) == 0) {
+            return RestResp.fail(CodeEnum.USER_REFRESH);
+        }
+        return RestResp.ok();
+    }
+
+    @Override
+    public RestResp<Void> onShelfGoods(Long goodsId) {
+        QueryWrapper<GoodsInfo> queryWrapperForStatus = getQueryWrapperForStatus(goodsId, 2);
+        GoodsInfo goodsInfo = goodsInfoMapper.selectById(goodsId);
+        // 上架标记
+        goodsInfo.setGoodsStatus(0);
+        goodsInfo.setUpdateTime(LocalDateTime.now());
+
+
+        // 更新失败
+        if (goodsInfoMapper.update(goodsInfo, queryWrapperForStatus) == 0) {
+            return RestResp.fail(CodeEnum.USER_REFRESH);
+        }
+        return RestResp.ok();
+    }
+
+    @Override
+    public RestResp<Void> updateGoods(GoodsUpdateRespDTO dto) {
+
+        QueryWrapper<GoodsInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq(DateBaseConstants.CommonColumnEnum.ID.getName(), dto.getGoodsId());
+        // status 为 0 或 2 的才能修改 0 代表上架 2 代表下架
+        queryWrapper.and(wrapper -> wrapper.eq(DateBaseConstants.GoodsInfoTable.COLUMN_GOODS_STATUS, 0)
+                .or().eq(DateBaseConstants.GoodsInfoTable.COLUMN_GOODS_STATUS, 2));
+
+        GoodsInfo goodsInfo = goodsInfoMapper.selectById(dto.getGoodsId());
+        // 修改信息
+        goodsInfo.setGoodsTitle(dto.getGoodsTitle());
+        goodsInfo.setGoodsContent(dto.getGoodsContent());
+        goodsInfo.setPicUrl(dto.getPicUrl());
+        goodsInfo.setOldDegree(dto.getOldDegree());
+        goodsInfo.setBuyTime(dto.getBuyTime());
+        goodsInfo.setGoodsPrice(dto.getPrice());
+        goodsInfo.setCategoryId(dto.getCategoryId());
+        goodsInfo.setCategoryName(dto.getCategoryName());
+        goodsInfo.setUpdateTime(LocalDateTime.now());
+
+        // 更新失败
+        if (goodsInfoMapper.update(goodsInfo, queryWrapper) == 0) {
+            return RestResp.fail(CodeEnum.USER_REFRESH);
+        }
+        return RestResp.ok();
+    }
+
+
+    @Override
+    public RestResp<Void> agreeApplyGoods(Long uid, Long goodsId) {
+        QueryWrapper<GoodsInfo> queryWrapperForStatus = getQueryWrapperForStatus(goodsId, 11);
+        GoodsInfo goodsInfo = goodsInfoMapper.selectById(goodsId);
+        // 上架标记
+        goodsInfo.setGoodsStatus(0);
+
+        // 更新失败
+        if (goodsInfoMapper.update(goodsInfo, queryWrapperForStatus) == 0) {
+            return RestResp.fail(CodeEnum.USER_REFRESH);
+        }
+        return RestResp.ok();
+    }
+
+    @Override
+    public RestResp<Void> disagreeApplyGoods(Long uid, Long goodsId) {
+        QueryWrapper<GoodsInfo> queryWrapperForStatus = getQueryWrapperForStatus(goodsId, 11);
+        GoodsInfo goodsInfo = goodsInfoMapper.selectById(goodsId);
+        // 上架标记
+        goodsInfo.setGoodsStatus(20);
+
+        // 更新失败
+        if (goodsInfoMapper.update(goodsInfo, queryWrapperForStatus) == 0) {
+            return RestResp.fail(CodeEnum.USER_REFRESH);
+        }
+        return RestResp.ok();
+    }
+
+    @Override
+    public RestResp<Void> platformOffGoods(Long uid, Long goodsId) {
+        return offShelfGoods(goodsId);
+    }
+
+
 }

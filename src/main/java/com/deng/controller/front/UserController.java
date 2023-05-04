@@ -62,7 +62,6 @@ public class UserController {
     }
 
 
-
     /**
      * 获得用户信息
      */
@@ -140,23 +139,52 @@ public class UserController {
     public RestResp<PageRespDTO<GoodsPublicRespDTO>> getPublicGoods(@ParameterObject GoodsPublicReqDTO condition) {
         return goodsInfoService.getPublicGoods(condition);
     }
-/*
-    *//**
-     * 获取用户购买商品接口
-     *//*
-    @Operation(summary = "用户购买商品接口")
-    @GetMapping("buyInfo")
-    public RestResp<Void> getBuyGoods( @ParameterObject GoodsBuyReqDTO dto) {
-        return goodsOrderService.buyGoods(dto);
+
+    /**
+     * 获取用户下架商品接口
+     */
+    @Operation(summary = "获得用户下架商品接口")
+    @GetMapping("offInfo")
+    public RestResp<PageRespDTO<GoodsOffRespDTO>> getOffGoods(@ParameterObject GoodsOffReqDTO condition) {
+        return goodsInfoService.getOffGoods(condition);
     }
 
-    *//**
-     * 获取用户卖出商品接口
-     *//*
-    @Operation(summary = "用户卖出商品接口")
+
+    @Operation(summary = "获得用户购买商品信息接口")
+    @GetMapping("buyInfo")
+    public RestResp<PageRespDTO<GoodsBuyRespDTO>> getBuyGoods(@ParameterObject GoodsBuyReqDTO condition) {
+        return goodsOrderService.getBuyGoods(condition);
+    }
+
+
+    @Operation(summary = "获得用户卖出商品信息接口")
     @GetMapping("sellInfo")
-    public RestResp<Void> getSellGoods( @ParameterObject GoodsSellReqDTO dto) {
-        return goodsOrderService.buyGoods(dto);
-    }*/
+    public RestResp<PageRespDTO<GoodsSellRespDTO>> getSellGoods(@ParameterObject GoodsSellReqDTO condition) {
+        return goodsOrderService.getSellGoods(condition);
+    }
+
+
+    // 获得平台订单信息接口
+    @Operation(summary = "获得平台订单信息接口")
+    @GetMapping("platformOrder")
+    public RestResp<PageRespDTO<GoodsPlatformOrderRespDTO>> getPlatformOrder(@ParameterObject GoodsPlatformOrderReqDTO condition) {
+        return goodsOrderService.getPlatformOrder(condition);
+    }
+
+
+
+    @Operation(summary = "获得用户申请上架商品信息接口")
+    @GetMapping("applyInfo")
+    public RestResp<PageRespDTO<GoodsApplyRespDTO>> getApplyGoods(@ParameterObject GoodsApplyReqDTO condition) {
+        return goodsInfoService.getApplyGoods(condition);
+    }
+
+    // 获得平台上架商品信息接口
+    @Operation(summary = "获得平台上架商品信息接口")
+    @GetMapping("goodsInfo")
+    public RestResp<PageRespDTO<GoodsPlatformRespDTO>> getPlatformGoods(@ParameterObject GoodsPlatformReqDTO condition) {
+        return goodsInfoService.getPlatformGoods(condition);
+    }
+
 
 }

@@ -1,26 +1,22 @@
-package com.deng.dto.resp;
+package com.deng.dto.resp.common;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
  * @author :deng
  * @version :1.0
- * @description :商品Dto
+ * @description :
  * @since :1.8
  */
 @Data
-@Builder
-public class GoodsInfoRespDTO implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+@SuperBuilder
+public class CommonGoodsResp {
 
     /**
      * 商品ID
@@ -83,9 +79,33 @@ public class GoodsInfoRespDTO implements Serializable {
     private Integer goodsStatus;
 
     /**
+     * 类别ID
+     */
+    @Schema(description = "类别ID")
+    private Long categoryId;
+
+    /**
+     * 类别名
+     */
+    @Schema(description = "类别名")
+    private String categoryName;
+
+    /**
+     * 创建时间
+     */
+    @Schema(description = "创建时间")
+    private LocalDateTime createTime;
+
+    /**
+     * 更新时间
+     */
+    @Schema(description = "更新时间")
+    private LocalDateTime updateTime;
+
+
+    /**
      * 0:自己发布,1:平台发布
      */
     @Schema(description = "0:自己发布,1:平台发布")
     private String extra;
-
 }

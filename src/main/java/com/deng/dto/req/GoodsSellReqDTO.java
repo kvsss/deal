@@ -1,8 +1,10 @@
 package com.deng.dto.req;
 
 import com.deng.core.common.req.PageReqDTO;
+import com.deng.dto.req.common.CommonPageReq;
 import io.swagger.v3.oas.annotations.Parameter;
 import lombok.Data;
+import org.apache.calcite.avatica.proto.Common;
 
 /**
  * @author :deng
@@ -11,15 +13,6 @@ import lombok.Data;
  * @since :1.8
  */
 @Data
-public class GoodsSellReqDTO extends PageReqDTO {
-    /**
-     * 用户id
-     */
-    private Long uid;
+public class GoodsSellReqDTO extends CommonPageReq {
 
-    /**
-     * 搜索关键字
-     */
-    @Parameter(description = "搜索关键字")
-    private String keyword;
 }

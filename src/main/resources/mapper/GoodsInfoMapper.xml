@@ -18,13 +18,25 @@
     <select id="searchGoods" resultType="com.deng.dao.entity.GoodsInfo">
         select
         id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,
-        comment_count,create_time,update_time,goods_status,buy_time,old_degree
+        comment_count,create_time,update_time,goods_status,buy_time,old_degree,extra
         from goods_info where
         goods_status = 0                   <!-- 0表示商品正常状态 -->
         <if test="condition.keyword != null and condition.keyword != ''">
             and (goods_title like concat('%',#{condition.keyword},'%') or goods_content like
             concat('%',#{condition.keyword},'%'))
         </if>
+
+        <choose>
+            <when test="condition.scene == null || condition.scene == 0" >
+            </when>
+            <when test="condition.scene ==1">
+                and extra = 0
+            </when>
+            <when test="condition.scene == 2">
+                and extra = 1
+            </when>
+            <otherwise>1=1</otherwise>
+        </choose>
 
         <if test="condition.categoryId != null">
             and category_id = #{condition.categoryId}
@@ -39,12 +51,28 @@
         </if>
     </select>
 
+
+
+
+
     <select id="getPublicGoods" resultType="com.deng.dao.entity.GoodsInfo">
         select
         id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,
         comment_count,create_time,update_time,goods_status,buy_time,old_degree
         from goods_info where
         goods_status = 0 and uid = #{condition.uid}
+        <if test="condition.keyword != null and condition.keyword != ''">
+            and (goods_title like concat('%',#{condition.keyword},'%') or goods_content like
+            concat('%',#{condition.keyword},'%'))
+        </if>
+    </select>
+
+    <select id="getOffGoods" resultType="com.deng.dao.entity.GoodsInfo">
+        select
+        id,category_id,category_name,pic_url,uid,nick_name,goods_price,goods_title,goods_content,visit_count,
+        comment_count,create_time,update_time,goods_status,buy_time,old_degree
+        from goods_info where
+        goods_status = 2 and uid = #{condition.uid}
         <if test="condition.keyword != null and condition.keyword != ''">
             and (goods_title like concat('%',#{condition.keyword},'%') or goods_content like
             concat('%',#{condition.keyword},'%'))

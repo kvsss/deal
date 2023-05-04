@@ -15,7 +15,8 @@ import java.time.LocalDateTime;
  * @since :1.8
  */
 @Data
-public class GoodsAddReqDTO {
+
+public class GoodsUpdateRespDTO {
 
     /**
      * 用户ID
@@ -23,6 +24,13 @@ public class GoodsAddReqDTO {
     @Schema(description = "用户ID", required = true)
     @NotNull
     private Long uid;
+
+    /**
+     * 商品ID
+     */
+    @Schema(description = "商品ID", required = true)
+    @NotNull
+    private Long goodsId;
 
     @Schema(description = "用户名", required = true)
     @NotNull
@@ -80,7 +88,4 @@ public class GoodsAddReqDTO {
      */
     @Schema(description = "新旧程度(1-10成新)")
     private Integer oldDegree;
-
-    @Schema(description = "额外的字段,(用数值时，起作用)")
-    private String extra;
 }

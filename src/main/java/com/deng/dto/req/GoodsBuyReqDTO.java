@@ -1,6 +1,7 @@
 package com.deng.dto.req;
 
 import com.deng.core.common.req.PageReqDTO;
+import com.deng.dto.req.common.CommonPageReq;
 import io.swagger.v3.oas.annotations.Parameter;
 import lombok.Data;
 
@@ -11,16 +12,7 @@ import lombok.Data;
  * @since :1.8
  */
 @Data
-public class GoodsBuyReqDTO extends PageReqDTO {
-    /**
-     * 用户id
-     */
-    private Long uid;
+public class GoodsBuyReqDTO extends CommonPageReq {
 
-    /**
-     * 搜索关键字
-     */
-    @Parameter(description = "搜索关键字")
-    private String keyword;
 
 }

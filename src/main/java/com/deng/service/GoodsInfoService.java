@@ -1,14 +1,11 @@
 package com.deng.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.deng.core.common.resp.PageRespDTO;
 import com.deng.core.common.resp.RestResp;
-import com.deng.dto.req.GoodsAddReqDTO;
-import com.deng.dto.req.GoodsPublicReqDTO;
-import com.deng.dto.req.UserCommentReqDTO;
-import com.deng.dto.resp.GoodsCategoryRespDTO;
-import com.deng.dto.resp.GoodsCommentRespDTO;
-import com.deng.dto.resp.GoodsInfoRespDTO;
-import com.deng.dto.resp.GoodsPublicRespDTO;
+import com.deng.dao.entity.GoodsInfo;
+import com.deng.dto.req.*;
+import com.deng.dto.resp.*;
 
 import java.util.List;
 
@@ -92,8 +89,73 @@ public interface GoodsInfoService {
 
     /**
      * 获取用户发布商品接口
+     *
      * @param dto
      * @return
      */
     RestResp<PageRespDTO<GoodsPublicRespDTO>> getPublicGoods(GoodsPublicReqDTO condition);
+
+    /**
+     * 删除商品
+     *
+     * @param goodsId
+     * @return
+     */
+    RestResp<Void> deleteGoods(Long goodsId);
+
+    /**
+     * 上架商品
+     *
+     * @param goodsId
+     * @return
+     */
+    RestResp<Void> offShelfGoods(Long goodsId);
+
+    /**
+     * 获得下架商品信息
+     *
+     * @param condition
+     * @return
+     */
+    RestResp<PageRespDTO<GoodsOffRespDTO>> getOffGoods(GoodsOffReqDTO condition);
+
+    /**
+     * 上架商品
+     *
+     * @param goodsId
+     * @return
+     */
+    RestResp<Void> onShelfGoods(Long goodsId);
+
+    /**
+     * 修改商品信息
+     *
+     * @param dto
+     * @return
+     */
+    RestResp<Void> updateGoods(GoodsUpdateRespDTO dto);
+
+    /**
+     * 获取用户申请商品列表
+     *
+     * @param condition
+     * @return
+     */
+    RestResp<PageRespDTO<GoodsApplyRespDTO>> getApplyGoods(GoodsApplyReqDTO condition);
+
+
+    QueryWrapper<GoodsInfo> getQueryWrapperForStatus(Long goodsId, Integer status);
+
+    QueryWrapper<GoodsInfo> getQueryWrapperForKeyword(Long goodsId, String keyword);
+
+    QueryWrapper<GoodsInfo> getQueryWrapperForStatusAndKeyword(Long goodsId, Integer status, String keyword);
+
+
+    RestResp<Void> agreeApplyGoods(Long uid, Long goodsId);
+
+    RestResp<Void> disagreeApplyGoods(Long uid, Long goodsId);
+
+    RestResp<Void> platformOffGoods(Long uid, Long goodsId);
+
+    RestResp<PageRespDTO<GoodsPlatformRespDTO>> getPlatformGoods(GoodsPlatformReqDTO condition);
 }

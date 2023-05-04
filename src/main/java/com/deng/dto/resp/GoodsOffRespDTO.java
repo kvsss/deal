@@ -1,8 +1,6 @@
 package com.deng.dto.resp;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.deng.dto.resp.common.CommonOrderResp;
+import com.deng.dto.resp.common.CommonGoodsResp;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Data;
@@ -19,7 +17,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @SuperBuilder
-public class GoodsBuyRespDTO extends CommonOrderResp {
+public class GoodsOffRespDTO extends CommonGoodsResp {
     private static final long serialVersionUID = 1L;
 
 }

@@ -21,7 +21,4 @@ public class ServiceException extends RuntimeException {
         super(codeEnum.getMessage(), null, false, false);
         this.codeEnum = codeEnum;
     }
-
-
-
 }

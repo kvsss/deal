@@ -78,4 +78,11 @@ public class HomeGoodsRespDTO implements Serializable {
      */
     @Schema(description = "商品状态(0:未售出,1:已售出,2:已下架)")
     private Integer goodsStatus;
+
+    /**
+     * 0:自己发布,1:平台发布
+     */
+    @Schema(description = "0:自己发布,1:平台发布")
+    private String extra;
+
 }

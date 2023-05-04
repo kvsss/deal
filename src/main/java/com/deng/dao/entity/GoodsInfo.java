@@ -3,7 +3,6 @@ package com.deng.dao.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -14,7 +13,7 @@ import java.time.LocalDateTime;
  * </p>
  *
  * @author ${author}
- * @since 2023/02/04
+ * @since 2023/05/01
  */
 @TableName("goods_info")
 public class GoodsInfo implements Serializable {
@@ -88,46 +87,25 @@ public class GoodsInfo implements Serializable {
     private LocalDateTime updateTime;
 
     /**
+     * 0:未售出,1:已售出,2:已下架,3:交易中
+     */
+    private Integer goodsStatus;
+
+    /**
      * 购买时间
      */
     private LocalDateTime buyTime;
 
     /**
-     * 新旧程度(1-10成新)
+     * 新旧程度 1-10
      */
     private Integer oldDegree;
 
     /**
-     * 商品状态(0:未售出,1:已售出,2:已下架,3:交易中)
+     * 0:自己发布,1:平台发布
      */
-    private Integer goodsStatus;
+    private String extra;
 
-    public LocalDateTime getBuyTime() {
-        return buyTime;
-    }
-
-    public void setBuyTime(LocalDateTime buyTime) {
-        this.buyTime = buyTime;
-    }
-
-    public Integer getOldDegree() {
-        return oldDegree;
-    }
-
-    public void setOldDegree(Integer oldDegree) {
-        this.oldDegree = oldDegree;
-    }
-
-    public Integer getGoodsStatus() {
-        return goodsStatus;
-    }
-
-    public void setGoodsStatus(Integer goodsStatus) {
-        this.goodsStatus = goodsStatus;
-    }
-
-    public GoodsInfo() {
-    }
 
     public Long getId() {
         return id;
@@ -233,22 +211,58 @@ public class GoodsInfo implements Serializable {
         this.updateTime = updateTime;
     }
 
+    public Integer getGoodsStatus() {
+        return goodsStatus;
+    }
+
+    public void setGoodsStatus(Integer goodsStatus) {
+        this.goodsStatus = goodsStatus;
+    }
+
+    public LocalDateTime getBuyTime() {
+        return buyTime;
+    }
+
+    public void setBuyTime(LocalDateTime buyTime) {
+        this.buyTime = buyTime;
+    }
+
+    public Integer getOldDegree() {
+        return oldDegree;
+    }
+
+    public void setOldDegree(Integer oldDegree) {
+        this.oldDegree = oldDegree;
+    }
+
+    public String getExtra() {
+        return extra;
+    }
+
+    public void setExtra(String extra) {
+        this.extra = extra;
+    }
+
     @Override
     public String toString() {
         return "GoodsInfo{" +
-                "id=" + id +
-                ", categoryId=" + categoryId +
-                ", categoryName=" + categoryName +
-                ", picUrl=" + picUrl +
-                ", uid=" + uid +
-                ", nickName=" + nickName +
-                ", goodsPrice=" + goodsPrice +
-                ", goodsTitle=" + goodsTitle +
-                ", goodsContent=" + goodsContent +
-                ", visitCount=" + visitCount +
-                ", commentCount=" + commentCount +
-                ", createTime=" + createTime +
-                ", updateTime=" + updateTime +
-                "}";
+        "id=" + id +
+        ", categoryId=" + categoryId +
+        ", categoryName=" + categoryName +
+        ", picUrl=" + picUrl +
+        ", uid=" + uid +
+        ", nickName=" + nickName +
+        ", goodsPrice=" + goodsPrice +
+        ", goodsTitle=" + goodsTitle +
+        ", goodsContent=" + goodsContent +
+        ", visitCount=" + visitCount +
+        ", commentCount=" + commentCount +
+        ", createTime=" + createTime +
+        ", updateTime=" + updateTime +
+        ", goodsStatus=" + goodsStatus +
+        ", buyTime=" + buyTime +
+        ", oldDegree=" + oldDegree +
+        ", extra=" + extra +
+        "}";
     }
 }

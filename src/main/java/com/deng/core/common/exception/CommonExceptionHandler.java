@@ -30,6 +30,7 @@ public class CommonExceptionHandler {
 
     /**
      * 处理系统异常,这里会全局捕获
+     *
      * @param e
      * @return
      */
@@ -38,5 +39,15 @@ public class CommonExceptionHandler {
         log.error(e.getMessage(), e);
         return RestResp.error();
     }
+
+    @ExceptionHandler(ServiceException.class)
+    public RestResp<Void> handlerServiceException(Exception e) {
+        if (e instanceof ServiceException) {
+            ServiceException serviceException = (ServiceException) e;
+            return RestResp.fail(serviceException.getCodeEnum());
+        }
+        return RestResp.error();
+    }
+
 
 }

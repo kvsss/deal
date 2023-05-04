@@ -23,6 +23,35 @@ public final class DateBaseConstants {
         }
 
         public static final String COLUMN_VISIT_COUNT = "visit_count";
+
+        public static final String COLUMN_GOODS_STATUS = "goods_status";
+
+        public static final String COLUMN_GOODS_TITLE = "goods_title";
+
+        // 额外的字段,可以用来做其他的查询,以实现其他的查询功能
+        public static final String COLUMN_EXTRA = "extra";
+
+        // 用户id
+        public static final String COLUMN_UID = "uid";
+
+    }
+
+    public static final class GoodsOrderTable {
+        private GoodsOrderTable() {
+            throw new IllegalStateException(this.getClass().getName() + ":" + SystemConfigConstants.CONST_INSTANCE_EXCEPTION_MSG);
+        }
+
+        // 商品id
+        public static final String COLUMN_GOODS_ID = "goods_id";
+
+        // 买家id
+        public static final String COLUMN_BUYER_ID = "buyer_id";
+
+        // 卖家id
+        public static final String COLUMN_SELLER_ID = "seller_id";
+
+        // 订单状态
+        public static final String COLUMN_STATUS = "status";
     }
 
 
@@ -66,6 +95,8 @@ public final class DateBaseConstants {
         LIMIT_10("limit 10"),
         // 数量限制为12
         LIMIT_12("limit 12"),
+        // 数量限制为12
+        LIMIT_18("limit 18"),
         // 数量限制为30
         LIMIT_30("limit 30"),
         // 数量限制为50

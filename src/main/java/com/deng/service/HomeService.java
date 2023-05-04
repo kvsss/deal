@@ -34,4 +34,10 @@ public interface HomeService {
      * @return 商品点击排行列表
      */
     RestResp<List<HomeGoodsRespDTO>> listNewestRankGoods();
+
+    /**
+     * 平台发布商品查询
+     * @return
+     */
+    RestResp<List<HomeGoodsRespDTO>> listPlatformGoods();
 }

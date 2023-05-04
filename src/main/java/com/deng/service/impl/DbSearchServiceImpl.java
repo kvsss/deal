@@ -37,6 +37,10 @@ public class DbSearchServiceImpl implements SearchService {
         page.setCurrent(condition.getPageNum());
         page.setSize(condition.getPageSize());
 
+        if ("不限".equals(condition.getScene())) {
+            condition.setScene(null);
+        }
+
         List<GoodsInfo> goodsInfos = goodsInfoMapper.searchGoods(page, condition);
         return RestResp.ok(PageRespDTO.of(condition.getPageNum(), condition.getPageSize(), page.getTotal(),
                 goodsInfos.stream().map(goodsInfo -> GoodsInfoRespDTO.builder()
@@ -50,6 +54,7 @@ public class DbSearchServiceImpl implements SearchService {
                         .oldDegree(goodsInfo.getOldDegree())
                         .goodsStatus(goodsInfo.getGoodsStatus())
                         .uid(goodsInfo.getUid())
+                        .extra(goodsInfo.getExtra())
                         .build()
                 ).collect(Collectors.toList())
         ));

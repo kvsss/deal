@@ -12,6 +12,6 @@ import lombok.Data;
  * @since :1.8
  */
 @Data
-public class GoodsPublicReqDTO extends CommonPageReq {
+public class GoodsOffReqDTO extends CommonPageReq {
 
 }
