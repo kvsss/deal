@@ -26,4 +26,7 @@ public class UserLoginRespDTO implements Serializable {
 
     @Schema(description = "用户token")
     private String token;
+
+    @Schema(description = "用户角色")
+    private String role;
 }

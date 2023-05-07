@@ -48,7 +48,9 @@ public class WebConfig implements WebMvcConfigurer {
                 // login, register页面不用拦截
                 .addPathPatterns("/**")
                 .excludePathPatterns(FrontApiRouterConstants.FRONT_USER_API_URL_PREFIX + "/login",
-                        FrontApiRouterConstants.FRONT_USER_API_URL_PREFIX + "/register")
+                        FrontApiRouterConstants.FRONT_USER_API_URL_PREFIX + "/register",
+                        FrontApiRouterConstants.BEHIND_URL_PREFIX + "/login"
+                       )
                 .order(3);
     }
 }

@@ -37,7 +37,7 @@ public final class FrontApiRouterConstants {
     public static final String GOODS_URL_PREFIX = "/goods";
 
     /**
-     *门户请求前缀
+     * 门户请求前缀
      */
     public static final String HOME_URL_PREFIX = "/home";
 
@@ -72,7 +72,7 @@ public final class FrontApiRouterConstants {
     public static final String FRONT_GOODS_API_URL_PREFIX = FRONT_URL_PREFIX + GOODS_URL_PREFIX;
 
     /**
-     *   前台门户请求前缀
+     * 前台门户请求前缀
      */
     public static final String FRONT_HOME_API_URL_PREFIX = FRONT_URL_PREFIX + HOME_URL_PREFIX;
 
@@ -86,6 +86,21 @@ public final class FrontApiRouterConstants {
      */
     public static final String FRONT_CATEGORY_API_URL_PREFIX = FRONT_URL_PREFIX + CATEGORY_URL_PREFIX;
 
+    /**
+     * 后台管理系统请求路径前缀
+     */
+    public static final String BEHIND_URL_PREFIX = "/behind";
+
+    /**
+     * 后台管理系统用户请求路径前缀
+     */
+    public static final String ADMIN_URL_PREFIX = "/admin";
+
+
+    /**
+     * 后台管理系统用户请求路径前缀
+     */
+    public static final String BEHIND_ADMIN_API_URL_PREFIX = BEHIND_URL_PREFIX + ADMIN_URL_PREFIX;
 
 
 }

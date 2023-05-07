@@ -158,4 +158,11 @@ public interface GoodsInfoService {
     RestResp<Void> platformOffGoods(Long uid, Long goodsId);
 
     RestResp<PageRespDTO<GoodsPlatformRespDTO>> getPlatformGoods(GoodsPlatformReqDTO condition);
+
+    RestResp<PageRespDTO<AdminGoodsRespDTO>> getAllGoods(AdminGoodsReqDTO condition);
+
+
+    RestResp adminOffGoods(Long uid, Long goodsId);
+
+    RestResp<Void> adminDeleteGoods(Long uid, Long goodsId);
 }

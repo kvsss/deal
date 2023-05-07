@@ -13,6 +13,7 @@ import com.deng.dao.mapper.GoodsInfoMapper;
 import com.deng.dao.mapper.GoodsOrderMapper;
 import com.deng.dao.mapper.UserInfoMapper;
 import com.deng.dto.req.*;
+import com.deng.dto.resp.AdminGoodsOrderRespDTO;
 import com.deng.dto.resp.GoodsBuyRespDTO;
 import com.deng.dto.resp.GoodsPlatformOrderRespDTO;
 import com.deng.dto.resp.GoodsSellRespDTO;
@@ -139,7 +140,7 @@ public class GoodsOrderServiceImpl implements GoodsOrderService {
                             goodsInfoService.getQueryWrapperForKeyword(goodsOrder.getGoodsId(), condition.getKeyword()));
                     // 这个地方
                     // 如果商品不存在或者商品的extra为0,则不返回
-                    if (goodsInfo == null ) {
+                    if (goodsInfo == null) {
                         return null;
                     }
                     return GoodsBuyRespDTO.builder()
@@ -234,7 +235,7 @@ public class GoodsOrderServiceImpl implements GoodsOrderService {
                             goodsInfoService.getQueryWrapperForKeyword(goodsOrder.getGoodsId(), condition.getKeyword()));
                     // 这个地方
                     // 如果商品不存在或者商品的extra为0,则不返回
-                    if (goodsInfo == null ) {
+                    if (goodsInfo == null) {
                         return null;
                     }
                     return GoodsSellRespDTO.builder()
@@ -433,5 +434,95 @@ public class GoodsOrderServiceImpl implements GoodsOrderService {
         return RestResp.ok();
     }
 
+    @Override
+    public RestResp<PageRespDTO<AdminGoodsOrderRespDTO>> getAllGoodsOrder(AdminGoodsOrderReqDTO condition) {
+        // 分页
+        //Page<GoodsOrder> page = new Page<>();
+        //page.setCurrent(condition.getPageNum());
+        //page.setSize(condition.getPageSize());
+        //Page<GoodsOrder> goodsInfoPage;
+        List<GoodsOrder> goodsOrders;
+        QueryWrapper<GoodsOrder> queryWrapper;
+        // 查询已经卖出的的商品
+        if (condition.getExtra() == null || "1".equals(condition.getExtra())
+                || "".equals(condition.getExtra())) {
+/*            goodsInfoPage = goodsOrderMapper.selectPage(page,
+                    getGoodsOrderQueryWrapperOfSeller(null, 1));*/
+            queryWrapper = getGoodsOrderQueryWrapperOfSeller(null, 1);
 
+            //goodsOrders = goodsOrderMapper.selectList(getGoodsOrderQueryWrapperOfSeller(null, 1));
+        }
+        // 查询待发货的
+        else if ("2".equals(condition.getExtra())) {
+/*            goodsInfoPage = goodsOrderMapper.selectPage(page,
+                    getGoodsOrderQueryWrapperOfSeller(null, 0));*/
+            queryWrapper = getGoodsOrderQueryWrapperOfSeller(null, 0);
+
+            //goodsOrders = goodsOrderMapper.selectList(getGoodsOrderQueryWrapperOfSeller(null, 0));
+        }
+        // 查询已经取消的
+        else if ("3".equals(condition.getExtra())) {
+/*            goodsInfoPage = goodsOrderMapper.selectPage(page,
+                    getGoodsOrderQueryWrapperOfSeller(null, 2));*/
+            queryWrapper = getGoodsOrderQueryWrapperOfSeller(null, 2);
+
+            //goodsOrders = goodsOrderMapper.selectList(getGoodsOrderQueryWrapperOfSeller(null, 2));
+        } else {
+            return RestResp.fail(CodeEnum.SYSTEM_ERROR);
+        }
+
+        // 模糊匹配
+        if (condition.getKeyword() != null && !"".equals(condition.getKeyword())) {
+            queryWrapper.eq(DateBaseConstants.CommonColumnEnum.ID.getName(), condition.getKeyword());
+        }
+
+        List<GoodsOrder> goodsOrdersInfos = goodsOrderMapper.selectList(queryWrapper);
+        List<AdminGoodsOrderRespDTO> collect = goodsOrdersInfos.stream().map(goodsOrder -> {
+
+                    GoodsInfo goodsInfo = goodsInfoMapper.selectById(goodsOrder.getGoodsId());
+                  /*  GoodsInfo goodsInfo = goodsInfoMapper.selectOne(
+                            goodsInfoService.getQueryWrapperForKeyword(goodsOrder.getGoodsId(), condition.getKeyword()));*/
+                    // 这个地方
+                    // 如果商品不存在或者商品的extra为0,则不返回
+                    if (goodsInfo == null) {
+                        return null;
+                    }
+                    return AdminGoodsOrderRespDTO.builder()
+                            .goodsId(goodsInfo.getId())
+                            .goodsContent(goodsInfo.getGoodsContent())
+                            .goodsTitle(goodsInfo.getGoodsTitle())
+                            .nickName(goodsInfo.getNickName())
+                            .picUrl(goodsInfo.getPicUrl())
+                            .price(goodsInfo.getGoodsPrice())
+                            .buyTime(goodsInfo.getBuyTime())
+                            .oldDegree(goodsInfo.getOldDegree())
+                            .goodsStatus(goodsInfo.getGoodsStatus())
+                            .uid(goodsInfo.getUid())
+                            .extra(goodsInfo.getExtra())
+
+                            .orderId(goodsOrder.getId())
+                            .sellerId(goodsOrder.getSellerId())
+                            .buyerId(goodsOrder.getBuyerId())
+                            .buyerPhone(goodsOrder.getBuyerPhone())
+                            .sellerPhone(goodsOrder.getSellerPhone())
+                            .buyerName(goodsOrder.getBuyerName())
+                            .buyerAddress(goodsOrder.getBuyerAddress())
+                            .completeTime(goodsOrder.getCompleteTime())
+                            .createTime(goodsOrder.getCreateTime())
+                            .updateTime(goodsOrder.getUpdateTime())
+                            .status(goodsOrder.getStatus())
+                            .build();
+                }
+        ).filter(Objects::nonNull).collect(Collectors.toList());
+
+        // 存在数量上的不对等
+        int start = (condition.getPageNum() - 1) * condition.getPageSize();
+        int end = start + condition.getPageSize();
+        if (end > collect.size()) {
+            end = collect.size();
+        }
+
+        return RestResp.ok(PageRespDTO.of(condition.getPageNum(), condition.getPageSize(),
+                collect.size(), collect.subList(start, end)));
+    }
 }

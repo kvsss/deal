@@ -389,7 +389,7 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
         } else {
             return RestResp.fail(CodeEnum.SYSTEM_ERROR);
         }
-
+        // 平台发布
         queryWrapper.eq(DateBaseConstants.GoodsInfoTable.COLUMN_EXTRA, 1);
         goodsInfoPage = goodsInfoMapper.selectPage(page, queryWrapper);
         List<GoodsInfo> goodsInfos = goodsInfoPage.getRecords();
@@ -468,14 +468,23 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
         return RestResp.ok();
     }
 
+
     @Override
     public RestResp<Void> offShelfGoods(Long goodsId) {
+        return offGoods(goodsId, false);
+    }
+
+
+    // flag表示是否为管理员操作
+    public RestResp<Void> offGoods(Long goodsId, boolean flag) {
         QueryWrapper<GoodsInfo> queryWrapperForStatus = getQueryWrapperForStatus(goodsId, 0);
         GoodsInfo goodsInfo = goodsInfoMapper.selectById(goodsId);
         // 下架标记
         goodsInfo.setGoodsStatus(2);
         goodsInfo.setUpdateTime(LocalDateTime.now());
-
+        if (flag) {
+            goodsInfo.setExtra("2");
+        }
         // 更新失败
         if (goodsInfoMapper.update(goodsInfo, queryWrapperForStatus) == 0) {
             return RestResp.fail(CodeEnum.USER_REFRESH);
@@ -558,8 +567,87 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
 
     @Override
     public RestResp<Void> platformOffGoods(Long uid, Long goodsId) {
-        return offShelfGoods(goodsId);
+        return offGoods(goodsId, false);
     }
 
 
+    @Override
+    public RestResp<PageRespDTO<AdminGoodsRespDTO>> getAllGoods(AdminGoodsReqDTO condition) {
+        Page<GoodsInfo> page = new Page<>();
+        page.setCurrent(condition.getPageNum());
+        page.setSize(condition.getPageSize());
+
+        Page<GoodsInfo> goodsInfoPage = null;
+        QueryWrapper<GoodsInfo> queryWrapper = null;
+
+
+        // 发布页面
+        // 上架中
+        if (condition.getExtra() == null || "1".equals(condition.getExtra())
+                || "".equals(condition.getExtra())) {
+            queryWrapper = getQueryWrapperForStatusAndKeyword(null, 0, null);
+        } // 已成交
+        else if ("2".equals(condition.getExtra())) {
+            queryWrapper = getQueryWrapperForStatusAndKeyword(null, 1, null);
+        } // 成交中
+        else if ("3".equals(condition.getExtra())) {
+            queryWrapper = getQueryWrapperForStatusAndKeyword(null, 3, null);
+        }//  已取消
+        else if ("4".equals(condition.getExtra())) {
+            queryWrapper = getQueryWrapperForStatusAndKeyword(null, 4, null);
+        }// 下架的
+        else if ("5".equals(condition.getExtra())) {
+            queryWrapper = getQueryWrapperForStatusAndKeyword(null, 2, null);
+        } else {
+            return RestResp.fail(CodeEnum.SYSTEM_ERROR);
+        }
+
+        // 模糊匹配
+        if (condition.getKeyword() != null && !"".equals(condition.getKeyword())) {
+            queryWrapper.and(wrapper ->
+                    wrapper.like(DateBaseConstants.GoodsInfoTable.COLUMN_GOODS_TITLE, condition.getKeyword())
+                            .or().like(DateBaseConstants.CommonColumnEnum.ID.getName(), condition.getKeyword()));
+        }
+
+        // 平台发布
+        //queryWrapper.eq(DateBaseConstants.GoodsInfoTable.COLUMN_EXTRA, 1);
+        goodsInfoPage = goodsInfoMapper.selectPage(page, queryWrapper);
+        List<GoodsInfo> goodsInfos = goodsInfoPage.getRecords();
+        return RestResp.ok(PageRespDTO.of(condition.getPageNum(), condition.getPageSize(), page.getTotal(),
+                goodsInfos.stream().map(goodsInfo -> AdminGoodsRespDTO.builder()
+                        .goodsId(goodsInfo.getId())
+                        .goodsContent(goodsInfo.getGoodsContent())
+                        .goodsTitle(goodsInfo.getGoodsTitle())
+                        .nickName(goodsInfo.getNickName())
+                        .picUrl(goodsInfo.getPicUrl())
+                        .price(goodsInfo.getGoodsPrice())
+                        .buyTime(goodsInfo.getBuyTime())
+                        .oldDegree(goodsInfo.getOldDegree())
+                        .goodsStatus(goodsInfo.getGoodsStatus())
+                        .categoryId(goodsInfo.getCategoryId())
+                        .categoryName(goodsInfo.getCategoryName())
+                        .createTime(goodsInfo.getCreateTime())
+                        .updateTime(goodsInfo.getUpdateTime())
+                        .uid(goodsInfo.getUid())
+                        .extra(goodsInfo.getExtra())
+                        .build()
+                ).collect(Collectors.toList())
+        ));
+    }
+
+
+    @Override
+    public RestResp adminOffGoods(Long uid, Long goodsId) {
+        return offGoods(goodsId, false);
+    }
+
+    @Override
+    public RestResp<Void> adminDeleteGoods(Long uid, Long goodsId) {
+        QueryWrapper<GoodsInfo> queryWrapperForStatus = getQueryWrapperForStatus(goodsId, 0);
+        // 更新失败
+        if (goodsInfoMapper.delete(queryWrapperForStatus) == 0) {
+            return RestResp.fail(CodeEnum.USER_REFRESH);
+        }
+        return RestResp.ok();
+    }
 }

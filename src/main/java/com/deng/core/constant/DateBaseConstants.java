@@ -15,6 +15,17 @@ public final class DateBaseConstants {
         }
 
         public static final String COLUMN_USERNAME = "username";
+        // COLUMN_NICK_NAME
+        public static final String COLUMN_NICK_NAME = "nick_name";
+    }
+
+
+    public static final class GoodsCategoryTable {
+        private GoodsCategoryTable() {
+            throw new IllegalStateException(this.getClass().getName() + ":" + SystemConfigConstants.CONST_INSTANCE_EXCEPTION_MSG);
+        }
+
+        public static final String COLUMN_NAME = "name";
     }
 
     public static final class GoodsInfoTable {

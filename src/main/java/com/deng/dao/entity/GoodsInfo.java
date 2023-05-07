@@ -3,6 +3,7 @@ package com.deng.dao.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -102,7 +103,7 @@ public class GoodsInfo implements Serializable {
     private Integer oldDegree;
 
     /**
-     * 0:自己发布,1:平台发布
+     * 0:自己发布,1:平台发布：2：管理员操作
      */
     private String extra;
 
@@ -246,23 +247,23 @@ public class GoodsInfo implements Serializable {
     @Override
     public String toString() {
         return "GoodsInfo{" +
-        "id=" + id +
-        ", categoryId=" + categoryId +
-        ", categoryName=" + categoryName +
-        ", picUrl=" + picUrl +
-        ", uid=" + uid +
-        ", nickName=" + nickName +
-        ", goodsPrice=" + goodsPrice +
-        ", goodsTitle=" + goodsTitle +
-        ", goodsContent=" + goodsContent +
-        ", visitCount=" + visitCount +
-        ", commentCount=" + commentCount +
-        ", createTime=" + createTime +
-        ", updateTime=" + updateTime +
-        ", goodsStatus=" + goodsStatus +
-        ", buyTime=" + buyTime +
-        ", oldDegree=" + oldDegree +
-        ", extra=" + extra +
-        "}";
+                "id=" + id +
+                ", categoryId=" + categoryId +
+                ", categoryName=" + categoryName +
+                ", picUrl=" + picUrl +
+                ", uid=" + uid +
+                ", nickName=" + nickName +
+                ", goodsPrice=" + goodsPrice +
+                ", goodsTitle=" + goodsTitle +
+                ", goodsContent=" + goodsContent +
+                ", visitCount=" + visitCount +
+                ", commentCount=" + commentCount +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", goodsStatus=" + goodsStatus +
+                ", buyTime=" + buyTime +
+                ", oldDegree=" + oldDegree +
+                ", extra=" + extra +
+                "}";
     }
 }

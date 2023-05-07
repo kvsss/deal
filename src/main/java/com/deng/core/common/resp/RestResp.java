@@ -78,6 +78,15 @@ public class RestResp<T> {
         return new RestResp<>(codeEnum);
     }
 
+    public static <T> RestResp<T> fail(String message) {
+        RestResp<T> resp = new RestResp<>();
+        resp.code = CodeEnum.FAIL.getCode();
+        resp.message = message;
+        resp.data = null;
+        return resp;
+    }
+
+
     /**
      * 系统错误
      */

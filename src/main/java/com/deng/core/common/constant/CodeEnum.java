@@ -71,6 +71,11 @@ public enum CodeEnum {
 
     PARAM_ERROR("B0001", "参数错误"),
 
+
+    ADMIN_FAIL("C0001", ""),
+
+    FAIL("D0001", "操作失败"),
+
     /**
      * 系统异常
      */

@@ -172,7 +172,6 @@ public class UserController {
     }
 
 
-
     @Operation(summary = "获得用户申请上架商品信息接口")
     @GetMapping("applyInfo")
     public RestResp<PageRespDTO<GoodsApplyRespDTO>> getApplyGoods(@ParameterObject GoodsApplyReqDTO condition) {

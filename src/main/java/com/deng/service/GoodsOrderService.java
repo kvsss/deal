@@ -3,6 +3,7 @@ package com.deng.service;
 import com.deng.core.common.resp.PageRespDTO;
 import com.deng.core.common.resp.RestResp;
 import com.deng.dto.req.*;
+import com.deng.dto.resp.AdminGoodsOrderRespDTO;
 import com.deng.dto.resp.GoodsBuyRespDTO;
 import com.deng.dto.resp.GoodsPlatformOrderRespDTO;
 import com.deng.dto.resp.GoodsSellRespDTO;
@@ -72,4 +73,10 @@ public interface GoodsOrderService {
      */
     RestResp<Void> updateOrder(GoodsOrderUpdateRespDTO dto);
 
+    /**
+     * 获取所有订单信息
+     * @param condition
+     * @return
+     */
+    RestResp<PageRespDTO<AdminGoodsOrderRespDTO>> getAllGoodsOrder(AdminGoodsOrderReqDTO condition);
 }
