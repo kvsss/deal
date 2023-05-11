@@ -9,23 +9,29 @@ import com.deng.core.common.resp.RestResp;
 import com.deng.core.constant.DateBaseConstants;
 import com.deng.dao.entity.GoodsInfo;
 import com.deng.dao.entity.GoodsOrder;
+import com.deng.dao.entity.Transaction;
 import com.deng.dao.mapper.GoodsInfoMapper;
 import com.deng.dao.mapper.GoodsOrderMapper;
 import com.deng.dao.mapper.UserInfoMapper;
 import com.deng.dto.req.*;
-import com.deng.dto.resp.AdminGoodsOrderRespDTO;
-import com.deng.dto.resp.GoodsBuyRespDTO;
-import com.deng.dto.resp.GoodsPlatformOrderRespDTO;
-import com.deng.dto.resp.GoodsSellRespDTO;
+import com.deng.dto.resp.*;
 import com.deng.manage.cache.GoodsInfoCacheManage;
 import com.deng.service.GoodsInfoService;
 import com.deng.service.GoodsOrderService;
+import com.deng.service.GoodsRoleService;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.YearMonth;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -40,6 +46,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Slf4j
 public class GoodsOrderServiceImpl implements GoodsOrderService {
+    @Resource
     private final GoodsOrderMapper goodsOrderMapper;
 
     private final GoodsInfoCacheManage goodsInfoCacheManage;
@@ -50,9 +57,15 @@ public class GoodsOrderServiceImpl implements GoodsOrderService {
 
     private final GoodsInfoService goodsInfoService;
 
+    private final GoodsRoleService goodsRoleService;
+
     @Override
     @Transactional
     public RestResp<Void> buyGoods(GoodsOrderAddReqDTO dto) {
+        if (!goodsRoleService.isNormalUser()) {
+            return RestResp.fail("该账号无法执行此操作");
+        }
+
         // 行级索防止超卖
         if (goodsInfoMapper.updateGoodsStatus(dto.getGoodsId()) == 0) {
             return RestResp.fail(CodeEnum.USER_ORDER_FAIL);
@@ -101,6 +114,7 @@ public class GoodsOrderServiceImpl implements GoodsOrderService {
 
     @Override
     public RestResp<PageRespDTO<GoodsBuyRespDTO>> getBuyGoods(GoodsBuyReqDTO condition) {
+
         // 分页
 /*        Page<GoodsOrder> page = new Page<>();
         page.setCurrent(condition.getPageNum());
@@ -404,6 +418,7 @@ public class GoodsOrderServiceImpl implements GoodsOrderService {
         // 修改订单信息
         GoodsOrder goodsOrder = goodsOrderMapper.selectById(orderId);
         goodsOrder.setStatus(1);
+        goodsOrder.setCompleteTime(LocalDateTime.now());
         if (goodsOrderMapper.update(goodsOrder, getGoodsOrderQueryWrapperInTrading(orderId)) == 0) {
             return RestResp.fail(CodeEnum.USER_REFRESH);
         }
@@ -524,5 +539,93 @@ public class GoodsOrderServiceImpl implements GoodsOrderService {
 
         return RestResp.ok(PageRespDTO.of(condition.getPageNum(), condition.getPageSize(),
                 collect.size(), collect.subList(start, end)));
+    }
+
+
+    @Override
+    public RestResp<AdminOrderSummaryRespDTO> getOrderSummary(AdminOrderSummaryReqDTO condition) {
+        LocalDate now = LocalDate.now();
+        int sum = 12;
+        List<Transaction> result;
+        // 周
+        if (condition.getExtra() == null || "".equals(condition.getExtra()) || "1".equals(condition.getExtra())) {
+            result = goodsOrderMapper.getLast12DailyTransactions(now.minusDays(sum-1), now.plusDays(1));
+            if (result.size() != sum) {
+                LocalDate start = now.minusDays(sum-1);
+                LocalDate end = now.plusDays(1);
+                int index = 0;
+                for (LocalDate date = start; date.isBefore(end); date = date.plusDays(1)) {
+                    boolean found = false;
+                    if (result.size() == index || !result.get(index).getDay().equals(date)) {
+                        //index++;
+                        Transaction t = new Transaction();
+                        t.setDay(date);
+                        t.setDayDate(null);
+                        t.setAmounts(BigDecimal.ZERO);
+                        t.setCounts(0L);
+                        result.add(index, t);
+                    }
+                    index++;
+                }
+            }
+            AdminOrderSummaryRespDTO resp = new AdminOrderSummaryRespDTO();
+            String[] titles = new String[sum];
+            Long[] orderCounts = new Long[sum];
+            Double[] orderAmounts = new Double[sum];
+
+            for (int i = 0; i < result.size(); i++) {
+                titles[i] = result.get(i).getDay().toString();
+                orderCounts[i] = result.get(i).getCounts();
+                orderAmounts[i] = result.get(i).getAmounts().doubleValue();
+            }
+            resp.setOrderAmounts(orderAmounts);
+            resp.setOrderCounts(orderCounts);
+            resp.setTitles(titles);
+            return RestResp.ok(resp);
+        }// 月
+        else if ("2".equals(condition.getExtra())) {
+            //result = goodsOrderMapper.getLast12WeeklyTransactions(now.minusWeeks(sum), now);
+            //int a = 1;
+        }// 年
+        else if ("3".equals(condition.getExtra())) {
+            result = goodsOrderMapper.getLast12MonthTransactions(now.minusMonths(sum), now);
+            if (result.size() != sum) {
+                LocalDate start = now.minusMonths(sum - 1);
+                LocalDate end = now.minusMonths(1);
+
+                int index = 0;
+                for (LocalDate date = start; date.isBefore(end); date = date.plusMonths(1)) {
+
+                    if (result.size() == index || !result.get(index).getDayDate().equals(YearMonth.from(date))) {
+                        //index++;
+                        Transaction t = new Transaction();
+                        t.setDay(date);
+                        t.setDayDate(YearMonth.from(date));
+                        t.setAmounts(BigDecimal.ZERO);
+                        t.setCounts(0L);
+                        result.add(index, t);
+                    }
+                    index++;
+                }
+            }
+
+            AdminOrderSummaryRespDTO resp = new AdminOrderSummaryRespDTO();
+            String[] titles = new String[sum];
+            Long[] orderCounts = new Long[sum];
+            Double[] orderAmounts = new Double[sum];
+
+            for (int i = 0; i < result.size(); i++) {
+                titles[i] = result.get(i).getDayDate().toString();
+                orderCounts[i] = result.get(i).getCounts();
+                orderAmounts[i] = result.get(i).getAmounts().doubleValue();
+            }
+            resp.setOrderAmounts(orderAmounts);
+            resp.setOrderCounts(orderCounts);
+            resp.setTitles(titles);
+            return RestResp.ok(resp);
+        } else {
+            RestResp.fail("参数错误");
+        }
+        return RestResp.fail("参数错误");
     }
 }

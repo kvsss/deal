@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * @author :deng
@@ -54,4 +55,10 @@ public class GoodsOrderAddReqDTO {
     @Schema(description = "买家电话", required = true)
     private String buyerPhone;
 
+
+    /**
+     * 联系时间
+     */
+    @Schema(description = "购买时间")
+    private LocalDateTime time;
 }

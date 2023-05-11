@@ -2,11 +2,13 @@ package com.deng.service;
 
 import com.deng.core.common.resp.PageRespDTO;
 import com.deng.core.common.resp.RestResp;
+import com.deng.dao.entity.Transaction;
 import com.deng.dto.req.*;
-import com.deng.dto.resp.AdminGoodsOrderRespDTO;
-import com.deng.dto.resp.GoodsBuyRespDTO;
-import com.deng.dto.resp.GoodsPlatformOrderRespDTO;
-import com.deng.dto.resp.GoodsSellRespDTO;
+import com.deng.dto.resp.*;
+import org.apache.ibatis.annotations.Param;
+
+import java.time.LocalDate;
+import java.util.List;
 
 /**
  * @author :deng
@@ -79,4 +81,14 @@ public interface GoodsOrderService {
      * @return
      */
     RestResp<PageRespDTO<AdminGoodsOrderRespDTO>> getAllGoodsOrder(AdminGoodsOrderReqDTO condition);
+
+    /**
+     * 获取订单汇总
+     * @param condition
+     * @return
+     */
+    RestResp<AdminOrderSummaryRespDTO> getOrderSummary(AdminOrderSummaryReqDTO condition);
+
+
+
 }

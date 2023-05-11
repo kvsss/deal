@@ -1,6 +1,7 @@
 package com.deng.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.deng.core.auth.UserHolder;
 import com.deng.dao.entity.UserRole;
 import com.deng.dao.mapper.GoodsRoleMapper;
 import com.deng.dao.mapper.UserRoleMapper;
@@ -44,5 +45,11 @@ public class GoodsRoleServiceImpl implements GoodsRoleService {
         QueryWrapper<UserRole> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_id", id);
         return userRoleMapper.selectOne(queryWrapper);
+    }
+
+    @Override
+    public boolean isNormalUser() {
+        String role = getRoleByUid(UserHolder.getUserId());
+        return "3".equals(role);
     }
 }

@@ -3,17 +3,16 @@ package com.deng.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.deng.core.auth.UserHolder;
 import com.deng.core.common.constant.CodeEnum;
 import com.deng.core.common.resp.PageRespDTO;
 import com.deng.core.common.resp.RestResp;
 import com.deng.core.constant.DateBaseConstants;
 import com.deng.core.constant.SystemConfigConstants;
 import com.deng.core.util.JwtUtils;
-import com.deng.dao.entity.GoodsRole;
 import com.deng.dao.entity.UserInfo;
 import com.deng.dao.entity.UserRole;
 import com.deng.dao.mapper.GoodsCategoryMapper;
-import com.deng.dao.mapper.GoodsRoleMapper;
 import com.deng.dao.mapper.UserInfoMapper;
 import com.deng.dao.mapper.UserRoleMapper;
 import com.deng.dto.req.*;
@@ -293,5 +292,46 @@ public class UserServiceImpl implements UserService {
                         .token(JwtUtils.generateToken(userInfo.getId(), SystemConfigConstants.DEAL_FRONT_KEY))
                         .build()
         );
+    }
+
+
+    @Override
+    public RestResp<Void> updateAdminPassword(AdminPasswordUpdateReqDTO condition) {
+        Long userId = UserHolder.getUserId();
+        UserInfo userInfo = userInfoMapper.selectById(userId);
+        if (Objects.isNull(userInfo)) {
+            // 用户不存在
+            return RestResp.fail(CodeEnum.USER_NOT_EXIST);
+        }
+        if (!Objects.equals(userInfo.getPassword(),
+                DigestUtils.md5DigestAsHex(
+                        (condition.getOldPassword() + userInfo.getSalt())
+                                .getBytes(StandardCharsets.UTF_8)))) {
+            // 密码错误
+            return RestResp.fail(CodeEnum.USER_PASSWORD_ERROR);
+        }
+
+        // 设置新密码
+        userInfo.setSalt(RandomStringUtils.randomAlphabetic(64));
+        userInfo.setPassword(
+                DigestUtils.md5DigestAsHex(
+                        (condition.getNewPassword() + userInfo.getSalt())
+                                .getBytes(StandardCharsets.UTF_8)));
+
+        userInfoMapper.updateById(userInfo);
+        return RestResp.ok();
+    }
+
+    @Override
+    public RestResp<Void> updateAdminInfo(AdminInfoUpdateReqDTO condition) {
+        Long userId = UserHolder.getUserId();
+        UserInfo userInfo = userInfoMapper.selectById(userId);
+        if (Objects.isNull(userInfo)) {
+            // 用户不存在
+            return RestResp.fail(CodeEnum.USER_NOT_EXIST);
+        }
+        userInfo.setNickName(condition.getNickName());
+        userInfoMapper.updateById(userInfo);
+        return RestResp.ok();
     }
 }

@@ -10,8 +10,25 @@ import com.deng.dao.entity.UserRole;
  */
 public interface GoodsRoleService {
 
+    /**
+     * 根据用户id获取角色
+     * @param id
+     * @return
+     */
     String getRoleByUid(Long id);
 
+    /**
+     * 根据用户id获取UserRole
+     * @param id
+     * @return
+     */
     UserRole getUserRoleByUid(Long id);
+
+
+    /**
+     * 是否为普通用户
+     * @return
+     */
+    boolean isNormalUser();
 
 }

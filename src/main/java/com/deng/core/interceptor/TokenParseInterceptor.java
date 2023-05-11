@@ -47,7 +47,10 @@ public class TokenParseInterceptor implements HandlerInterceptor {
         // 资源get请求不用进过token解析
         // 但是要对管理员的请求进行拦截
         // 开启token解析
-        if (!request.getRequestURI().startsWith(FrontApiRouterConstants.BEHIND_URL_PREFIX) && Objects.equals(request.getMethod(), GET)) {
+/*        if (!request.getRequestURI().startsWith(FrontApiRouterConstants.BEHIND_URL_PREFIX) && Objects.equals(request.getMethod(), GET)) {
+            return true;
+        }   */
+        if ( Objects.equals(request.getMethod(), GET)) {
             return true;
         }
         // 使用jwt来防止csrf攻击

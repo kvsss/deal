@@ -85,4 +85,18 @@ public interface UserService {
      * @return
      */
     RestResp<UserLoginRespDTO> adminLogin(UserLoginReqDTO dto);
+
+    /**
+     * 管理员修改密码
+     * @param condition
+     * @return
+     */
+    RestResp<Void> updateAdminPassword(AdminPasswordUpdateReqDTO condition);
+
+    /**
+     * 管理员修改个人信息
+     * @param condition
+     * @return
+     */
+    RestResp<Void> updateAdminInfo(AdminInfoUpdateReqDTO condition);
 }

@@ -2,4 +2,38 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.deng.dao.mapper.GoodsOrderMapper">
 
+    <select id="getLast12DailyTransactions" resultType="com.deng.dao.entity.Transaction">
+        SELECT DATE_FORMAT(complete_time, '%Y-%m-%d') AS day,
+               COALESCE(SUM(price), 0)           AS amounts,
+               COALESCE(COUNT(*), 0)             AS counts
+        FROM goods_order
+        WHERE     status = 1         AND
+            complete_time BETWEEN #{start_date}
+                  AND #{end_date}
+        GROUP BY day
+        order by day asc
+    </select>
+
+    <select id="getLast12WeeklyTransactions" resultType="com.deng.dao.entity.Transaction">
+        SELECT DATE_FORMAT(complete_time, '%x-%v') AS day_date,
+               COALESCE(SUM(price), 0)           AS amounts,
+               COALESCE(COUNT(*), 0)             AS counts
+        FROM goods_order
+        WHERE  status = 1 AND
+            complete_time BETWEEN #{start_date}
+                  AND #{end_date}
+        GROUP BY day_date
+    </select>
+
+    <select id="getLast12MonthTransactions" resultType="com.deng.dao.entity.Transaction">
+        SELECT DATE_FORMAT(complete_time, '%Y-%m') AS day_date,
+               COALESCE(SUM(price), 0)           AS amounts,
+               COALESCE(COUNT(*), 0)             AS counts
+        FROM goods_order
+        WHERE  status = 1 AND
+            complete_time BETWEEN #{start_date}
+                  AND #{end_date}
+        GROUP BY day_date
+
+    </select>
 </mapper>

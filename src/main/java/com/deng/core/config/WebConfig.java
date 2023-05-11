@@ -49,7 +49,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .addPathPatterns("/**")
                 .excludePathPatterns(FrontApiRouterConstants.FRONT_USER_API_URL_PREFIX + "/login",
                         FrontApiRouterConstants.FRONT_USER_API_URL_PREFIX + "/register",
-                        FrontApiRouterConstants.BEHIND_URL_PREFIX + "/login"
+                        FrontApiRouterConstants.BEHIND_ADMIN_API_URL_PREFIX + "/login"
                        )
                 .order(3);
     }

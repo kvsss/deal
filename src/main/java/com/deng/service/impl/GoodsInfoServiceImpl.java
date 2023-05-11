@@ -21,6 +21,7 @@ import com.deng.manage.cache.GoodsInfoCacheManage;
 import com.deng.manage.dao.UserDaoManager;
 import com.deng.service.GoodsCategoryService;
 import com.deng.service.GoodsInfoService;
+import com.deng.service.GoodsRoleService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -55,9 +56,15 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
 
     private final GoodsCategoryService goodsCategoryService;
 
+    private final GoodsRoleService goodsRoleService;
+
 
     @Override
     public RestResp<Void> saveGoods(GoodsAddReqDTO dto) {
+        if (!goodsRoleService.isNormalUser()) {
+            return RestResp.fail("该账号无法执行此操作");
+        }
+
         // 修改时间戳,去掉时分秒
         dto.setBuyTime(dto.getBuyTime().toLocalDate().atStartOfDay());
 
@@ -175,6 +182,10 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
     @Override
     public RestResp<Void> saveComment(
             @Key(expr = "#{userId + '::' + goodsId}") UserCommentReqDTO dto) {
+        if (!goodsRoleService.isNormalUser()) {
+            return RestResp.fail("该账号无法执行此操作");
+        }
+
         // 校验用户是否已发表评论
         QueryWrapper<GoodsComment> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq(DateBaseConstants.GoodsCommentTable.COLUMN_USER_ID, dto.getUserId())
@@ -494,6 +505,7 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
 
     @Override
     public RestResp<Void> onShelfGoods(Long goodsId) {
+
         QueryWrapper<GoodsInfo> queryWrapperForStatus = getQueryWrapperForStatus(goodsId, 2);
         GoodsInfo goodsInfo = goodsInfoMapper.selectById(goodsId);
         // 上架标记

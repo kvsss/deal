@@ -160,4 +160,26 @@ public class AdminController {
     }
 
 
+    // 管理员修改密码
+    @Operation(summary = "管理员修改密码")
+    @PutMapping("password")
+    public RestResp<Void> updateAdminPassword(@RequestBody AdminPasswordUpdateReqDTO condition) {
+        return userService.updateAdminPassword(condition);
+    }
+
+
+    // 管理员修改个人信息
+    @Operation(summary = "管理员修改个人信息")
+    @PutMapping("info")
+    public RestResp<Void> updateAdminInfo(@RequestBody AdminInfoUpdateReqDTO condition) {
+        return userService.updateAdminInfo(condition);
+    }
+
+    //获取订单的汇总
+    @Operation(summary = "获取订单的汇总")
+    @GetMapping("orderSummary")
+    public RestResp<AdminOrderSummaryRespDTO> getOrderSummary(@ParameterObject AdminOrderSummaryReqDTO condition) {
+        return goodsOrderService.getOrderSummary(condition);
+    }
+
 }
