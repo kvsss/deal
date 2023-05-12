@@ -185,5 +185,10 @@ public class UserController {
         return goodsInfoService.getPlatformGoods(condition);
     }
 
-
+    // 获得商家卖家信息
+    @Operation(summary = "获得商家卖家信息")
+    @GetMapping("seller/{goodsId}")
+    public RestResp<SellerRespDTO> getSeller(@PathVariable  Long goodsId){
+        return goodsOrderService.getSeller(goodsId);
+    }
 }

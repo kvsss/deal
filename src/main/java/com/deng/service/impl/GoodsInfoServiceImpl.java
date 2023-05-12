@@ -14,6 +14,7 @@ import com.deng.dao.entity.GoodsOrder;
 import com.deng.dao.entity.UserInfo;
 import com.deng.dao.mapper.GoodsCommentMapper;
 import com.deng.dao.mapper.GoodsInfoMapper;
+import com.deng.dao.mapper.UserInfoMapper;
 import com.deng.dto.req.*;
 import com.deng.dto.resp.*;
 import com.deng.manage.cache.GoodsCategoryCacheManage;
@@ -53,6 +54,8 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
     private final GoodsCommentMapper goodsCommentMapper;
 
     private final UserDaoManager userDaoManager;
+
+    private final UserInfoMapper userInfoMapper;
 
     private final GoodsCategoryService goodsCategoryService;
 
@@ -95,6 +98,12 @@ public class GoodsInfoServiceImpl implements GoodsInfoService {
             return RestResp.fail(CodeEnum.PARAM_ERROR);
         }
         goodsInfo.setExtra(dto.getExtra());
+
+        // 更新用户上架数量
+        UserInfo userInfo = userInfoMapper.selectById(dto.getUid());
+        userInfo.setPublicCount(userInfo.getPublicCount() + 1);
+        userInfoMapper.updateById(userInfo);
+
         goodsInfoMapper.insert(goodsInfo);
         return RestResp.ok();
     }

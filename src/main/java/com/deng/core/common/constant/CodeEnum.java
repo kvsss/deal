@@ -68,9 +68,9 @@ public enum CodeEnum {
 
     USER_REFRESH("A0240", "操作失败，请刷新页面重试"),
 
+    USER_DISABLE("A0250", "账号被禁用，请联系管理员"),
 
     PARAM_ERROR("B0001", "参数错误"),
-
 
     ADMIN_FAIL("C0001", ""),
 

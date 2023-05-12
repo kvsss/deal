@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  * </p>
  *
  * @author ${author}
- * @since 2023/01/27
+ * @since 2023/05/12
  */
 @TableName("user_info")
 public class UserInfo implements Serializable {
@@ -71,6 +71,16 @@ public class UserInfo implements Serializable {
      * 更新时间
      */
     private LocalDateTime updateTime;
+
+    /**
+     * 发布数量
+     */
+    private Long publicCount;
+
+    /**
+     * 成交数量
+     */
+    private Long makeCount;
 
 
     public Long getId() {
@@ -161,6 +171,22 @@ public class UserInfo implements Serializable {
         this.updateTime = updateTime;
     }
 
+    public Long getPublicCount() {
+        return publicCount;
+    }
+
+    public void setPublicCount(Long publicCount) {
+        this.publicCount = publicCount;
+    }
+
+    public Long getMakeCount() {
+        return makeCount;
+    }
+
+    public void setMakeCount(Long makeCount) {
+        this.makeCount = makeCount;
+    }
+
     @Override
     public String toString() {
         return "UserInfo{" +
@@ -175,6 +201,8 @@ public class UserInfo implements Serializable {
         ", status=" + status +
         ", createTime=" + createTime +
         ", updateTime=" + updateTime +
+        ", publicCount=" + publicCount +
+        ", makeCount=" + makeCount +
         "}";
     }
 }

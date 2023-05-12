@@ -115,6 +115,11 @@ public class UserServiceImpl implements UserService {
             return RestResp.fail(CodeEnum.USER_PASSWORD_ERROR);
         }
 
+        // 判断用户状态
+        if (userInfo.getStatus().equals(1)) {
+            return RestResp.fail(CodeEnum.USER_DISABLE);
+        }
+
         //登录成功,生成jWT,并返回
         return RestResp.ok(
                 UserLoginRespDTO.builder()

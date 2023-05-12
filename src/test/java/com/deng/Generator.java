@@ -40,7 +40,8 @@ public class Generator {
         // 传入需要生成的表名，多个用英文逗号分隔，所有用 all 表示
         //genCode("goods_info");
         //genCode("user_role");
-        genCode("goods_role");
+        //genCode("goods_role");
+        genCode("user_info");
 
     }
 

@@ -90,5 +90,5 @@ public interface GoodsOrderService {
     RestResp<AdminOrderSummaryRespDTO> getOrderSummary(AdminOrderSummaryReqDTO condition);
 
 
-
+    RestResp<SellerRespDTO> getSeller(Long goodsId);
 }

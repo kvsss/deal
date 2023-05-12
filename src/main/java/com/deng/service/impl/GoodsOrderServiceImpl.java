@@ -10,6 +10,7 @@ import com.deng.core.constant.DateBaseConstants;
 import com.deng.dao.entity.GoodsInfo;
 import com.deng.dao.entity.GoodsOrder;
 import com.deng.dao.entity.Transaction;
+import com.deng.dao.entity.UserInfo;
 import com.deng.dao.mapper.GoodsInfoMapper;
 import com.deng.dao.mapper.GoodsOrderMapper;
 import com.deng.dao.mapper.UserInfoMapper;
@@ -431,6 +432,14 @@ public class GoodsOrderServiceImpl implements GoodsOrderService {
             // 这里需要回滚事务
             throw new ServiceException(CodeEnum.USER_REFRESH);
         }
+
+        // 添加用户成交数量
+        UserInfo userInfo = userInfoMapper.selectById(goodsOrder.getSellerId());
+        userInfo.setMakeCount(userInfo.getMakeCount() + 1);
+        if (userInfoMapper.updateById(userInfo) == 0) {
+            throw new ServiceException(CodeEnum.USER_REFRESH);
+        }
+
         return RestResp.ok();
     }
 
@@ -549,9 +558,9 @@ public class GoodsOrderServiceImpl implements GoodsOrderService {
         List<Transaction> result;
         // 周
         if (condition.getExtra() == null || "".equals(condition.getExtra()) || "1".equals(condition.getExtra())) {
-            result = goodsOrderMapper.getLast12DailyTransactions(now.minusDays(sum-1), now.plusDays(1));
+            result = goodsOrderMapper.getLast12DailyTransactions(now.minusDays(sum - 1), now.plusDays(1));
             if (result.size() != sum) {
-                LocalDate start = now.minusDays(sum-1);
+                LocalDate start = now.minusDays(sum - 1);
                 LocalDate end = now.plusDays(1);
                 int index = 0;
                 for (LocalDate date = start; date.isBefore(end); date = date.plusDays(1)) {
@@ -627,5 +636,19 @@ public class GoodsOrderServiceImpl implements GoodsOrderService {
             RestResp.fail("参数错误");
         }
         return RestResp.fail("参数错误");
+    }
+
+
+    @Override
+    public RestResp<SellerRespDTO> getSeller(Long goodsId) {
+
+        GoodsInfo goodsInfo = goodsInfoMapper.selectById(goodsId);
+        UserInfo userInfo = userInfoMapper.selectById(goodsInfo.getUid());
+
+        return RestResp.ok(SellerRespDTO.builder().nickName(userInfo.getNickName())
+                .userPhoto(userInfo.getUserPhoto())
+                .publicCount(userInfo.getPublicCount())
+                .makeCount(userInfo.getMakeCount())
+                .build());
     }
 }
